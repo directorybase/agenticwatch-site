@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AgenticWatch.dev — The MCP Server Index</title>
+<meta name="description" content="DistroWatch-style directory of 2,001+ MCP (Model Context Protocol) servers. Ranked by GitHub stars, categorized, and searchable."/>
+<meta name="robots" content="index, follow"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0D0D0F;
+  --s1:#141418;
+  --s2:#1A1A20;
+  --ac:#00C2FF;
+  --b1:rgba(0,194,255,0.15);
+  --b2:rgba(0,194,255,0.3);
+  --t1:#e8e8e8;
+  --t2:rgba(232,232,232,0.6);
+  --tm:rgba(232,232,232,0.3);
+  --link:#00C2FF;
+  --link2:#00a8e0;
+}
+body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,sans-serif;}
+
+/* DW layout */
+.dw-wrap{display:grid;grid-template-columns:180px 1fr 185px;min-height:600px;font-size:12px;}
+.dw-left{background:var(--s1);border-right:1px solid var(--b1);padding:12px 10px;}
+.dw-center{padding:14px 16px;}
+.dw-right{background:var(--s1);border-left:1px solid var(--b1);padding:12px 10px;}
+
+/* DW header */
+.dw-hdr{background:var(--s2);border-bottom:2px solid var(--ac);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;}
+.dw-logo{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:800;color:var(--t1);letter-spacing:-0.5px;}
+.dw-logo span{color:var(--ac);}
+.dw-tagline{font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;}
+
+/* DW nav bar */
+.dw-nav{background:var(--s2);border-bottom:1px solid var(--b1);padding:5px 14px;display:flex;gap:0;}
+.dw-nav a{font-size:11px;color:var(--link);text-decoration:none;padding:3px 10px;border-right:1px solid var(--b1);}
+.dw-nav a:first-child{padding-left:0;}
+.dw-nav a:hover{color:var(--t1);}
+.dw-nav a.on{color:var(--t1);font-weight:500;}
+
+/* DW search bar */
+.dw-search-bar{background:var(--bg);border-bottom:1px solid var(--b1);padding:5px 14px;display:flex;align-items:center;gap:8px;}
+.dw-search-bar input{background:var(--s2);border:1px solid var(--b2);color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 8px;border-radius:3px;outline:none;width:240px;}
+.dw-search-bar select{background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 6px;border-radius:3px;}
+.dw-search-bar button{background:var(--ac);border:none;color:#000;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 10px;border-radius:3px;cursor:pointer;}
+
+/* DW section headings */
+.dw-sh{background:var(--ac);color:#000;font-size:11px;font-weight:700;padding:3px 7px;margin:0 0 6px;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;}
+.dw-sh2{border-bottom:1px solid var(--b2);color:var(--ac);font-size:11px;font-weight:500;padding:2px 0 4px;margin:12px 0 6px;font-family:'JetBrains Mono',monospace;}
+
+/* DW rank table */
+.dw-rank{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:10px;}
+.dw-rank tr{border-bottom:1px solid var(--b1);}
+.dw-rank tr:last-child{border-bottom:none;}
+.dw-rank td{padding:4px 3px;vertical-align:top;}
+.dw-rank .rnum{color:var(--tm);font-family:'JetBrains Mono',monospace;font-size:10px;width:20px;text-align:right;padding-right:6px;}
+.dw-rank .rlink{color:var(--link);text-decoration:none;font-size:11px;}
+.dw-rank .rlink:hover{color:var(--t1);}
+.dw-rank .rcount{color:var(--tm);font-family:'JetBrains Mono',monospace;font-size:10px;text-align:right;white-space:nowrap;}
+.dw-rank .rcat{display:block;font-size:9px;color:var(--tm);font-family:'JetBrains Mono',monospace;}
+
+/* DW listing entries */
+.dw-entry{border-bottom:1px solid var(--b1);padding:10px 0;}
+.dw-entry:last-child{border-bottom:none;}
+.dw-entry-hdr{display:flex;align-items:baseline;gap:8px;margin-bottom:4px;}
+.dw-entry-name{font-size:13px;font-weight:500;color:var(--link);font-family:'Space Grotesk',sans-serif;}
+.dw-entry-meta{font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;}
+.dw-entry-desc{font-size:11px;color:var(--t2);line-height:1.6;margin-bottom:5px;}
+.dw-entry-tags{display:flex;gap:4px;flex-wrap:wrap;}
+.dw-etag{font-size:9px;font-family:'JetBrains Mono',monospace;color:var(--link);border:1px solid var(--b2);padding:1px 5px;border-radius:2px;}
+.dw-stars{font-size:10px;color:#ffb400;font-family:'JetBrains Mono',monospace;}
+
+/* DW right sidebar items */
+.dw-side-item{padding:4px 0;border-bottom:1px solid var(--b1);font-size:11px;}
+.dw-side-item:last-child{border-bottom:none;}
+.dw-side-link{color:var(--link);text-decoration:none;display:block;}
+.dw-side-link:hover{color:var(--t1);}
+.dw-side-meta{font-size:9px;color:var(--tm);font-family:'JetBrains Mono',monospace;}
+
+/* DW stat box */
+.dw-stats{background:var(--bg);border:1px solid var(--b1);padding:8px;margin-bottom:10px;font-size:11px;}
+.dw-stat-row{display:flex;justify-content:space-between;padding:2px 0;border-bottom:1px solid var(--b1);}
+.dw-stat-row:last-child{border-bottom:none;}
+.dw-stat-label{color:var(--t2);}
+.dw-stat-val{color:var(--ac);font-family:'JetBrains Mono',monospace;font-size:10px;}
+
+/* DW category list */
+.dw-cat-row{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--b1);font-size:11px;}
+.dw-cat-row:last-child{border-bottom:none;}
+.dw-cat-link{color:var(--link);text-decoration:none;}
+.dw-cat-link:hover{color:var(--t1);}
+.dw-cat-num{color:var(--tm);font-family:'JetBrains Mono',monospace;font-size:10px;}
+</style>
+</head>
+<body>
+
+  <div class="dw-hdr">
+    <div>
+      <div class="dw-logo">Agentic<span>Watch</span>.dev</div>
+      <div class="dw-tagline">The MCP Server Index — 2,001 entries tracked</div>
+    </div>
+    <div style="font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;text-align:right">Updated: 2026-04-02<br/>Source: robodorm harvest v1</div>
+  </div>
+
+  <div class="dw-nav">
+    <a href="#" class="on">Home</a>
+    <a href="#">Rankings</a>
+    <a href="#">Search</a>
+    <a href="#">Categories</a>
+    <a href="#">New Entries</a>
+    <a href="#">Submit Server</a>
+    <a href="#">About</a>
+  </div>
+
+  <div class="dw-search-bar">
+    <span style="font-size:11px;color:var(--t2)">Search:</span>
+    <input placeholder="server name, category, keyword..."/>
+    <select><option>All categories</option><option>Web</option><option>Database</option><option>Filesystem</option><option>Finance</option></select>
+    <button>Search</button>
+  </div>
+
+  <div class="dw-wrap">
+
+    <!-- LEFT: Rankings + Categories -->
+    <div class="dw-left">
+      <div class="dw-sh">TOP 15 BY STARS</div>
+      <table class="dw-rank">
+        <tr><td class="rnum">1</td><td><a class="rlink" href="#">markitdown</a><span class="rcat">filesystem</span></td><td class="rcount">93.1k</td></tr>
+        <tr><td class="rnum">2</td><td><a class="rlink" href="#">mcp/servers</a><span class="rcat">ai-ml</span></td><td class="rcount">82.8k</td></tr>
+        <tr><td class="rnum">3</td><td><a class="rlink" href="#">server-everything</a><span class="rcat">other</span></td><td class="rcount">82.8k</td></tr>
+        <tr><td class="rnum">4</td><td><a class="rlink" href="#">netdata</a><span class="rcat">other</span></td><td class="rcount">78.3k</td></tr>
+        <tr><td class="rnum">5</td><td><a class="rlink" href="#">context7-mcp</a><span class="rcat">infrastructure</span></td><td class="rcount">51.4k</td></tr>
+        <tr><td class="rnum">6</td><td><a class="rlink" href="#">mindsdb</a><span class="rcat">other</span></td><td class="rcount">38.9k</td></tr>
+        <tr><td class="rnum">7</td><td><a class="rlink" href="#">chrome-devtools-mcp</a><span class="rcat">infrastructure</span></td><td class="rcount">32.8k</td></tr>
+        <tr><td class="rnum">8</td><td><a class="rlink" href="#">playwright-mcp</a><span class="rcat">web</span></td><td class="rcount">30.1k</td></tr>
+        <tr><td class="rnum">9</td><td><a class="rlink" href="#">mcp-server-browser</a><span class="rcat">web</span></td><td class="rcount">29.2k</td></tr>
+        <tr><td class="rnum">10</td><td><a class="rlink" href="#">github-mcp-server</a><span class="rcat">other</span></td><td class="rcount">28.5k</td></tr>
+        <tr><td class="rnum">11</td><td><a class="rlink" href="#">claude-task-master</a><span class="rcat">other</span></td><td class="rcount">26.4k</td></tr>
+        <tr><td class="rnum">12</td><td><a class="rlink" href="#">FastMCP</a><span class="rcat">framework</span></td><td class="rcount">24.2k</td></tr>
+        <tr><td class="rnum">13</td><td><a class="rlink" href="#">mastra-mcp</a><span class="rcat">ai-ml</span></td><td class="rcount">22.6k</td></tr>
+        <tr><td class="rnum">14</td><td><a class="rlink" href="#">serena</a><span class="rcat">other</span></td><td class="rcount">22.4k</td></tr>
+        <tr><td class="rnum">15</td><td><a class="rlink" href="#">blender-mcp</a><span class="rcat">other</span></td><td class="rcount">18.3k</td></tr>
+      </table>
+      <div class="dw-sh2">CATEGORIES</div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Other</a><span class="dw-cat-num">1,003</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Finance</a><span class="dw-cat-num">202</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Web</a><span class="dw-cat-num">197</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Infrastructure</a><span class="dw-cat-num">138</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Database</a><span class="dw-cat-num">112</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Dev Tools</a><span class="dw-cat-num">98</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Communication</a><span class="dw-cat-num">74</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Data</a><span class="dw-cat-num">53</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Productivity</a><span class="dw-cat-num">44</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">AI / ML</a><span class="dw-cat-num">32</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Filesystem</a><span class="dw-cat-num">28</span></div>
+      <div class="dw-cat-row"><a class="dw-cat-link" href="#">Media</a><span class="dw-cat-num">20</span></div>
+    </div>
+
+    <!-- CENTER: Main listings -->
+    <div class="dw-center">
+      <div class="dw-sh" style="margin-bottom:10px">LATEST ENTRIES — sorted by GitHub stars</div>
+
+      <div class="dw-entry">
+        <div class="dw-entry-hdr">
+          <span class="dw-entry-name">microsoft/markitdown</span>
+          <span class="dw-entry-meta">filesystem · MIT · stdio · ★ 93,119</span>
+        </div>
+        <div class="dw-entry-desc">MCP tool access to MarkItDown — a library that converts many file formats (local or remote) to Markdown for use with LLMs and AI code editors. Supports PDF, Word, Excel, PowerPoint, images, and more.</div>
+        <div class="dw-entry-tags"><span class="dw-etag">filesystem</span><span class="dw-etag">microsoft</span><span class="dw-etag">stdio</span><span class="dw-etag">MIT</span></div>
+      </div>
+
+      <div class="dw-entry">
+        <div class="dw-entry-hdr">
+          <span class="dw-entry-name">microsoft/playwright-mcp</span>
+          <span class="dw-entry-meta">web · Apache 2.0 · ★ 30,134</span>
+        </div>
+        <div class="dw-entry-desc">Official Microsoft Playwright MCP server, enabling LLMs to interact with web pages through structured accessibility snapshots. Supports navigation, form filling, clicking, and screenshot capture.</div>
+        <div class="dw-entry-tags"><span class="dw-etag">web</span><span class="dw-etag">browser</span><span class="dw-etag">microsoft</span><span class="dw-etag">Apache</span></div>
+      </div>
+
+      <div class="dw-entry">
+        <div class="dw-entry-hdr">
+          <span class="dw-entry-name">github/github-mcp-server</span>
+          <span class="dw-entry-meta">other · MIT · SSE · ★ 28,476</span>
+        </div>
+        <div class="dw-entry-desc">Official GitHub server for integration with repository management, PRs, issues, code search, and more. Enables agents to read, create, and update GitHub resources programmatically.</div>
+        <div class="dw-entry-tags"><span class="dw-etag">github</span><span class="dw-etag">code</span><span class="dw-etag">git</span><span class="dw-etag">MIT</span></div>
+      </div>
+
+      <div class="dw-entry">
+        <div class="dw-entry-hdr">
+          <span class="dw-entry-name">FastMCP</span>
+          <span class="dw-entry-meta">framework · Apache 2.0 · ★ 24,213</span>
+        </div>
+        <div class="dw-entry-desc">A high-level Python framework for building MCP servers. Simplifies server creation using decorators and automatic type inference. The most popular framework for custom MCP server development.</div>
+        <div class="dw-entry-tags"><span class="dw-etag">framework</span><span class="dw-etag">python</span><span class="dw-etag">Apache</span></div>
+      </div>
+
+      <div class="dw-entry">
+        <div class="dw-entry-hdr">
+          <span class="dw-entry-name">topoteretes/cognee</span>
+          <span class="dw-entry-meta">other · Apache 2.0 · SSE · ★ 14,854</span>
+        </div>
+        <div class="dw-entry-desc">Memory manager for AI apps and agents using various graph and vector stores. Supports ingestion from 30+ data sources. Enables persistent, queryable memory across agent sessions.</div>
+        <div class="dw-entry-tags"><span class="dw-etag">memory</span><span class="dw-etag">graph</span><span class="dw-etag">vector</span><span class="dw-etag">Apache</span></div>
+      </div>
+
+      <div class="dw-entry">
+        <div class="dw-entry-hdr">
+          <span class="dw-entry-name">elie222/inbox-zero</span>
+          <span class="dw-entry-meta">communication · Apache 2.0 · ★ 10,372</span>
+        </div>
+        <div class="dw-entry-desc">AI-powered email management server. Enables agents to read, categorize, draft, and send email with configurable rules and zero-inbox workflows. Integrates with Gmail.</div>
+        <div class="dw-entry-tags"><span class="dw-etag">email</span><span class="dw-etag">gmail</span><span class="dw-etag">communication</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Stats + Highlights -->
+    <div class="dw-right">
+      <div class="dw-sh">INDEX STATS</div>
+      <div class="dw-stats">
+        <div class="dw-stat-row"><span class="dw-stat-label">Total entries</span><span class="dw-stat-val">2,001</span></div>
+        <div class="dw-stat-row"><span class="dw-stat-label">With descriptions</span><span class="dw-stat-val">1,997</span></div>
+        <div class="dw-stat-row"><span class="dw-stat-label">With star data</span><span class="dw-stat-val">1,563</span></div>
+        <div class="dw-stat-row"><span class="dw-stat-label">SSE transport</span><span class="dw-stat-val">~193</span></div>
+        <div class="dw-stat-row"><span class="dw-stat-label">Last updated</span><span class="dw-stat-val">2026-04-02</span></div>
+        <div class="dw-stat-row"><span class="dw-stat-label">Top star count</span><span class="dw-stat-val">93,119</span></div>
+      </div>
+
+      <div class="dw-sh2">WEB CATEGORY TOP 5</div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">playwright-mcp</a><div class="dw-side-meta">Microsoft · ★ 30,134</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">mcp-server-browser</a><div class="dw-side-meta">bytedance · ★ 29,199</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">browsermcp/mcp</a><div class="dw-side-meta">★ 6,215</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">browserbase-mcp</a><div class="dw-side-meta">★ 1,841</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">fetch</a><div class="dw-side-meta">modelcontextprotocol · ★ 82,778</div></div>
+
+      <div class="dw-sh2">DATABASE CATEGORY TOP 5</div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">googleapis/genai-toolbox</a><div class="dw-side-meta">Google · ★ 13,611</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">bram2w/baserow</a><div class="dw-side-meta">★ 4,528</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">supabase-mcp</a><div class="dw-side-meta">★ 2,573</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">postgres-mcp</a><div class="dw-side-meta">★ 1,804</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">sqlite-mcp</a><div class="dw-side-meta">★ 880</div></div>
+
+      <div class="dw-sh2">RECENTLY ADDED</div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">eyaltoledano/claude-task-master</a><div class="dw-side-meta">2026-04-01</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">oraios/serena</a><div class="dw-side-meta">2026-04-01</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">mediar-ai/screenpipe</a><div class="dw-side-meta">2026-03-30</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">topoteretes/cognee</a><div class="dw-side-meta">2026-03-30</div></div>
+      <div class="dw-side-item"><a class="dw-side-link" href="#">awslabs/mcp</a><div class="dw-side-meta">2026-03-29</div></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
