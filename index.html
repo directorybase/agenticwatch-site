@@ -28,7 +28,7 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 
 /* header */
 .dw-hdr{background:var(--s2);border-bottom:2px solid var(--ac);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;}
-.dw-logo{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:800;color:var(--t1);letter-spacing:-0.5px;}
+.dw-logo{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:800;color:var(--t1);letter-spacing:-0.5px;text-decoration:none;}
 .dw-logo span{color:var(--ac);}
 .dw-tagline{font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;}
 
@@ -40,7 +40,7 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 .dw-nav a.on{color:var(--t1);font-weight:500;}
 
 /* search bar */
-.dw-search-bar{background:var(--bg);border-bottom:1px solid var(--b1);padding:5px 14px;display:flex;align-items:center;gap:8px;}
+.dw-search-bar{background:var(--bg);border-bottom:1px solid var(--b1);padding:5px 14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .dw-search-bar input{background:var(--s2);border:1px solid var(--b2);color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 8px;border-radius:3px;outline:none;width:260px;}
 .dw-search-bar input::placeholder{color:var(--tm);}
 .dw-search-bar select{background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 6px;border-radius:3px;outline:none;}
@@ -71,7 +71,7 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 .dw-cat-link:hover{color:var(--t1);}
 .dw-cat-num{color:var(--tm);font-family:'JetBrains Mono',monospace;font-size:10px;}
 
-/* entries */
+/* directory entries */
 .dw-entry{border-bottom:1px solid var(--b1);padding:10px 0;}
 .dw-entry:last-child{border-bottom:none;}
 .dw-entry-hdr{display:flex;align-items:baseline;gap:8px;margin-bottom:4px;flex-wrap:wrap;}
@@ -102,7 +102,7 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 .dw-page-btn:hover{border-color:var(--b2);color:var(--t1);}
 .dw-page-btn.active{background:var(--ac);color:#000;border-color:var(--ac);}
 .dw-page-btn:disabled{color:var(--tm);cursor:default;border-color:var(--b1);}
-.dw-page-info{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);margin-left:6px;}
+.dw-page-info{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);margin-left:2px;}
 
 /* center header row */
 .dw-center-hdr{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
@@ -115,9 +115,55 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 .dw-loading{padding:20px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--tm);}
 .dw-empty{padding:20px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--tm);}
 
-/* filter active indicator */
+/* filter badge */
 .dw-filter-active{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ac);padding:2px 6px;border:1px solid var(--b2);border-radius:2px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;}
 .dw-filter-active:hover{color:var(--t1);}
+
+/* ── DETAIL PAGE ─────────────────────────────────────────────────────────── */
+.detail-back{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--link);text-decoration:none;margin-bottom:14px;}
+.detail-back:hover{color:var(--t1);}
+
+.detail-name{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:800;color:var(--t1);letter-spacing:-0.5px;margin-bottom:6px;line-height:1.2;}
+
+.detail-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.detail-badge{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:2px;border:1px solid var(--b2);color:var(--ac);}
+.detail-badge.cat{background:rgba(0,194,255,0.08);}
+.detail-stars{color:#ffb400;border-color:rgba(255,180,0,0.3);background:rgba(255,180,0,0.08);}
+
+.detail-desc{font-size:13px;color:var(--t2);line-height:1.7;margin-bottom:16px;padding:12px;background:var(--s1);border:1px solid var(--b1);border-radius:3px;}
+.detail-desc-placeholder{font-size:12px;color:var(--tm);font-family:'JetBrains Mono',monospace;padding:12px;background:var(--s1);border:1px solid var(--b1);border-radius:3px;margin-bottom:16px;}
+
+.detail-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:16px;}
+.detail-table tr{border-bottom:1px solid var(--b1);}
+.detail-table tr:last-child{border-bottom:none;}
+.detail-table td{padding:7px 8px;vertical-align:top;}
+.detail-table td:first-child{color:var(--tm);font-family:'JetBrains Mono',monospace;font-size:10px;white-space:nowrap;width:110px;text-transform:uppercase;letter-spacing:0.5px;}
+.detail-table td:last-child{color:var(--t1);}
+.detail-table a{color:var(--link);text-decoration:none;word-break:break-all;}
+.detail-table a:hover{text-decoration:underline;color:var(--t1);}
+
+.detail-tags{display:flex;gap:5px;flex-wrap:wrap;}
+.detail-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--link);border:1px solid var(--b2);padding:2px 7px;border-radius:2px;}
+
+.detail-platforms{display:flex;gap:5px;flex-wrap:wrap;}
+.detail-platform{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2);border:1px solid var(--b1);padding:2px 7px;border-radius:2px;}
+
+.detail-difficulty{display:flex;gap:3px;align-items:center;}
+.diff-dot{width:9px;height:9px;border-radius:50%;background:var(--b2);}
+.diff-dot.on{background:var(--ac);}
+
+.detail-cta{display:flex;gap:10px;align-items:center;padding:14px 0;border-top:1px solid var(--b1);margin-top:4px;}
+.detail-cta-btn{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:7px 16px;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.detail-cta-primary{background:var(--ac);color:#000;border:none;}
+.detail-cta-primary:hover{background:var(--link2);color:#000;}
+.detail-cta-secondary{background:transparent;color:var(--link);border:1px solid var(--b2);}
+.detail-cta-secondary:hover{color:var(--t1);border-color:var(--t2);}
+
+/* detail right sidebar — related entries */
+.detail-related-item{padding:4px 0;border-bottom:1px solid var(--b1);font-size:11px;}
+.detail-related-item:last-child{border-bottom:none;}
+.detail-related-link{color:var(--link);text-decoration:none;display:block;}
+.detail-related-link:hover{color:var(--t1);text-decoration:underline;}
 
 /* footer */
 .dw-footer{background:var(--s2);border-top:1px solid var(--b1);padding:6px 14px;display:flex;justify-content:space-between;align-items:center;}
@@ -128,23 +174,23 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 
 <div class="dw-hdr">
   <div>
-    <div class="dw-logo">Agentic<span>Watch</span>.dev</div>
+    <a href="#" class="dw-logo" onclick="goHome();return false;">Agentic<span>Watch</span>.dev</a>
     <div class="dw-tagline" id="tagline">The MCP Server Index — loading...</div>
   </div>
   <div style="font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;text-align:right" id="hdr-meta">Loading…</div>
 </div>
 
 <div class="dw-nav">
-  <a href="#" class="on">Home</a>
-  <a href="#" onclick="sortBy('stars');return false;">Rankings</a>
-  <a href="#" onclick="document.getElementById('search-input').focus();return false;">Search</a>
-  <a href="#" onclick="showAllCategories();return false;">Categories</a>
-  <a href="#" onclick="sortBy('recent');return false;">New Entries</a>
-  <a href="mailto:gregory@agenticwatch.dev">Submit Server</a>
+  <a href="#" id="nav-home" class="on" onclick="goHome();return false;">Home</a>
+  <a href="#" onclick="goHome();sortBy('stars');return false;">Rankings</a>
+  <a href="#" onclick="goHome();setTimeout(()=>document.getElementById('search-input').focus(),50);return false;">Search</a>
+  <a href="#" onclick="goHome();showAllCategories();return false;">Categories</a>
+  <a href="#" onclick="goHome();sortBy('recent');return false;">New Entries</a>
+  <a href="mailto:submit@agenticwatch.dev">Submit Server</a>
   <a href="#">About</a>
 </div>
 
-<div class="dw-search-bar">
+<div class="dw-search-bar" id="search-bar">
   <span style="font-size:11px;color:var(--t2)">Search:</span>
   <input id="search-input" placeholder="server name, category, keyword..." oninput="onSearch()"/>
   <select id="cat-select" onchange="onCatSelect()">
@@ -172,7 +218,7 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 
 <div class="dw-wrap">
 
-  <!-- LEFT: Rankings + Categories -->
+  <!-- LEFT: Rankings + Categories (always visible) -->
   <div class="dw-left">
     <div class="dw-sh">TOP 15 BY STARS</div>
     <table class="dw-rank" id="rankings-table">
@@ -182,8 +228,8 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
     <div id="category-list"><div class="dw-loading">loading…</div></div>
   </div>
 
-  <!-- CENTER: Listings -->
-  <div class="dw-center">
+  <!-- CENTER: Directory view -->
+  <div class="dw-center" id="view-directory">
     <div class="dw-center-hdr">
       <div class="dw-sh" style="margin:0" id="center-heading">LATEST ENTRIES</div>
       <span class="dw-result-count" id="result-count"></span>
@@ -192,10 +238,13 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
     <div id="pagination"></div>
   </div>
 
-  <!-- RIGHT: Stats + Highlights -->
-  <div class="dw-right">
+  <!-- CENTER: Detail view (hidden until needed) -->
+  <div class="dw-center" id="view-detail" style="display:none"></div>
+
+  <!-- RIGHT: Stats sidebar (directory mode) -->
+  <div class="dw-right" id="sidebar-directory">
     <div class="dw-sh">INDEX STATS</div>
-    <div class="dw-stats" id="stats-box">
+    <div class="dw-stats">
       <div class="dw-stat-row"><span class="dw-stat-label">Total entries</span><span class="dw-stat-val" id="stat-total">—</span></div>
       <div class="dw-stat-row"><span class="dw-stat-label">With descriptions</span><span class="dw-stat-val" id="stat-desc">—</span></div>
       <div class="dw-stat-row"><span class="dw-stat-label">With star data</span><span class="dw-stat-val" id="stat-stars">—</span></div>
@@ -203,32 +252,33 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
       <div class="dw-stat-row"><span class="dw-stat-label">Last updated</span><span class="dw-stat-val" id="stat-updated">—</span></div>
       <div class="dw-stat-row"><span class="dw-stat-label">Top star count</span><span class="dw-stat-val" id="stat-top">—</span></div>
     </div>
-
     <div class="dw-sh2">WEB CATEGORY TOP 5</div>
     <div id="sidebar-web"><div class="dw-loading">loading…</div></div>
-
     <div class="dw-sh2">DATABASE CATEGORY TOP 5</div>
     <div id="sidebar-db"><div class="dw-loading">loading…</div></div>
-
     <div class="dw-sh2">RECENTLY ADDED</div>
     <div id="sidebar-recent"><div class="dw-loading">loading…</div></div>
   </div>
 
+  <!-- RIGHT: Detail sidebar (hidden until needed) -->
+  <div class="dw-right" id="sidebar-detail" style="display:none"></div>
+
 </div>
 
 <div class="dw-footer">
-  <span>AgenticWatch.dev — design demo · not yet functional</span>
-  <span>v0.9 · 2026-04-02</span>
+  <span id="footer-left">AgenticWatch.dev — The MCP Server Index</span>
+  <span>v1.1 · 2026-04-02</span>
 </div>
 
 <script>
-// ─── State ───────────────────────────────────────────────────────────────────
+// ─── State ────────────────────────────────────────────────────────────────────
 let allEntries = [];
 let filtered = [];
 let currentPage = 1;
 let currentSort = 'stars';
 let currentCategory = '';
 let currentSearch = '';
+let indexBySlug = {};
 const PER_PAGE = 25;
 
 const CATEGORY_LABELS = {
@@ -244,6 +294,12 @@ fetch('/data/mcp-servers.json')
   .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
   .then(data => {
     allEntries = data.entries || [];
+    // build slug index
+    allEntries.forEach((e, i) => {
+      e._idx = i;
+      e._slug = slugify(e.name) + '-' + i;
+      indexBySlug[e._slug] = e;
+    });
     document.getElementById('tagline').textContent =
       'The MCP Server Index — ' + allEntries.length.toLocaleString() + ' entries tracked';
     document.getElementById('hdr-meta').innerHTML =
@@ -252,27 +308,176 @@ fetch('/data/mcp-servers.json')
     renderRankings(allEntries);
     renderCategoryList(allEntries);
     renderSidebars(allEntries);
-    applyFilters();
+    router();
   })
   .catch(err => {
     document.getElementById('entries-list').innerHTML =
       '<div class="dw-empty">⚠ Could not load data/mcp-servers.json — ' + err.message + '</div>';
   });
 
+// ─── Router ───────────────────────────────────────────────────────────────────
+function router() {
+  const hash = window.location.hash;
+  if (hash.startsWith('#/server/')) {
+    const slug = hash.replace('#/server/', '');
+    const entry = indexBySlug[slug];
+    if (entry) {
+      showDetail(entry);
+    } else {
+      showDirectory();
+    }
+  } else {
+    showDirectory();
+  }
+}
+
+window.addEventListener('hashchange', router);
+
+function goHome() {
+  window.location.hash = '';
+  showDirectory();
+}
+
+function navToDetail(slug) {
+  window.location.hash = '#/server/' + slug;
+}
+
+// ─── View switching ───────────────────────────────────────────────────────────
+function showDirectory() {
+  document.getElementById('view-directory').style.display = '';
+  document.getElementById('view-detail').style.display = 'none';
+  document.getElementById('sidebar-directory').style.display = '';
+  document.getElementById('sidebar-detail').style.display = 'none';
+  document.getElementById('search-bar').style.display = '';
+  document.getElementById('nav-home').classList.add('on');
+  applyFilters();
+}
+
+function showDetail(entry) {
+  document.getElementById('view-directory').style.display = 'none';
+  document.getElementById('view-detail').style.display = '';
+  document.getElementById('sidebar-directory').style.display = 'none';
+  document.getElementById('sidebar-detail').style.display = '';
+  document.getElementById('search-bar').style.display = 'none';
+  document.getElementById('nav-home').classList.remove('on');
+  document.title = entry.name + ' — AgenticWatch.dev';
+  renderDetailCenter(entry);
+  renderDetailSidebar(entry);
+  window.scrollTo(0, 0);
+}
+
+// ─── Detail: center ───────────────────────────────────────────────────────────
+function renderDetailCenter(e) {
+  const catLabel = CATEGORY_LABELS[e.category] || e.category || '—';
+
+  const badges = [
+    e.category ? `<span class="detail-badge cat">${escHtml(catLabel)}</span>` : '',
+    e.github_stars != null ? `<span class="detail-badge detail-stars">★ ${e.github_stars.toLocaleString()}</span>` : '',
+    e.transport ? `<span class="detail-badge">${escHtml(e.transport)}</span>` : '',
+    e.license && e.license !== 'unknown' ? `<span class="detail-badge">${escHtml(e.license)}</span>` : '',
+  ].filter(Boolean).join('');
+
+  const desc = e.description
+    ? `<div class="detail-desc">${escHtml(e.description)}</div>`
+    : `<div class="detail-desc-placeholder">No description available for this entry yet.</div>`;
+
+  // summary table rows
+  const rows = [
+    ['Home Page', e.url ? `<a href="${escHtml(e.url)}" target="_blank" rel="noopener">${escHtml(e.url)}</a>` : '—'],
+    ['Category', escHtml(catLabel)],
+    ['Transport', e.transport ? escHtml(e.transport) : '—'],
+    ['Auth', e.auth ? escHtml(e.auth) : '—'],
+    ['License', e.license ? escHtml(e.license) : '—'],
+    ['Difficulty', e.difficulty != null ? difficultyDots(e.difficulty) : '—'],
+    ['Platforms', e.platforms && e.platforms.length
+      ? `<div class="detail-platforms">${e.platforms.map(p=>`<span class="detail-platform">${escHtml(p)}</span>`).join('')}</div>`
+      : '—'],
+    ['Tags', e.tags && e.tags.length
+      ? `<div class="detail-tags">${e.tags.map(t=>`<span class="detail-tag">${escHtml(t)}</span>`).join('')}</div>`
+      : '—'],
+    ['Last Updated', e.last_updated ? escHtml(e.last_updated) : '—'],
+  ];
+
+  const tableHtml = rows.map(([label, val]) =>
+    `<tr><td>${label}</td><td>${val}</td></tr>`
+  ).join('');
+
+  const ctaUrl = e.url || '#';
+
+  document.getElementById('view-detail').innerHTML = `
+    <a class="detail-back" href="#" onclick="goHome();return false;">← All Servers</a>
+    <div class="detail-name">${escHtml(e.name)}</div>
+    <div class="detail-badges">${badges}</div>
+    ${desc}
+    <table class="detail-table"><tbody>${tableHtml}</tbody></table>
+    <div class="detail-cta">
+      <a class="detail-cta-btn detail-cta-primary" href="${escHtml(ctaUrl)}" target="_blank" rel="noopener">
+        View on GitHub →
+      </a>
+      <a class="detail-cta-btn detail-cta-secondary" href="#" onclick="goHome();return false;">
+        ← Back to Index
+      </a>
+    </div>
+  `;
+}
+
+function difficultyDots(n) {
+  const max = 5;
+  let html = '<div class="detail-difficulty">';
+  for (let i = 1; i <= max; i++) {
+    html += `<div class="diff-dot${i <= n ? ' on' : ''}"></div>`;
+  }
+  html += `<span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);margin-left:5px">${n}/${max}</span>`;
+  html += '</div>';
+  return html;
+}
+
+// ─── Detail: right sidebar ────────────────────────────────────────────────────
+function renderDetailSidebar(e) {
+  const cat = e.category || 'other';
+  const catLabel = CATEGORY_LABELS[cat] || cat;
+
+  // related: same category, excluding current entry, top by stars
+  const related = allEntries
+    .filter(x => x.category === cat && x._slug !== e._slug)
+    .sort((a,b) => (b.github_stars||0) - (a.github_stars||0))
+    .slice(0, 8);
+
+  const relatedHtml = related.length
+    ? related.map(r => `
+        <div class="detail-related-item">
+          <a class="detail-related-link" href="#" onclick="navToDetail('${r._slug}');return false;">${escHtml(shortName(r.name))}</a>
+          <div class="dw-side-meta">${r.github_stars != null ? '★ '+r.github_stars.toLocaleString() : escHtml(r.category||'')}</div>
+        </div>`).join('')
+    : '<div class="dw-empty" style="font-size:10px;padding:4px 0">No related entries</div>';
+
+  document.getElementById('sidebar-detail').innerHTML = `
+    <div class="dw-sh">SERVER INFO</div>
+    <div class="dw-stats">
+      <div class="dw-stat-row"><span class="dw-stat-label">Category</span><span class="dw-stat-val">${escHtml(catLabel)}</span></div>
+      <div class="dw-stat-row"><span class="dw-stat-label">GitHub Stars</span><span class="dw-stat-val">${e.github_stars != null ? e.github_stars.toLocaleString() : '—'}</span></div>
+      <div class="dw-stat-row"><span class="dw-stat-label">Transport</span><span class="dw-stat-val">${escHtml(e.transport||'—')}</span></div>
+      <div class="dw-stat-row"><span class="dw-stat-label">Auth</span><span class="dw-stat-val">${escHtml(e.auth||'—')}</span></div>
+      <div class="dw-stat-row"><span class="dw-stat-label">License</span><span class="dw-stat-val">${escHtml(e.license||'—')}</span></div>
+    </div>
+    <div class="dw-sh2">MORE IN ${escHtml(catLabel.toUpperCase())}</div>
+    ${relatedHtml}
+  `;
+}
+
 // ─── Stats ────────────────────────────────────────────────────────────────────
 function renderStats(data) {
   const entries = data.entries || [];
-  const withDesc = entries.filter(e => e.description).length;
+  const withDesc  = entries.filter(e => e.description).length;
   const withStars = entries.filter(e => e.github_stars != null).length;
-  const sseCount = entries.filter(e => e.transport === 'SSE' || e.transport === 'both').length;
-  const topStars = Math.max(...entries.map(e => e.github_stars || 0));
-
-  document.getElementById('stat-total').textContent = entries.length.toLocaleString();
-  document.getElementById('stat-desc').textContent = withDesc.toLocaleString();
-  document.getElementById('stat-stars').textContent = withStars.toLocaleString();
-  document.getElementById('stat-sse').textContent = '~' + sseCount.toLocaleString();
+  const sseCount  = entries.filter(e => e.transport === 'SSE' || e.transport === 'both').length;
+  const topStars  = Math.max(...entries.map(e => e.github_stars || 0));
+  document.getElementById('stat-total').textContent   = entries.length.toLocaleString();
+  document.getElementById('stat-desc').textContent    = withDesc.toLocaleString();
+  document.getElementById('stat-stars').textContent   = withStars.toLocaleString();
+  document.getElementById('stat-sse').textContent     = '~' + sseCount.toLocaleString();
   document.getElementById('stat-updated').textContent = data.generated || '—';
-  document.getElementById('stat-top').textContent = topStars > 0 ? topStars.toLocaleString() : '—';
+  document.getElementById('stat-top').textContent     = topStars > 0 ? topStars.toLocaleString() : '—';
 }
 
 // ─── Rankings ─────────────────────────────────────────────────────────────────
@@ -282,17 +487,18 @@ function renderRankings(entries) {
     .sort((a,b) => b.github_stars - a.github_stars)
     .slice(0, 15);
 
-  const tbody = top15.map((e, i) => `
+  const html = top15.map((e, i) => `
     <tr>
       <td class="rnum">${i+1}</td>
       <td>
-        <a class="rlink" href="${escHtml(e.url)}" target="_blank" rel="noopener">${escHtml(shortName(e.name))}</a>
-        <span class="rcat">${escHtml(e.category || '')}</span>
+        <a class="rlink" href="#" onclick="navToDetail('${e._slug}');return false;">${escHtml(shortName(e.name))}</a>
+        <span class="rcat">${escHtml(e.category||'')}</span>
       </td>
       <td class="rcount">${fmtStars(e.github_stars)}</td>
     </tr>`).join('');
 
-  document.getElementById('rankings-table').innerHTML = tbody || '<tr><td colspan="3" class="dw-empty">No star data</td></tr>';
+  document.getElementById('rankings-table').innerHTML =
+    html || '<tr><td colspan="3" class="dw-empty">No star data</td></tr>';
 }
 
 // ─── Category list ────────────────────────────────────────────────────────────
@@ -316,10 +522,10 @@ function renderCategoryList(entries) {
   document.getElementById('category-list').innerHTML = html;
 }
 
-// ─── Sidebars ─────────────────────────────────────────────────────────────────
+// ─── Sidebars (directory mode) ────────────────────────────────────────────────
 function renderSidebars(entries) {
-  renderSidebarTop('sidebar-web', entries, 'web', 5);
-  renderSidebarTop('sidebar-db', entries, 'database', 5);
+  renderSidebarTop('sidebar-web',    entries, 'web',      5);
+  renderSidebarTop('sidebar-db',     entries, 'database', 5);
   renderSidebarRecent('sidebar-recent', entries, 5);
 }
 
@@ -331,11 +537,12 @@ function renderSidebarTop(id, entries, cat, n) {
 
   const html = top.map(e => `
     <div class="dw-side-item">
-      <a class="dw-side-link" href="${escHtml(e.url)}" target="_blank" rel="noopener">${escHtml(shortName(e.name))}</a>
+      <a class="dw-side-link" href="#" onclick="navToDetail('${e._slug}');return false;">${escHtml(shortName(e.name))}</a>
       <div class="dw-side-meta">${e.github_stars != null ? '★ '+e.github_stars.toLocaleString() : ''}</div>
     </div>`).join('');
 
-  document.getElementById(id).innerHTML = html || '<div class="dw-empty" style="font-size:10px;padding:4px 0">No data</div>';
+  document.getElementById(id).innerHTML =
+    html || '<div class="dw-empty" style="font-size:10px;padding:4px 0">No data</div>';
 }
 
 function renderSidebarRecent(id, entries, n) {
@@ -346,14 +553,15 @@ function renderSidebarRecent(id, entries, n) {
 
   const html = recent.map(e => `
     <div class="dw-side-item">
-      <a class="dw-side-link" href="${escHtml(e.url)}" target="_blank" rel="noopener">${escHtml(shortName(e.name))}</a>
-      <div class="dw-side-meta">${escHtml(e.last_updated || '')}</div>
+      <a class="dw-side-link" href="#" onclick="navToDetail('${e._slug}');return false;">${escHtml(shortName(e.name))}</a>
+      <div class="dw-side-meta">${escHtml(e.last_updated||'')}</div>
     </div>`).join('');
 
-  document.getElementById(id).innerHTML = html || '<div class="dw-empty" style="font-size:10px;padding:4px 0">No data</div>';
+  document.getElementById(id).innerHTML =
+    html || '<div class="dw-empty" style="font-size:10px;padding:4px 0">No data</div>';
 }
 
-// ─── Entries ──────────────────────────────────────────────────────────────────
+// ─── Directory entries ────────────────────────────────────────────────────────
 function renderEntries(entries, page) {
   const start = (page - 1) * PER_PAGE;
   const slice = entries.slice(start, start + PER_PAGE);
@@ -368,22 +576,22 @@ function renderEntries(entries, page) {
 
   const html = slice.map(e => {
     const meta = [
-      e.category ? escHtml(CATEGORY_LABELS[e.category] || e.category) : null,
-      e.license ? escHtml(e.license) : null,
-      e.transport ? escHtml(e.transport) : null,
-      e.github_stars != null ? '★ ' + e.github_stars.toLocaleString() : null
+      e.category    ? escHtml(CATEGORY_LABELS[e.category]||e.category) : null,
+      e.license     ? escHtml(e.license)    : null,
+      e.transport   ? escHtml(e.transport)  : null,
+      e.github_stars != null ? '★ '+e.github_stars.toLocaleString() : null
     ].filter(Boolean).join(' · ');
 
     const tags = [
       e.category ? `<span class="dw-etag">${escHtml(CATEGORY_LABELS[e.category]||e.category)}</span>` : '',
-      ...(e.tags||[]).slice(0,4).map(t => `<span class="dw-etag">${escHtml(t)}</span>`),
+      ...(e.tags||[]).slice(0,4).map(t=>`<span class="dw-etag">${escHtml(t)}</span>`),
       e.transport ? `<span class="dw-etag">${escHtml(e.transport)}</span>` : '',
       e.license && e.license !== 'unknown' ? `<span class="dw-etag">${escHtml(e.license)}</span>` : ''
     ].filter(Boolean).join('');
 
     return `<div class="dw-entry">
       <div class="dw-entry-hdr">
-        <a class="dw-entry-name" href="${escHtml(e.url)}" target="_blank" rel="noopener">${escHtml(e.name)}</a>
+        <a class="dw-entry-name" href="#" onclick="navToDetail('${e._slug}');return false;">${escHtml(e.name)}</a>
         <span class="dw-entry-meta">${meta}</span>
       </div>
       ${e.description ? `<div class="dw-entry-desc">${escHtml(e.description)}</div>` : ''}
@@ -393,7 +601,7 @@ function renderEntries(entries, page) {
 
   document.getElementById('entries-list').innerHTML = html;
   document.getElementById('result-count').textContent =
-    total.toLocaleString() + ' result' + (total !== 1 ? 's' : '') +
+    total.toLocaleString() + ' result' + (total!==1?'s':'') +
     ' · page ' + page + ' of ' + Math.ceil(total/PER_PAGE);
 
   renderPagination(total, page);
@@ -403,79 +611,61 @@ function renderEntries(entries, page) {
 // ─── Pagination ───────────────────────────────────────────────────────────────
 function renderPagination(total, page) {
   const pages = Math.ceil(total / PER_PAGE);
-  if (pages <= 1) { document.getElementById('pagination').innerHTML = ''; return; }
+  if (pages <= 1) { document.getElementById('pagination').innerHTML=''; return; }
 
   let html = '<div class="dw-pagination">';
   html += `<button class="dw-page-btn" onclick="goPage(${page-1})" ${page===1?'disabled':''}>‹ prev</button>`;
 
-  // show window of pages around current
   const range = [];
   for (let p = 1; p <= pages; p++) {
-    if (p === 1 || p === pages || (p >= page-2 && p <= page+2)) range.push(p);
-    else if (range[range.length-1] !== '…') range.push('…');
+    if (p===1||p===pages||(p>=page-2&&p<=page+2)) range.push(p);
+    else if (range[range.length-1]!=='…') range.push('…');
   }
-
   range.forEach(p => {
-    if (p === '…') html += `<span class="dw-page-info">…</span>`;
-    else html += `<button class="dw-page-btn ${p===page?'active':''}" onclick="goPage(${p})">${p}</button>`;
+    if (p==='…') html+=`<span class="dw-page-info">…</span>`;
+    else html+=`<button class="dw-page-btn ${p===page?'active':''}" onclick="goPage(${p})">${p}</button>`;
   });
 
   html += `<button class="dw-page-btn" onclick="goPage(${page+1})" ${page===pages?'disabled':''}>next ›</button>`;
   html += '</div>';
-
   document.getElementById('pagination').innerHTML = html;
 }
 
 // ─── Filtering + Sorting ──────────────────────────────────────────────────────
 function applyFilters() {
   let results = [...allEntries];
-
-  if (currentCategory) {
-    results = results.filter(e => e.category === currentCategory);
-  }
-
+  if (currentCategory) results = results.filter(e => e.category === currentCategory);
   if (currentSearch) {
     const q = currentSearch.toLowerCase();
     results = results.filter(e =>
       (e.name||'').toLowerCase().includes(q) ||
       (e.description||'').toLowerCase().includes(q) ||
       (e.category||'').toLowerCase().includes(q) ||
-      (e.tags||[]).some(t => t.toLowerCase().includes(q))
+      (e.tags||[]).some(t=>t.toLowerCase().includes(q))
     );
   }
-
-  // sort
-  if (currentSort === 'stars') {
-    results.sort((a,b) => (b.github_stars||0) - (a.github_stars||0));
-  } else if (currentSort === 'recent') {
-    results.sort((a,b) => (b.last_updated||'').localeCompare(a.last_updated||''));
-  } else if (currentSort === 'alpha') {
-    results.sort((a,b) => (a.name||'').localeCompare(b.name||''));
-  }
+  if (currentSort==='stars')  results.sort((a,b)=>(b.github_stars||0)-(a.github_stars||0));
+  if (currentSort==='recent') results.sort((a,b)=>(b.last_updated||'').localeCompare(a.last_updated||''));
+  if (currentSort==='alpha')  results.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
 
   filtered = results;
 
-  // update heading
   let heading = 'LATEST ENTRIES';
-  if (currentCategory) heading = (CATEGORY_LABELS[currentCategory]||currentCategory).toUpperCase() + ' — ALL ENTRIES';
+  if (currentSort==='stars' && !currentCategory && !currentSearch) heading = 'TOP ENTRIES — sorted by GitHub stars';
+  if (currentCategory) heading = (CATEGORY_LABELS[currentCategory]||currentCategory).toUpperCase()+' — ALL ENTRIES';
   if (currentSearch) heading = 'SEARCH RESULTS';
-  if (currentSort === 'stars' && !currentCategory && !currentSearch) heading = 'TOP ENTRIES — sorted by GitHub stars';
   document.getElementById('center-heading').textContent = heading;
 
-  // update filter badge
   const badge = document.getElementById('filter-badge');
-  if (currentCategory || currentSearch) {
-    const parts = [];
+  if (currentCategory||currentSearch) {
+    const parts=[];
     if (currentCategory) parts.push(CATEGORY_LABELS[currentCategory]||currentCategory);
     if (currentSearch) parts.push('"'+currentSearch+'"');
-    badge.innerHTML = `<span class="dw-filter-active" onclick="clearFilters()">✕ ${parts.join(' + ')}</span>`;
-  } else {
-    badge.innerHTML = '';
-  }
+    badge.innerHTML=`<span class="dw-filter-active" onclick="clearFilters()">✕ ${parts.join(' + ')}</span>`;
+  } else { badge.innerHTML=''; }
 
-  // update active category in sidebar
-  document.querySelectorAll('.dw-cat-row').forEach(row => {
-    row.classList.toggle('active', row.dataset.cat === currentCategory);
+  document.querySelectorAll('.dw-cat-row').forEach(row=>{
+    row.classList.toggle('active', row.dataset.cat===currentCategory);
   });
 
   currentPage = 1;
@@ -483,75 +673,58 @@ function applyFilters() {
 }
 
 function filterByCategory(cat) {
-  currentCategory = currentCategory === cat ? '' : cat;
+  if (document.getElementById('view-detail').style.display!=='none') goHome();
+  currentCategory = currentCategory===cat ? '' : cat;
   document.getElementById('cat-select').value = currentCategory;
   applyFilters();
 }
 
-function showAllCategories() {
-  currentCategory = '';
-  document.getElementById('cat-select').value = '';
-  applyFilters();
-}
-
-function onSearch() {
-  currentSearch = document.getElementById('search-input').value.trim();
-  applyFilters();
-}
-
-function doSearch() {
-  currentSearch = document.getElementById('search-input').value.trim();
-  applyFilters();
-}
-
-function onCatSelect() {
-  currentCategory = document.getElementById('cat-select').value;
-  applyFilters();
-}
+function showAllCategories() { currentCategory=''; document.getElementById('cat-select').value=''; applyFilters(); }
+function onSearch()  { currentSearch = document.getElementById('search-input').value.trim(); applyFilters(); }
+function doSearch()  { currentSearch = document.getElementById('search-input').value.trim(); applyFilters(); }
+function onCatSelect(){ currentCategory = document.getElementById('cat-select').value; applyFilters(); }
 
 function sortBy(s) {
   currentSort = s;
-  document.querySelectorAll('.dw-sort-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.dw-sort-btn').forEach(b=>b.classList.remove('active'));
   const btn = document.getElementById('sort-'+s);
   if (btn) btn.classList.add('active');
   applyFilters();
 }
 
 function clearFilters() {
-  currentCategory = '';
-  currentSearch = '';
-  document.getElementById('search-input').value = '';
-  document.getElementById('cat-select').value = '';
+  currentCategory=''; currentSearch='';
+  document.getElementById('search-input').value='';
+  document.getElementById('cat-select').value='';
   applyFilters();
 }
 
 function goPage(p) {
-  const pages = Math.ceil(filtered.length / PER_PAGE);
-  if (p < 1 || p > pages) return;
+  const pages = Math.ceil(filtered.length/PER_PAGE);
+  if (p<1||p>pages) return;
   currentPage = p;
   renderEntries(filtered, currentPage);
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
+function slugify(s) {
+  return (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+
 function escHtml(s) {
   if (!s) return '';
-  return String(s)
-    .replace(/&/g,'&amp;')
-    .replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;');
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 function shortName(name) {
   if (!name) return '';
-  // show just the repo name portion for long org/repo strings
   const parts = name.split('/');
-  return parts[parts.length - 1] || name;
+  return parts[parts.length-1] || name;
 }
 
 function fmtStars(n) {
-  if (n == null) return '—';
-  if (n >= 1000) return (n/1000).toFixed(1).replace(/\.0$/,'') + 'k';
+  if (n==null) return '—';
+  if (n>=1000) return (n/1000).toFixed(1).replace(/\.0$/,'')+'k';
   return n.toString();
 }
 </script>

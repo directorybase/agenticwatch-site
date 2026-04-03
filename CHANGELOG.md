@@ -1,5 +1,16 @@
 # Changelog — AgenticWatch.dev
 
+## v1.1 — 2026-04-02
+- Internal detail pages — clicking a server name stays on agenticwatch.dev
+- Hash-based routing: agenticwatch.dev/#/server/[slug]
+- Detail page: metadata table, full description, difficulty dots, platform badges
+- Detail sidebar: server stats + related entries in same category
+- "View on GitHub →" CTA on detail page (intentional, not the first click)
+- "More in [Category]" related entries panel
+- Browser back button works correctly
+- All rankings and sidebar links also go to internal detail pages
+- Logo click returns to index
+
 ## v1.0-dev — 2026-04-02
 - Fully working site: dynamic data load from data/mcp-servers.json
 - Live search (name, description, category, tags)
