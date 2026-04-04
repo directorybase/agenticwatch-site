@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgenticWatch.dev Inline Header</title>
+  <style>
+    :root {
+      --aw-bg: #0D0D0F;
+      --aw-cyan: #00C2FF;
+      --aw-text: #EAFBFF;
+      --aw-soft: #9FDBF0;
+      --aw-line: #12303A;
+    }
+
+    body {
+      margin: 0;
+      background: var(--aw-bg);
+      color: var(--aw-text);
+      font-family: Inter, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--aw-line);
+      padding: 18px 24px;
+    }
+
+    .site-header__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      width: min(100%, 760px);
+      display: block;
+    }
+
+    .brand svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    @media (max-width: 720px) {
+      .site-header {
+        padding: 14px 16px;
+      }
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+      }
+      .brand {
+        width: min(100%, 520px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="brand desktop">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 240" role="img" aria-label="AgenticWatch.dev desktop header">
+  
+    <g transform="translate(24,72) scale(1.5)">
+      <defs>
+        <clipPath id="clipDesktop">
+          <circle cx="32" cy="32" r="19"/>
+        </clipPath>
+      </defs>
+      <g fill="none" stroke="#00C2FF" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="32" r="19" stroke-width="4.2"/>
+        <path d="M32 32l13-10" stroke-width="4.2"/>
+      </g>
+      <g clip-path="url(#clipDesktop)">
+        <path d="M32 32 L48 21 A19 19 0 0 1 49 42 Z" fill="#00C2FF" opacity="0.30"/>
+      </g>
+      <circle cx="32" cy="32" r="4.5" fill="#00C2FF"/>
+    </g>
+    
+  <text x="148" y="120" fill="#EAFBFF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-1.4">AgenticWatch</text>
+  <text x="748" y="120" fill="#00C2FF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-1.4">.dev</text>
+  <text x="150" y="160" fill="#9FDBF0" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="2.8">TECHNICAL DIRECTORY FOR AI AGENT TOOLS</text>
+</svg>
+      </div>
+      <div class="brand mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-label="AgenticWatch.dev mobile header">
+  
+    <g transform="translate(16,24) scale(1.25)">
+      <defs>
+        <clipPath id="clipMobile">
+          <circle cx="32" cy="32" r="19"/>
+        </clipPath>
+      </defs>
+      <g fill="none" stroke="#00C2FF" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="32" r="19" stroke-width="4.2"/>
+        <path d="M32 32l13-10" stroke-width="4.2"/>
+      </g>
+      <g clip-path="url(#clipMobile)">
+        <path d="M32 32 L48 21 A19 19 0 0 1 49 42 Z" fill="#00C2FF" opacity="0.30"/>
+      </g>
+      <circle cx="32" cy="32" r="4.5" fill="#00C2FF"/>
+    </g>
+    
+  <text x="112" y="86" fill="#EAFBFF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">AgenticWatch</text>
+  <text x="478" y="86" fill="#00C2FF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">.dev</text>
+  <text x="18" y="136" fill="#9FDBF0" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="2.2">TECHNICAL DIRECTORY FOR AI AGENT TOOLS</text>
+</svg>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>AgenticWatch.dev</h1>
+    <p>Single-file header snippet for rapid testing on Cloudflare Pages.</p>
+  </main>
+</body>
+</html>

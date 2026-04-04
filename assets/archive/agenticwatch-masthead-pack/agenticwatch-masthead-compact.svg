@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 140" role="img" aria-label="AgenticWatch.dev compact lockup">
+  
+    <g transform="translate(12,22) scale(1.375)">
+      <defs>
+        <clipPath id="scopeClip">
+          <circle cx="32" cy="32" r="19"/>
+        </clipPath>
+      </defs>
+      <g fill="none" stroke="#00C2FF" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="32" r="19" stroke-width="4.2"/>
+        <path d="M32 32l13-10" stroke-width="4.2"/>
+      </g>
+      <g clip-path="url(#scopeClip)">
+        <path d="M32 32 L48 21 A19 19 0 0 1 49 42 Z" fill="#00C2FF" opacity="0.30"/>
+      </g>
+      <circle cx="32" cy="32" r="4.5" fill="#00C2FF"/>
+    </g>
+    
+  <text x="118" y="82" fill="#EAFBFF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1">AgenticWatch</text>
+  <text x="576" y="82" fill="#00C2FF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1">.dev</text>
+</svg>

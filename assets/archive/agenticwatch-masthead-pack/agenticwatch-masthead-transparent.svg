@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" role="img" aria-label="AgenticWatch.dev masthead">
+  
+    <g transform="translate(24,62) scale(1.5)">
+      <defs>
+        <clipPath id="scopeClip">
+          <circle cx="32" cy="32" r="19"/>
+        </clipPath>
+      </defs>
+      <g fill="none" stroke="#00C2FF" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="32" r="19" stroke-width="4.2"/>
+        <path d="M32 32l13-10" stroke-width="4.2"/>
+      </g>
+      <g clip-path="url(#scopeClip)">
+        <path d="M32 32 L48 21 A19 19 0 0 1 49 42 Z" fill="#00C2FF" opacity="0.30"/>
+      </g>
+      <circle cx="32" cy="32" r="4.5" fill="#00C2FF"/>
+    </g>
+    
+  <text x="148" y="112" fill="#EAFBFF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-1.2">AgenticWatch</text>
+  <text x="714" y="112" fill="#00C2FF" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-1.2">.dev</text>
+  <text x="150" y="154" fill="#9FDBF0" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" letter-spacing="2.5">TRACKING THE AI AGENT TOOL LANDSCAPE</text>
+</svg>

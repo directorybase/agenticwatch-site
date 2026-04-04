@@ -7,6 +7,8 @@
 <meta name="description" content="DistroWatch-style directory of 2,001+ MCP (Model Context Protocol) servers. Ranked by GitHub stars, categorized, and searchable."/>
 <meta name="robots" content="index, follow"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="shortcut icon" href="/favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -27,10 +29,17 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 .dw-right{background:var(--s1);border-left:1px solid var(--b1);padding:12px 10px;}
 
 /* header */
-.dw-hdr{background:var(--s2);border-bottom:2px solid var(--ac);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;}
-.dw-logo{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:800;color:var(--t1);letter-spacing:-0.5px;text-decoration:none;}
-.dw-logo span{color:var(--ac);}
-.dw-tagline{font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;}
+.dw-hdr{background:var(--s2);border-bottom:2px solid var(--ac);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.dw-logo{display:block;text-decoration:none;flex-shrink:0;}
+.dw-logo img{display:block;height:64px;width:auto;}
+.dw-logo-mobile{display:none;}
+.dw-hdr-meta{font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;text-align:right;white-space:nowrap;}
+@media(max-width:720px){
+  .dw-logo-desktop{display:none;}
+  .dw-logo-mobile{display:block;}
+  .dw-logo img{height:44px;}
+  .dw-hdr-meta{display:none;}
+}
 
 /* nav */
 .dw-nav{background:var(--s2);border-bottom:1px solid var(--b1);padding:5px 14px;display:flex;gap:0;}
@@ -173,11 +182,11 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 <body>
 
 <div class="dw-hdr">
-  <div>
-    <a href="#" class="dw-logo" onclick="goHome();return false;">Agentic<span>Watch</span>.dev</a>
-    <div class="dw-tagline" id="tagline">The MCP Server Index — loading...</div>
-  </div>
-  <div style="font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;text-align:right" id="hdr-meta">Loading…</div>
+  <a href="#" class="dw-logo" onclick="goHome();return false;" aria-label="AgenticWatch.dev home">
+    <img src="/assets/agenticwatch-header-desktop.svg" class="dw-logo-desktop" alt="AgenticWatch.dev — Technical Directory for AI Agent Tools" height="64" width="auto"/>
+    <img src="/assets/agenticwatch-header-mobile.svg" class="dw-logo-mobile" alt="AgenticWatch.dev" height="44" width="auto"/>
+  </a>
+  <div class="dw-hdr-meta" id="hdr-meta">Loading…</div>
 </div>
 
 <div class="dw-nav">
@@ -267,7 +276,7 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 
 <div class="dw-footer">
   <span id="footer-left">AgenticWatch.dev — The MCP Server Index · <a href="mailto:submit@agenticwatch.dev" style="color:var(--link);text-decoration:none;">Submit a Server</a></span>
-  <span>v1.1 · 2026-04-02</span>
+  <span>© 2026 Gregory D. Collins · v1.1 · 2026-04-02</span>
 </div>
 
 <script>
@@ -300,10 +309,8 @@ fetch('/data/mcp-servers.json')
       e._slug = slugify(e.name) + '-' + i;
       indexBySlug[e._slug] = e;
     });
-    document.getElementById('tagline').textContent =
-      'The MCP Server Index — ' + allEntries.length.toLocaleString() + ' entries tracked';
     document.getElementById('hdr-meta').innerHTML =
-      'Updated: ' + (data.generated || '—') + '<br/>Source: ' + (data.source || 'robodorm harvest v1');
+      allEntries.length.toLocaleString() + ' entries · Updated: ' + (data.generated || '—');
     renderStats(data);
     renderRankings(allEntries);
     renderCategoryList(allEntries);

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgenticWatch.dev Header Demo</title>
+  <link rel="icon" href="agenticwatch-favicon.ico">
+  <link rel="stylesheet" href="agenticwatch-header.css">
+  <style>
+    body {
+      margin: 0;
+      background: #0D0D0F;
+      color: #EAFBFF;
+      font-family: Inter, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      max-width: 72ch;
+      color: #9FDBF0;
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="aw-site-header">
+    <div class="aw-site-header__inner">
+      <a class="aw-brand aw-brand--desktop" href="/" aria-label="AgenticWatch home">
+        <img src="agenticwatch-header-desktop.svg" alt="AgenticWatch.dev">
+      </a>
+      <a class="aw-brand aw-brand--mobile" href="/" aria-label="AgenticWatch home">
+        <img src="agenticwatch-header-mobile.svg" alt="AgenticWatch.dev">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Technical directory for AI agent tools</h1>
+    <p>
+      This demo shows the locked header system using the final sonar-minimal mark.
+      The desktop and mobile SVG lockups are swapped responsively. You can drop these
+      files directly into a Cloudflare Pages project.
+    </p>
+  </main>
+</body>
+</html>
