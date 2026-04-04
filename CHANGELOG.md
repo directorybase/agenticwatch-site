@@ -1,5 +1,14 @@
 # Changelog — AgenticWatch.dev
 
+## v1.2 — 2026-04-03
+- New sonar-based masthead SVG system (desktop 1400×240, mobile 720×220)
+- Responsive logo switching at 720px breakpoint
+- favicon.svg updated to sonar minimal mark (64×64 dark rounded rect)
+- Fixed CSS specificity bug causing double logo on desktop
+- Text contrast raised: --t2 → 88%, --tm → 70% opacity (field labels legible)
+- © 2026 Gregory D. Collins added to footer
+- assets/ directory committed with full masthead system and archive of prior logos
+
 ## v1.1 — 2026-04-02
 - Internal detail pages — clicking a server name stays on agenticwatch.dev
 - Hash-based routing: agenticwatch.dev/#/server/[slug]
