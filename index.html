@@ -10,56 +10,270 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="shortcut icon" href="/favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --bg:#0D0D0F;--s1:#141418;--s2:#1A1A20;
+  --bg:#0D0D0F;
+  --bg-hdr:#0B0C0E;
+  --s1:#13161A;
+  --s2:#181C21;
+  --s3:#20262D;
+  --b0:#26303A;
+  --b1:rgba(0,194,255,0.15);
+  --b2:rgba(0,194,255,0.3);
+  --t1:#EAFBFF;
+  --t2:#B7D7E2;
+  --tm:#87A8B5;
+  --td:#5D7480;
   --ac:#00C2FF;
-  --b1:rgba(0,194,255,0.15);--b2:rgba(0,194,255,0.3);
-  --t1:#e8e8e8;--t2:rgba(232,232,232,0.88);--tm:rgba(232,232,232,0.70);
-  --link:#00C2FF;--link2:#00a8e0;
+  --ac-h:#35D1FF;
+  --ac-a:#009DCE;
+  --ac-soft:rgba(0,194,255,0.12);
+  --ac-line:rgba(0,194,255,0.35);
+  --link:#00C2FF;
+  --link2:#00a8e0;
+  --ok:#2DD4A3;
+  --warn:#F5B942;
+  --err:#FF6B6B;
+  --info:#58AFFF;
 }
-body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,sans-serif;}
+body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,sans-serif;line-height:1.5;}
+a{color:var(--ac);text-decoration:none;}
+a:hover{color:var(--ac-h);text-decoration:underline;}
 
-/* layout */
+/* ── HEADER ───────────────────────────────────────────────────────────────── */
+.hdr{
+  background:var(--bg-hdr);
+  border-bottom:2px solid var(--ac);
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:20px;
+  height:76px;
+}
+.hdr-brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+.hdr-brand:hover{text-decoration:none;}
+.hdr-logo-desktop{display:block;height:64px;width:auto;}
+.hdr-logo-mobile{display:none;height:44px;width:auto;}
+@media(max-width:720px){
+  .hdr-logo-desktop{display:none;}
+  .hdr-logo-mobile{display:block;}
+  .hdr{grid-template-columns:auto 1fr;height:56px;}
+  .hdr-search{display:none;}
+}
+
+.hdr-nav{display:flex;align-items:center;gap:0;justify-content:center;}
+.hdr-nav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  color:var(--t2);
+  padding:4px 12px;
+  border-right:1px solid var(--b0);
+  white-space:nowrap;
+  transition:color 0.1s;
+  text-decoration:none;
+}
+.hdr-nav a:first-child{border-left:1px solid var(--b0);}
+.hdr-nav a:hover{color:var(--t1);background:var(--s1);text-decoration:none;}
+.hdr-nav a.active{color:var(--ac);}
+
+.hdr-search{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.hdr-search input{
+  background:var(--s1);
+  border:1px solid var(--b0);
+  color:var(--t1);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:3px;
+  outline:none;
+  width:200px;
+}
+.hdr-search input::placeholder{color:var(--tm);}
+.hdr-search input:focus{border-color:var(--ac);box-shadow:0 0 0 2px var(--ac-soft);}
+.btn-primary{
+  background:var(--ac);
+  border:none;
+  color:#071015;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:600;
+  padding:4px 10px;
+  border-radius:3px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.btn-primary:hover{background:var(--ac-h);}
+
+/* ── UTILITY STRIP ────────────────────────────────────────────────────────── */
+.util-strip{
+  background:var(--s1);
+  border-bottom:1px solid var(--b0);
+  padding:5px 20px;
+  display:flex;
+  align-items:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+}
+.util-stat{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  padding:0 16px;
+  border-right:1px solid var(--b0);
+}
+.util-stat:first-child{padding-left:0;}
+.util-stat:last-child{border-right:none;}
+.util-num{color:var(--ac);font-weight:600;}
+.util-label{color:var(--tm);}
+
+/* ── TOP ROW (3-col editorial) ────────────────────────────────────────────── */
+.top-row{
+  display:grid;
+  grid-template-columns:180px 1fr 185px;
+  border-bottom:1px solid var(--b0);
+}
+.top-col{padding:14px 12px;}
+.top-col+.top-col{border-left:1px solid var(--b0);}
+.top-col-featured{position:relative;}
+
+/* section headings */
+.sh{
+  background:var(--ac);
+  color:#000;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.8px;
+  text-transform:uppercase;
+  padding:3px 7px;
+  margin:0 0 8px;
+  display:block;
+}
+.sh2{
+  border-bottom:1px solid var(--b2);
+  color:var(--ac);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  font-weight:500;
+  padding:2px 0 4px;
+  margin:12px 0 6px;
+  display:block;
+}
+
+/* Quick Browse */
+.browse-links{list-style:none;}
+.browse-links li{border-bottom:1px solid var(--b0);}
+.browse-links li:last-child{border-bottom:none;}
+.browse-links a{display:block;padding:3px 0;font-size:11px;color:var(--t2);}
+.browse-links a:hover{color:var(--t1);padding-left:3px;text-decoration:none;}
+.browse-section-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  color:var(--tm);
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  padding:6px 0 2px;
+  display:block;
+}
+
+/* Featured Guide */
+.badge-editors-pick{
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  font-weight:600;
+  color:#0D0D0F;
+  background:var(--warn);
+  padding:2px 6px;
+  border-radius:2px;
+  white-space:nowrap;
+  display:inline-block;
+  margin-bottom:10px;
+}
+.guide-featured{display:flex;flex-direction:column;height:100%;}
+.guide-featured-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:18px;
+  font-weight:800;
+  color:var(--t1);
+  line-height:1.25;
+  letter-spacing:-0.3px;
+  margin-bottom:10px;
+  text-decoration:none;
+  display:block;
+}
+.guide-featured-title:hover{color:var(--warn);text-decoration:none;}
+.guide-featured-excerpt{font-size:12px;color:var(--t2);line-height:1.65;margin-bottom:14px;flex:1;}
+.guide-byline{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  color:var(--tm);
+  margin-bottom:14px;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(245,185,66,0.15);
+  line-height:1.5;
+}
+.guide-byline span{color:var(--t2);}
+.top-col-featured{background:rgba(245,185,66,0.06);border-left:3px solid var(--warn) !important;}
+.btn-read-more{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  font-weight:600;
+  padding:7px 14px;
+  background:var(--warn);
+  color:#0D0D0F;
+  border-radius:3px;
+  text-decoration:none;
+  align-self:flex-start;
+  cursor:pointer;
+  border:none;
+}
+.btn-read-more:hover{background:#f9c85a;color:#0D0D0F;text-decoration:none;}
+
+/* Sponsor + Claim */
+.sponsor-card{background:var(--s1);border:1px solid var(--b0);padding:10px;margin-bottom:8px;border-radius:3px;}
+.sponsor-label{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--td);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px;display:block;}
+.sponsor-logo{width:28px;height:28px;background:var(--s3);border:1px solid var(--b1);border-radius:4px;margin-bottom:7px;display:flex;align-items:center;justify-content:center;}
+.sponsor-name{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--t1);margin-bottom:4px;}
+.sponsor-desc{font-size:10px;color:var(--t2);line-height:1.4;margin-bottom:8px;}
+.btn-outline{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:500;
+  padding:4px 10px;
+  border:1px solid var(--ac-line);
+  color:var(--ac);
+  border-radius:3px;
+  cursor:pointer;
+  background:var(--ac-soft);
+  text-decoration:none;
+}
+.btn-outline:hover{border-color:var(--ac);background:rgba(0,194,255,0.18);color:var(--ac-h);text-decoration:none;}
+.claim-card{background:var(--s1);border:1px dashed var(--b1);padding:10px;border-radius:3px;}
+.claim-title{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:var(--t2);margin-bottom:4px;}
+.claim-desc{font-size:10px;color:var(--tm);line-height:1.4;margin-bottom:7px;}
+
+/* ── DIRECTORY LAYOUT ─────────────────────────────────────────────────────── */
 .dw-wrap{display:grid;grid-template-columns:180px 1fr 185px;min-height:600px;font-size:12px;}
 .dw-left{background:var(--s1);border-right:1px solid var(--b1);padding:12px 10px;}
 .dw-center{padding:14px 16px;}
 .dw-right{background:var(--s1);border-left:1px solid var(--b1);padding:12px 10px;}
 
-/* header */
-.dw-hdr{background:var(--s2);border-bottom:2px solid var(--ac);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.dw-logo{display:block;text-decoration:none;flex-shrink:0;}
-.dw-logo img{display:block;height:64px;width:auto;}
-.dw-logo img.dw-logo-mobile{display:none;}
-.dw-hdr-meta{font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;text-align:right;white-space:nowrap;}
-@media(max-width:720px){
-  .dw-logo-desktop{display:none;}
-  .dw-logo-mobile{display:block;}
-  .dw-logo img{height:44px;}
-  .dw-hdr-meta{display:none;}
-}
-
-/* nav */
-.dw-nav{background:var(--s2);border-bottom:1px solid var(--b1);padding:5px 14px;display:flex;gap:0;}
-.dw-nav a{font-size:11px;color:var(--link);text-decoration:none;padding:3px 10px;border-right:1px solid var(--b1);}
-.dw-nav a:first-child{padding-left:0;}
-.dw-nav a:hover{color:var(--t1);}
-.dw-nav a.on{color:var(--t1);font-weight:500;}
-
 /* search bar */
 .dw-search-bar{background:var(--bg);border-bottom:1px solid var(--b1);padding:5px 14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .dw-search-bar input{background:var(--s2);border:1px solid var(--b2);color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 8px;border-radius:3px;outline:none;width:260px;}
 .dw-search-bar input::placeholder{color:var(--tm);}
+.dw-search-bar input:focus{border-color:var(--ac);}
 .dw-search-bar select{background:var(--s2);border:1px solid var(--b1);color:var(--t2);font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 6px;border-radius:3px;outline:none;}
 .dw-search-bar button{background:var(--ac);border:none;color:#000;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 10px;border-radius:3px;cursor:pointer;}
 .dw-search-bar button:hover{background:var(--link2);}
 .dw-sort-label{font-size:10px;color:var(--tm);font-family:'JetBrains Mono',monospace;margin-left:auto;}
-
-/* section headings */
-.dw-sh{background:var(--ac);color:#000;font-size:11px;font-weight:700;padding:3px 7px;margin:0 0 6px;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;}
-.dw-sh2{border-bottom:1px solid var(--b2);color:var(--ac);font-size:11px;font-weight:500;padding:2px 0 4px;margin:12px 0 6px;font-family:'JetBrains Mono',monospace;}
 
 /* rank table */
 .dw-rank{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:10px;}
@@ -131,17 +345,13 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 /* ── DETAIL PAGE ─────────────────────────────────────────────────────────── */
 .detail-back{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--link);text-decoration:none;margin-bottom:14px;}
 .detail-back:hover{color:var(--t1);}
-
 .detail-name{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:800;color:var(--t1);letter-spacing:-0.5px;margin-bottom:6px;line-height:1.2;}
-
 .detail-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
 .detail-badge{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:2px;border:1px solid var(--b2);color:var(--ac);}
 .detail-badge.cat{background:rgba(0,194,255,0.08);}
 .detail-stars{color:#ffb400;border-color:rgba(255,180,0,0.3);background:rgba(255,180,0,0.08);}
-
 .detail-desc{font-size:13px;color:var(--t2);line-height:1.7;margin-bottom:16px;padding:12px;background:var(--s1);border:1px solid var(--b1);border-radius:3px;}
 .detail-desc-placeholder{font-size:12px;color:var(--tm);font-family:'JetBrains Mono',monospace;padding:12px;background:var(--s1);border:1px solid var(--b1);border-radius:3px;margin-bottom:16px;}
-
 .detail-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:16px;}
 .detail-table tr{border-bottom:1px solid var(--b1);}
 .detail-table tr:last-child{border-bottom:none;}
@@ -150,55 +360,139 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
 .detail-table td:last-child{color:var(--t1);}
 .detail-table a{color:var(--link);text-decoration:none;word-break:break-all;}
 .detail-table a:hover{text-decoration:underline;color:var(--t1);}
-
 .detail-tags{display:flex;gap:5px;flex-wrap:wrap;}
 .detail-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--link);border:1px solid var(--b2);padding:2px 7px;border-radius:2px;}
-
 .detail-platforms{display:flex;gap:5px;flex-wrap:wrap;}
 .detail-platform{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2);border:1px solid var(--b1);padding:2px 7px;border-radius:2px;}
-
 .detail-difficulty{display:flex;gap:3px;align-items:center;}
 .diff-dot{width:9px;height:9px;border-radius:50%;background:var(--b2);}
 .diff-dot.on{background:var(--ac);}
-
 .detail-cta{display:flex;gap:10px;align-items:center;padding:14px 0;border-top:1px solid var(--b1);margin-top:4px;}
 .detail-cta-btn{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:7px 16px;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
 .detail-cta-primary{background:var(--ac);color:#000;border:none;}
 .detail-cta-primary:hover{background:var(--link2);color:#000;}
 .detail-cta-secondary{background:transparent;color:var(--link);border:1px solid var(--b2);}
 .detail-cta-secondary:hover{color:var(--t1);border-color:var(--t2);}
-
-/* detail right sidebar — related entries */
 .detail-related-item{padding:4px 0;border-bottom:1px solid var(--b1);font-size:11px;}
 .detail-related-item:last-child{border-bottom:none;}
 .detail-related-link{color:var(--link);text-decoration:none;display:block;}
 .detail-related-link:hover{color:var(--t1);text-decoration:underline;}
 
-/* footer */
-.dw-footer{background:var(--s2);border-top:1px solid var(--b1);padding:6px 14px;display:flex;justify-content:space-between;align-items:center;}
-.dw-footer span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--tm);}
+/* ── FOOTER CTA ──────────────────────────────────────────────────────────── */
+.footer-cta{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--b0);
+  border-top:1px solid var(--b0);
+}
+.footer-cta-cell{background:var(--s1);padding:12px 16px;display:flex;align-items:center;gap:10px;}
+.footer-cta-icon{font-size:18px;flex-shrink:0;opacity:0.7;}
+.footer-cta-title{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--t1);margin-bottom:2px;}
+.footer-cta-desc{font-size:10px;color:var(--tm);}
+.footer-cta-btn{margin-left:auto;flex-shrink:0;}
+
+/* footer bar */
+.dw-footer{background:var(--bg-hdr);border-top:1px solid var(--b0);padding:7px 20px;display:flex;justify-content:space-between;align-items:center;}
+.dw-footer span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);}
+.dw-footer a{color:var(--tm);}
+.dw-footer a:hover{color:var(--t1);}
 </style>
 </head>
 <body>
 
-<div class="dw-hdr">
-  <a href="#" class="dw-logo" onclick="goHome();return false;" aria-label="AgenticWatch.dev home">
-    <img src="/assets/agenticwatch-header-desktop.svg" class="dw-logo-desktop" alt="AgenticWatch.dev — Technical Directory for AI Agent Tools" height="64" width="auto"/>
-    <img src="/assets/agenticwatch-header-mobile.svg" class="dw-logo-mobile" alt="AgenticWatch.dev" height="44" width="auto"/>
+<!-- ── HEADER ─────────────────────────────────────────────────────────────── -->
+<header class="hdr">
+  <a href="#" class="hdr-brand" onclick="goHome();return false;" aria-label="AgenticWatch.dev home">
+    <img src="/assets/agenticwatch-header-desktop.svg" class="hdr-logo-desktop" alt="AgenticWatch.dev — Technical Directory for AI Agent Tools" height="64"/>
+    <img src="/assets/agenticwatch-header-mobile.svg" class="hdr-logo-mobile" alt="AgenticWatch.dev" height="44"/>
   </a>
-  <div class="dw-hdr-meta" id="hdr-meta">Loading…</div>
+  <nav class="hdr-nav">
+    <a href="#" id="nav-home" class="active" onclick="goHome();return false;">Servers</a>
+    <a href="#" onclick="goHome();showAllCategories();return false;">Categories</a>
+    <a href="#" onclick="showGuide();return false;">Guides</a>
+    <a href="#">Compare</a>
+    <a href="mailto:submit@agenticwatch.dev">Submit</a>
+    <a href="#">Advertise</a>
+  </nav>
+  <div class="hdr-search">
+    <input type="text" id="hdr-search-input" placeholder="Search servers…" onkeydown="if(event.key==='Enter')doHeaderSearch()"/>
+    <button class="btn-primary" onclick="doHeaderSearch()">Search</button>
+  </div>
+</header>
+
+<!-- ── UTILITY STRIP ──────────────────────────────────────────────────────── -->
+<div class="util-strip" id="util-strip">
+  <div class="util-stat"><span class="util-num" id="util-total">—</span><span class="util-label">servers tracked</span></div>
+  <div class="util-stat"><span class="util-num" id="util-cats">—</span><span class="util-label">categories</span></div>
+  <div class="util-stat"><span class="util-num" id="util-new">—</span><span class="util-label">new this week</span></div>
+  <div class="util-stat"><span class="util-num" id="util-updated">—</span><span class="util-label">stars updated</span></div>
 </div>
 
-<div class="dw-nav">
-  <a href="#" id="nav-home" class="on" onclick="goHome();return false;">Home</a>
-  <a href="#" onclick="goHome();sortBy('stars');return false;">Rankings</a>
-  <a href="#" onclick="goHome();setTimeout(()=>document.getElementById('search-input').focus(),50);return false;">Search</a>
-  <a href="#" onclick="goHome();showAllCategories();return false;">Categories</a>
-  <a href="#" onclick="goHome();sortBy('recent');return false;">New Entries</a>
-  <a href="mailto:submit@agenticwatch.dev">Submit Server</a>
-  <a href="#">About</a>
+<!-- ── TOP ROW ────────────────────────────────────────────────────────────── -->
+<div class="top-row">
+
+  <!-- LEFT: Quick Browse -->
+  <div class="top-col">
+    <span class="sh">Quick Browse</span>
+    <span class="browse-section-label">By Type</span>
+    <ul class="browse-links">
+      <li><a href="#" onclick="goHome();sortBy('stars');return false;">Top Ranked</a></li>
+      <li><a href="#" onclick="goHome();sortBy('recent');return false;">Recently Added</a></li>
+      <li><a href="#" onclick="goHome();sortBy('alpha');return false;">A–Z</a></li>
+    </ul>
+    <span class="browse-section-label">By Category</span>
+    <ul class="browse-links">
+      <li><a href="#" onclick="goHome();filterByCategory('developer-tools');return false;">Dev Tools</a></li>
+      <li><a href="#" onclick="goHome();filterByCategory('database');return false;">Databases</a></li>
+      <li><a href="#" onclick="goHome();filterByCategory('web');return false;">Web</a></li>
+      <li><a href="#" onclick="goHome();filterByCategory('filesystem');return false;">Filesystem</a></li>
+      <li><a href="#" onclick="goHome();filterByCategory('productivity');return false;">Productivity</a></li>
+      <li><a href="#" onclick="goHome();filterByCategory('ai-ml');return false;">AI / ML</a></li>
+      <li><a href="#" onclick="goHome();filterByCategory('communication');return false;">Communication</a></li>
+      <li><a href="#" onclick="goHome();showAllCategories();return false;">All Categories →</a></li>
+    </ul>
+  </div>
+
+  <!-- CENTER: Featured Guide -->
+  <div class="top-col top-col-featured" id="featured-guide-col">
+    <span class="sh">Featured Guide</span>
+    <div class="guide-featured">
+      <span class="badge-editors-pick">Editor's Pick</span>
+      <a href="javascript:void(0)" class="guide-featured-title" onclick="showGuide()">Best MCP Servers for Claude Code</a>
+      <p class="guide-featured-excerpt">Claude Code is already a capable coding agent. What it cannot do by default is touch your GitHub PRs, query your database, open a browser, or pull current documentation for the library you're using right now. MCP is the fix — and these 15 servers are the ones worth installing.</p>
+      <div class="guide-byline">
+        SMALL COUNCIL REVIEW &nbsp;·&nbsp; <span>Claude Sonnet 4.6, Gemini 1.5 Pro, Grok, GPT-5.4 Thinking</span><br/>
+        April 4, 2026 &nbsp;·&nbsp; 15 servers reviewed
+      </div>
+      <button class="btn-read-more" onclick="showGuide()">Read the full guide →</button>
+    </div>
+  </div>
+
+  <!-- RIGHT: Sponsored + Claim -->
+  <div class="top-col">
+    <div class="sponsor-card">
+      <span class="sponsor-label">Sponsored Listing</span>
+      <div class="sponsor-logo">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <rect width="14" height="14" rx="3" fill="#26303A"/>
+          <path d="M3 7h8M7 3v8" stroke="#5D7480" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="sponsor-name">Your Tool Here</div>
+      <div class="sponsor-desc">Reach developers evaluating AI agent infrastructure. Feature your MCP server to 12,000+ monthly visitors.</div>
+      <a href="mailto:advertise@agenticwatch.dev" class="btn-outline">Learn more</a>
+    </div>
+    <div class="claim-card">
+      <div class="claim-title">Claim This Listing</div>
+      <div class="claim-desc">Is this your server? Claim your entry to add documentation and contact info.</div>
+      <a href="mailto:submit@agenticwatch.dev" class="btn-outline" style="font-size:10px;">Claim it →</a>
+    </div>
+  </div>
+
 </div>
 
+<!-- ── SEARCH BAR ─────────────────────────────────────────────────────────── -->
 <div class="dw-search-bar" id="search-bar">
   <span style="font-size:11px;color:var(--t2)">Search:</span>
   <input id="search-input" placeholder="server name, category, keyword..." oninput="onSearch()"/>
@@ -225,34 +519,31 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
   <button class="dw-sort-btn" id="sort-alpha" onclick="sortBy('alpha')">A–Z</button>
 </div>
 
+<!-- ── DIRECTORY ──────────────────────────────────────────────────────────── -->
 <div class="dw-wrap">
 
-  <!-- LEFT: Rankings + Categories (always visible) -->
   <div class="dw-left">
-    <div class="dw-sh">TOP 15 BY STARS</div>
+    <div class="sh">TOP 15 BY STARS</div>
     <table class="dw-rank" id="rankings-table">
       <tr><td colspan="3" class="dw-loading">loading…</td></tr>
     </table>
-    <div class="dw-sh2">CATEGORIES</div>
+    <div class="sh2">CATEGORIES</div>
     <div id="category-list"><div class="dw-loading">loading…</div></div>
   </div>
 
-  <!-- CENTER: Directory view -->
   <div class="dw-center" id="view-directory">
     <div class="dw-center-hdr">
-      <div class="dw-sh" style="margin:0" id="center-heading">LATEST ENTRIES</div>
+      <div class="sh" style="margin:0" id="center-heading">LATEST ENTRIES</div>
       <span class="dw-result-count" id="result-count"></span>
     </div>
     <div id="entries-list"><div class="dw-loading">Loading MCP server data…</div></div>
     <div id="pagination"></div>
   </div>
 
-  <!-- CENTER: Detail view (hidden until needed) -->
   <div class="dw-center" id="view-detail" style="display:none"></div>
 
-  <!-- RIGHT: Stats sidebar (directory mode) -->
   <div class="dw-right" id="sidebar-directory">
-    <div class="dw-sh">INDEX STATS</div>
+    <div class="sh">INDEX STATS</div>
     <div class="dw-stats">
       <div class="dw-stat-row"><span class="dw-stat-label">Total entries</span><span class="dw-stat-val" id="stat-total">—</span></div>
       <div class="dw-stat-row"><span class="dw-stat-label">With descriptions</span><span class="dw-stat-val" id="stat-desc">—</span></div>
@@ -261,22 +552,49 @@ body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,s
       <div class="dw-stat-row"><span class="dw-stat-label">Last updated</span><span class="dw-stat-val" id="stat-updated">—</span></div>
       <div class="dw-stat-row"><span class="dw-stat-label">Top star count</span><span class="dw-stat-val" id="stat-top">—</span></div>
     </div>
-    <div class="dw-sh2">WEB CATEGORY TOP 5</div>
+    <div class="sh2">WEB CATEGORY TOP 5</div>
     <div id="sidebar-web"><div class="dw-loading">loading…</div></div>
-    <div class="dw-sh2">DATABASE CATEGORY TOP 5</div>
+    <div class="sh2">DATABASE CATEGORY TOP 5</div>
     <div id="sidebar-db"><div class="dw-loading">loading…</div></div>
-    <div class="dw-sh2">RECENTLY ADDED</div>
+    <div class="sh2">RECENTLY ADDED</div>
     <div id="sidebar-recent"><div class="dw-loading">loading…</div></div>
   </div>
 
-  <!-- RIGHT: Detail sidebar (hidden until needed) -->
   <div class="dw-right" id="sidebar-detail" style="display:none"></div>
 
 </div>
 
+<!-- ── FOOTER CTA ─────────────────────────────────────────────────────────── -->
+<div class="footer-cta">
+  <div class="footer-cta-cell">
+    <div class="footer-cta-icon">⊕</div>
+    <div>
+      <div class="footer-cta-title">Submit a Server</div>
+      <div class="footer-cta-desc">Add your MCP server to the index</div>
+    </div>
+    <a href="mailto:submit@agenticwatch.dev" class="btn-outline footer-cta-btn">Submit →</a>
+  </div>
+  <div class="footer-cta-cell">
+    <div class="footer-cta-icon">◈</div>
+    <div>
+      <div class="footer-cta-title">Claim a Listing</div>
+      <div class="footer-cta-desc">Take ownership of your server's entry</div>
+    </div>
+    <a href="mailto:submit@agenticwatch.dev" class="btn-outline footer-cta-btn">Claim →</a>
+  </div>
+  <div class="footer-cta-cell">
+    <div class="footer-cta-icon">◎</div>
+    <div>
+      <div class="footer-cta-title">Advertise</div>
+      <div class="footer-cta-desc">Reach developers building with MCP</div>
+    </div>
+    <a href="mailto:advertise@agenticwatch.dev" class="btn-outline footer-cta-btn">Get rates →</a>
+  </div>
+</div>
+
 <div class="dw-footer">
-  <span id="footer-left">AgenticWatch.dev — The MCP Server Index · <a href="mailto:submit@agenticwatch.dev" style="color:var(--link);text-decoration:none;">Submit a Server</a></span>
-  <span>© 2026 Gregory D. Collins · v1.1 · 2026-04-02</span>
+  <span>AgenticWatch.dev — The MCP Server Index · <a href="mailto:submit@agenticwatch.dev">Submit a Server</a> · <a href="#">About</a></span>
+  <span>© 2026 Gregory D. Collins · v2.0 · 2026-04-05</span>
 </div>
 
 <script>
@@ -298,6 +616,9 @@ const CATEGORY_LABELS = {
   'other':'Other'
 };
 
+// Save guide card HTML before any JS touches it
+const GUIDE_CARD_HTML = document.getElementById('featured-guide-col').innerHTML;
+
 // ─── Load data ────────────────────────────────────────────────────────────────
 Promise.all([
   fetch('/data/mcp-servers.json').then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }),
@@ -306,7 +627,7 @@ Promise.all([
   .then(([data, starsData]) => {
     allEntries = data.entries || [];
 
-    // Merge live star counts if stars.json is available
+    // Merge live star counts
     if (starsData && starsData.stars) {
       allEntries.forEach(e => {
         if (e.url && e.url.startsWith('https://github.com/')) {
@@ -320,17 +641,24 @@ Promise.all([
       });
     }
 
-    // build slug index
+    // Build slug index
     allEntries.forEach((e, i) => {
       e._idx = i;
       e._slug = slugify(e.name) + '-' + i;
       indexBySlug[e._slug] = e;
     });
 
+    // Populate utility strip
+    const cats = new Set(allEntries.map(e => e.category).filter(Boolean));
+    const oneWeekAgo = new Date(Date.now() - 7*24*60*60*1000).toISOString().slice(0,10);
+    const newThisWeek = allEntries.filter(e => e.last_updated && e.last_updated >= oneWeekAgo).length;
     const starsUpdated = starsData ? starsData.updated : null;
-    document.getElementById('hdr-meta').innerHTML =
-      allEntries.length.toLocaleString() + ' entries · Stars: ' +
-      (starsUpdated ? starsUpdated.replace('T',' ').replace('Z',' UTC') : 'static');
+
+    document.getElementById('util-total').textContent = allEntries.length.toLocaleString();
+    document.getElementById('util-cats').textContent = cats.size;
+    document.getElementById('util-new').textContent = newThisWeek.toLocaleString();
+    document.getElementById('util-updated').textContent =
+      starsUpdated ? starsUpdated.replace('T',' ').replace('Z',' UTC') : 'static';
 
     renderStats(data);
     renderRankings(allEntries);
@@ -349,11 +677,9 @@ function router() {
   if (hash.startsWith('#/server/')) {
     const slug = hash.replace('#/server/', '');
     const entry = indexBySlug[slug];
-    if (entry) {
-      showDetail(entry);
-    } else {
-      showDirectory();
-    }
+    if (entry) { showDetail(entry); } else { showDirectory(); }
+  } else if (hash === '#/guide/best-mcp-servers-for-claude-code') {
+    renderGuide();
   } else {
     showDirectory();
   }
@@ -363,6 +689,7 @@ window.addEventListener('hashchange', router);
 
 function goHome() {
   window.location.hash = '';
+  restoreGuideCard();
   showDirectory();
 }
 
@@ -377,7 +704,7 @@ function showDirectory() {
   document.getElementById('sidebar-directory').style.display = '';
   document.getElementById('sidebar-detail').style.display = 'none';
   document.getElementById('search-bar').style.display = '';
-  document.getElementById('nav-home').classList.add('on');
+  document.getElementById('nav-home').classList.add('active');
   applyFilters();
 }
 
@@ -387,29 +714,161 @@ function showDetail(entry) {
   document.getElementById('sidebar-directory').style.display = 'none';
   document.getElementById('sidebar-detail').style.display = '';
   document.getElementById('search-bar').style.display = 'none';
-  document.getElementById('nav-home').classList.remove('on');
+  document.getElementById('nav-home').classList.remove('active');
   document.title = entry.name + ' — AgenticWatch.dev';
   renderDetailCenter(entry);
   renderDetailSidebar(entry);
   window.scrollTo(0, 0);
 }
 
+// ─── Header search ────────────────────────────────────────────────────────────
+function doHeaderSearch() {
+  const val = document.getElementById('hdr-search-input').value.trim();
+  if (!val) return;
+  document.getElementById('search-input').value = val;
+  currentSearch = val;
+  goHome();
+}
+
+// ─── Featured Guide ───────────────────────────────────────────────────────────
+function showGuide() {
+  window.location.hash = '#/guide/best-mcp-servers-for-claude-code';
+  renderGuide();
+}
+
+function restoreGuideCard() {
+  const col = document.getElementById('featured-guide-col');
+  col.innerHTML = GUIDE_CARD_HTML;
+}
+
+function renderGuide() {
+  const col = document.getElementById('featured-guide-col');
+  const colHeight = col.offsetHeight;
+  col.innerHTML = `
+    <div style="height:${colHeight - 28}px;overflow-y:auto;padding-right:6px;" id="guide-scroll">
+      <a href="javascript:void(0)" onclick="goHome()" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);display:inline-flex;align-items:center;gap:4px;margin-bottom:14px;text-decoration:none;">← Back to home</a>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:600;color:#0D0D0F;background:var(--warn);padding:2px 6px;border-radius:2px;display:inline-block;margin-bottom:10px;">Editor's Pick</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:800;color:var(--t1);line-height:1.2;letter-spacing:-0.3px;margin-bottom:6px;">Best MCP Servers for Claude Code</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--tm);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(245,185,66,0.15);">SMALL COUNCIL REVIEW &nbsp;·&nbsp; Claude Sonnet 4.6, Gemini 1.5 Pro, Grok, GPT-5.4 Thinking &nbsp;·&nbsp; April 4, 2026 &nbsp;·&nbsp; 15 servers</div>
+      <div id="guide-body" style="font-size:12px;color:var(--t2);line-height:1.7;"></div>
+    </div>`;
+  document.getElementById('guide-body').innerHTML = guideHTML();
+}
+
+function guideHTML() {
+  const h2 = (n,t,gh,stars,transport,diff) => `
+    <div style="margin:20px 0 6px;padding-top:16px;border-top:1px solid rgba(245,185,66,0.12);">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:800;color:var(--t1);">#${n} — ${t}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--tm);margin-top:3px;">
+        ${gh ? `<a href="${gh}" target="_blank" style="color:var(--ac);">${gh.replace('https://github.com/','')}</a> &nbsp;·&nbsp; ` : ''}★ ${stars} &nbsp;·&nbsp; ${transport} &nbsp;·&nbsp; ${diff}
+      </div>
+    </div>`;
+  const review = (model, url, text) => `
+    <div style="margin:8px 0 4px;font-size:11px;font-style:italic;color:var(--tm);">Best review by <a href="${url}" target="_blank" style="color:var(--ac);">${model}</a>:</div>
+    <p style="margin-bottom:8px;">${text}</p>`;
+  const caveat = t => `<p style="font-size:11px;color:var(--tm);background:var(--s1);border-left:2px solid var(--b0);padding:6px 8px;margin-bottom:6px;"><strong style="color:var(--t2);">Caveat:</strong> ${t}</p>`;
+  const note = t => `<p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);font-style:italic;margin-bottom:4px;"><em>Council note: ${t}</em></p>`;
+
+  return `
+    <p style="margin-bottom:14px;">Claude Code is already a capable coding agent. It edits files, runs shell commands, works across a codebase, and calls the Anthropic API. What it cannot do by default is touch your GitHub PRs, query your database, open a browser, or pull current documentation for the library you're using right now.</p>
+    <p style="margin-bottom:14px;">MCP (Model Context Protocol) is the fix. As of early 2026, the ecosystem has grown past 400 community-built servers. Most aren't worth your time. These 15 are.</p>
+
+    ${h2(1,'GitHub MCP Server','https://github.com/github/github-mcp-server','~28,600 ★','stdio / HTTP','Easy')}
+    ${review('GPT-5.4 Thinking','https://openai.com','For Claude Code, this is the most broadly useful MCP server because it closes the loop between local coding work and the system of record: repos, PRs, issues, Actions, labels, and code security. It belongs at #1 because Claude Code already edits code well locally; what it needs most is authoritative repo state, PR context, CI visibility, and issue workflows — which GitHub\'s server exposes directly.')}
+    ${caveat('Rate limits of 5,000 requests per hour can be hit during heavy agentic sessions. Use fine-grained PATs scoped to only the repos and permissions you need.')}
+    ${note('Ranked #1 or #2 by all four models.')}
+
+    ${h2(2,'Context7','https://github.com/upstash/context7','~51,600 ★','stdio / HTTP','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code\'s training data is months old. When you\'re working with Next.js 15, Prisma 6, React 19, or any fast-moving framework, Claude will generate code against outdated API signatures — and it won\'t know it\'s doing it. Context7 solves this by fetching current, version-specific documentation for any library at call time and injecting it into the prompt. This is arguably the highest-ROI server on this list for day-to-day coding.')}
+    ${caveat('The parsing backend and crawling engine are proprietary — only the MCP wrapper is open source. Quality varies by library.')}
+    ${note('Ranked #2 by both Claude and ChatGPT. Directly addresses Claude Code\'s most common failure mode.')}
+
+    ${h2(3,'Playwright MCP','https://github.com/microsoft/playwright-mcp','~30,300 ★','stdio / HTTP','Easy')}
+    ${review('Grok','https://x.ai','Provides structured browser automation via accessibility trees — no screenshots needed — letting Claude Code autonomously navigate, click, type, mock networks, and run E2E tests during web and full-stack builds. Microsoft backing ensures rock-solid stability and frequent updates.')}
+    ${caveat('Requires Playwright browsers installed (npx playwright install chromium) before first use.')}
+    ${note('Appeared in all four lists.')}
+
+    ${h2(4,'Sentry MCP','https://github.com/getsentry/sentry-mcp','~621 ★ (repo)','stdio / HTTP','Easy')}
+    ${review('GPT-5.4 Thinking','https://openai.com','Sentry is unusually well aligned with Claude Code because it is explicitly optimized for coding assistants and debugging workflows. This makes it high-value for "fix the real production error, not the hypothetical one" work: issues, traces, and performance data become available inside the coding session.')}
+    ${caveat('Most valuable only if the team already has good Sentry coverage. Pair with GitHub MCP to close the full loop.')}
+    ${note('"Fix the real production error, not the hypothetical one" was the standout line of the entire review round.')}
+
+    ${h2(5,'Filesystem MCP Server','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code has native file access within a project directory. The Filesystem MCP server adds sandboxed access to directories outside that project — shared config directories, monorepo sibling packages, data folders. You specify exactly which directories to expose at startup. Nothing outside that list is reachable.')}
+    ${caveat('Claude Code\'s native access is usually sufficient for single-project work. Earns its place in multi-package setups.')}
+    ${note('Gemini ranked this #1; Claude ranked it #4.')}
+
+    ${h2(6,'Sequential Thinking MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Gemini 1.5 Pro','https://gemini.google.com','This isn\'t a tool in the traditional sense — it\'s a reasoning enhancer. It forces Claude to use a structured, step-by-step reflection process, which is critical for complex refactors in the CLI where "one-shot" logic often fails.')}
+    ${caveat('Adds latency where it engages. Best scoped to complex sessions rather than left on globally.')}
+    ${note('All four models included this server.')}
+
+    ${h2(7,'Fetch MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code cannot access the internet by default. Fetch MCP adds the ability to retrieve any URL and convert it to clean Markdown — API docs, release notes, changelog entries. Anthropic-maintained, no API key required.')}
+    ${caveat('For JavaScript-heavy pages, Firecrawl outperforms this server. Fetch is right for simple URL retrieval.')}
+
+    ${h2(8,'Memory MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code has no memory between sessions by default. The Memory server implements a knowledge graph that persists entities and relationships across conversations — your architecture decisions, technical constraints, known bugs, working patterns for your codebase.')}
+    ${caveat('Only as useful as how disciplined you are about curating it. Stale entries will mislead the model.')}
+
+    ${h2(9,'Firecrawl MCP','https://github.com/firecrawl/firecrawl-mcp-server','~86,000 ★','stdio / HTTP','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Where Fetch MCP handles simple URL retrieval, Firecrawl handles the hard cases: JavaScript-heavy pages, multi-page crawls, structured data extraction, batch scraping. It can traverse entire documentation sites in a single operation. There\'s also an autonomous agent mode that accepts a natural language prompt and finds relevant information across multiple sources on its own.')}
+    ${caveat('The free tier\'s 500 credits deplete quickly on batch operations. A paid plan is needed for sustained workflows.')}
+
+    ${h2(10,'Supabase MCP','https://github.com/supabase-community/supabase-mcp','~2,600 ★','HTTP (SSE)','Easy')}
+    ${review('GPT-5.4 Thinking','https://openai.com','Supabase MCP is one of the best "full-stack in one shot" servers for Claude Code. It compresses database and platform context into a single connection: query your Postgres database, inspect table schemas, manage RLS policies, create migrations, debug auth issues, and interact with Edge Functions — all through natural language.')}
+    ${caveat('Enable read-only mode by default. OAuth requires a browser redirect — use a service token in headless CI. Prompt injection via database content is a documented risk.')}
+
+    ${h2(11,'PostgreSQL MCP Pro','https://github.com/crystaldba/postgres-mcp','~2,500 ★','stdio / HTTP','Moderate')}
+    ${review('GPT-5.4 Thinking','https://openai.com','This is one of the few database MCP servers that goes beyond "run SQL" into explain plans, index tuning, health checks, and performance diagnostics — much more valuable when the job is to fix slow queries or bad schema design.')}
+    ${caveat('Use a dedicated read-only user. The crystaldba version is the stronger pick for serious backend work.')}
+
+    ${h2(12,'Git MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Grok','https://x.ai','Local Git repo tools — commit, branch, diff, blame, search — that pair perfectly with the GitHub MCP server for end-to-end version control without leaving the CLI. The distinct value over Claude Code\'s native git is structured, programmatic history analysis.')}
+    ${caveat('Local-only. Git MCP earns its place specifically for history analysis and context-building across large repos.')}
+
+    ${h2(13,'Linear MCP',null,'N/A (hosted)','HTTP (SSE)','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','The combinatorial value with GitHub MCP is the headline: Claude Code can diagnose a bug, write the fix, open the PR, and update the Linear ticket to "In Review" in a single workflow without touching a browser.')}
+    ${caveat('Most valuable as a companion to GitHub MCP. If your team doesn\'t use Linear, skip it.')}
+
+    ${h2(14,'Figma MCP',null,'N/A (hosted)','HTTP (SSE)','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Figma MCP exposes your Figma selection\'s live component structure to Claude — hierarchy, auto-layout values, spacing tokens, component references, design variables, and color styles. The practical result: Claude Code generates code against the actual design rather than a screenshot or verbal description.')}
+    ${caveat('Requires Figma Dev Mode access, a paid feature on most plans.')}
+
+    ${h2(15,'Cloudflare MCP Server','https://github.com/cloudflare/mcp-server-cloudflare','~3,600 ★','HTTP (SSE)','Moderate')}
+    ${review('GPT-5.4 Thinking','https://openai.com','If a Claude Code user ships on Cloudflare Pages, Workers, D1, R2, DNS, or observability, this server is extremely practical. It spans deployment, infrastructure, and debugging tasks in one official package.')}
+    ${caveat('Irrelevant if your stack doesn\'t use Cloudflare. Scope permissions tightly.')}
+    ${note('ChatGPT was the only model to include this — a legitimate omission from the others.')}
+
+    <div style="margin-top:24px;padding:14px;background:var(--s1);border:1px solid rgba(245,185,66,0.2);border-radius:3px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--t1);margin-bottom:8px;">How to Think About This Stack</div>
+      <p style="margin-bottom:8px;"><strong style="color:var(--t1);">Start here:</strong> GitHub MCP + Context7 + Playwright. Three servers, 80% of the value.</p>
+      <p style="margin-bottom:8px;"><strong style="color:var(--t1);">Add based on your stack:</strong> Supabase or Postgres MCP Pro for databases. Sentry for production debugging. Linear, Figma, Cloudflare if you use them.</p>
+      <p><strong style="color:var(--t1);">Install globally and forget:</strong> Filesystem, Fetch, Memory, Sequential Thinking, Git MCP — all in Anthropic's reference monorepo. Zero config, no API keys.</p>
+    </div>
+
+    <div style="margin-top:20px;padding-top:14px;border-top:1px solid rgba(245,185,66,0.15);font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);">
+      <div style="margin-bottom:6px;color:var(--tm);font-weight:600;">SMALL COUNCIL — ATTRIBUTION</div>
+      <div>Claude Sonnet 4.6 · <a href="https://anthropic.com" target="_blank" style="color:var(--ac);">Anthropic</a></div>
+      <div>Gemini 1.5 Pro · <a href="https://gemini.google.com" target="_blank" style="color:var(--ac);">Google</a></div>
+      <div>Grok · <a href="https://x.ai" target="_blank" style="color:var(--ac);">xAI</a></div>
+      <div>GPT-5.4 Thinking · <a href="https://openai.com" target="_blank" style="color:var(--ac);">OpenAI</a></div>
+      <div style="margin-top:6px;">Research date: April 4, 2026</div>
+    </div>`;
+}
+
 // ─── Detail: center ───────────────────────────────────────────────────────────
 function renderDetailCenter(e) {
   const catLabel = CATEGORY_LABELS[e.category] || e.category || '—';
-
   const badges = [
     e.category ? `<span class="detail-badge cat">${escHtml(catLabel)}</span>` : '',
     e.github_stars != null ? `<span class="detail-badge detail-stars">★ ${e.github_stars.toLocaleString()}</span>` : '',
     e.transport ? `<span class="detail-badge">${escHtml(e.transport)}</span>` : '',
     e.license && e.license !== 'unknown' ? `<span class="detail-badge">${escHtml(e.license)}</span>` : '',
   ].filter(Boolean).join('');
-
   const desc = e.description
     ? `<div class="detail-desc">${escHtml(e.description)}</div>`
     : `<div class="detail-desc-placeholder">No description available for this entry yet.</div>`;
-
-  // summary table rows
   const rows = [
     ['Home Page', e.url ? `<a href="${escHtml(e.url)}" target="_blank" rel="noopener">${escHtml(e.url)}</a>` : '—'],
     ['Category', escHtml(catLabel)],
@@ -418,20 +877,12 @@ function renderDetailCenter(e) {
     ['License', e.license ? escHtml(e.license) : '—'],
     ['Difficulty', e.difficulty != null ? difficultyDots(e.difficulty) : '—'],
     ['Platforms', e.platforms && e.platforms.length
-      ? `<div class="detail-platforms">${e.platforms.map(p=>`<span class="detail-platform">${escHtml(p)}</span>`).join('')}</div>`
-      : '—'],
+      ? `<div class="detail-platforms">${e.platforms.map(p=>`<span class="detail-platform">${escHtml(p)}</span>`).join('')}</div>` : '—'],
     ['Tags', e.tags && e.tags.length
-      ? `<div class="detail-tags">${e.tags.map(t=>`<span class="detail-tag">${escHtml(t)}</span>`).join('')}</div>`
-      : '—'],
+      ? `<div class="detail-tags">${e.tags.map(t=>`<span class="detail-tag">${escHtml(t)}</span>`).join('')}</div>` : '—'],
     ['Last Updated', e.last_updated ? escHtml(e.last_updated) : '—'],
   ];
-
-  const tableHtml = rows.map(([label, val]) =>
-    `<tr><td>${label}</td><td>${val}</td></tr>`
-  ).join('');
-
-  const ctaUrl = e.url || '#';
-
+  const tableHtml = rows.map(([label, val]) => `<tr><td>${label}</td><td>${val}</td></tr>`).join('');
   document.getElementById('view-detail').innerHTML = `
     <a class="detail-back" href="#" onclick="goHome();return false;">← All Servers</a>
     <div class="detail-name">${escHtml(e.name)}</div>
@@ -439,24 +890,16 @@ function renderDetailCenter(e) {
     ${desc}
     <table class="detail-table"><tbody>${tableHtml}</tbody></table>
     <div class="detail-cta">
-      <a class="detail-cta-btn detail-cta-primary" href="${escHtml(ctaUrl)}" target="_blank" rel="noopener">
-        View on GitHub →
-      </a>
-      <a class="detail-cta-btn detail-cta-secondary" href="#" onclick="goHome();return false;">
-        ← Back to Index
-      </a>
-    </div>
-  `;
+      <a class="detail-cta-btn detail-cta-primary" href="${escHtml(e.url||'#')}" target="_blank" rel="noopener">View on GitHub →</a>
+      <a class="detail-cta-btn detail-cta-secondary" href="#" onclick="goHome();return false;">← Back to Index</a>
+    </div>`;
 }
 
 function difficultyDots(n) {
   const max = 5;
   let html = '<div class="detail-difficulty">';
-  for (let i = 1; i <= max; i++) {
-    html += `<div class="diff-dot${i <= n ? ' on' : ''}"></div>`;
-  }
-  html += `<span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);margin-left:5px">${n}/${max}</span>`;
-  html += '</div>';
+  for (let i = 1; i <= max; i++) html += `<div class="diff-dot${i<=n?' on':''}"></div>`;
+  html += `<span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);margin-left:5px">${n}/${max}</span></div>`;
   return html;
 }
 
@@ -464,13 +907,10 @@ function difficultyDots(n) {
 function renderDetailSidebar(e) {
   const cat = e.category || 'other';
   const catLabel = CATEGORY_LABELS[cat] || cat;
-
-  // related: same category, excluding current entry, top by stars
   const related = allEntries
     .filter(x => x.category === cat && x._slug !== e._slug)
     .sort((a,b) => (b.github_stars||0) - (a.github_stars||0))
     .slice(0, 8);
-
   const relatedHtml = related.length
     ? related.map(r => `
         <div class="detail-related-item">
@@ -478,9 +918,8 @@ function renderDetailSidebar(e) {
           <div class="dw-side-meta">${r.github_stars != null ? '★ '+r.github_stars.toLocaleString() : escHtml(r.category||'')}</div>
         </div>`).join('')
     : '<div class="dw-empty" style="font-size:10px;padding:4px 0">No related entries</div>';
-
   document.getElementById('sidebar-detail').innerHTML = `
-    <div class="dw-sh">SERVER INFO</div>
+    <div class="sh">SERVER INFO</div>
     <div class="dw-stats">
       <div class="dw-stat-row"><span class="dw-stat-label">Category</span><span class="dw-stat-val">${escHtml(catLabel)}</span></div>
       <div class="dw-stat-row"><span class="dw-stat-label">GitHub Stars</span><span class="dw-stat-val">${e.github_stars != null ? e.github_stars.toLocaleString() : '—'}</span></div>
@@ -488,9 +927,8 @@ function renderDetailSidebar(e) {
       <div class="dw-stat-row"><span class="dw-stat-label">Auth</span><span class="dw-stat-val">${escHtml(e.auth||'—')}</span></div>
       <div class="dw-stat-row"><span class="dw-stat-label">License</span><span class="dw-stat-val">${escHtml(e.license||'—')}</span></div>
     </div>
-    <div class="dw-sh2">MORE IN ${escHtml(catLabel.toUpperCase())}</div>
-    ${relatedHtml}
-  `;
+    <div class="sh2">MORE IN ${escHtml(catLabel.toUpperCase())}</div>
+    ${relatedHtml}`;
 }
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
@@ -514,7 +952,6 @@ function renderRankings(entries) {
     .filter(e => e.github_stars != null)
     .sort((a,b) => b.github_stars - a.github_stars)
     .slice(0, 15);
-
   const html = top15.map((e, i) => `
     <tr>
       <td class="rnum">${i+1}</td>
@@ -524,7 +961,6 @@ function renderRankings(entries) {
       </td>
       <td class="rcount">${fmtStars(e.github_stars)}</td>
     </tr>`).join('');
-
   document.getElementById('rankings-table').innerHTML =
     html || '<tr><td colspan="3" class="dw-empty">No star data</td></tr>';
 }
@@ -533,10 +969,8 @@ function renderRankings(entries) {
 function renderCategoryList(entries) {
   const counts = {};
   entries.forEach(e => { const c = e.category || 'other'; counts[c] = (counts[c]||0)+1; });
-
   const order = ['other','finance','web','infrastructure','database','developer-tools',
                  'communication','data','productivity','ai-ml','filesystem','media'];
-
   const html = order.map(cat => {
     const n = counts[cat] || 0;
     const label = CATEGORY_LABELS[cat] || cat;
@@ -546,14 +980,13 @@ function renderCategoryList(entries) {
       <span class="dw-cat-num">${n.toLocaleString()}</span>
     </div>`;
   }).join('');
-
   document.getElementById('category-list').innerHTML = html;
 }
 
-// ─── Sidebars (directory mode) ────────────────────────────────────────────────
+// ─── Sidebars ─────────────────────────────────────────────────────────────────
 function renderSidebars(entries) {
-  renderSidebarTop('sidebar-web',    entries, 'web',      5);
-  renderSidebarTop('sidebar-db',     entries, 'database', 5);
+  renderSidebarTop('sidebar-web', entries, 'web', 5);
+  renderSidebarTop('sidebar-db', entries, 'database', 5);
   renderSidebarRecent('sidebar-recent', entries, 5);
 }
 
@@ -562,13 +995,11 @@ function renderSidebarTop(id, entries, cat, n) {
     .filter(e => e.category === cat && e.github_stars != null)
     .sort((a,b) => b.github_stars - a.github_stars)
     .slice(0, n);
-
   const html = top.map(e => `
     <div class="dw-side-item">
       <a class="dw-side-link" href="#" onclick="navToDetail('${e._slug}');return false;">${escHtml(shortName(e.name))}</a>
       <div class="dw-side-meta">${e.github_stars != null ? '★ '+e.github_stars.toLocaleString() : ''}</div>
     </div>`).join('');
-
   document.getElementById(id).innerHTML =
     html || '<div class="dw-empty" style="font-size:10px;padding:4px 0">No data</div>';
 }
@@ -578,13 +1009,11 @@ function renderSidebarRecent(id, entries, n) {
     .filter(e => e.last_updated)
     .sort((a,b) => b.last_updated.localeCompare(a.last_updated))
     .slice(0, n);
-
   const html = recent.map(e => `
     <div class="dw-side-item">
       <a class="dw-side-link" href="#" onclick="navToDetail('${e._slug}');return false;">${escHtml(shortName(e.name))}</a>
       <div class="dw-side-meta">${escHtml(e.last_updated||'')}</div>
     </div>`).join('');
-
   document.getElementById(id).innerHTML =
     html || '<div class="dw-empty" style="font-size:10px;padding:4px 0">No data</div>';
 }
@@ -594,29 +1023,25 @@ function renderEntries(entries, page) {
   const start = (page - 1) * PER_PAGE;
   const slice = entries.slice(start, start + PER_PAGE);
   const total = entries.length;
-
   if (!total) {
     document.getElementById('entries-list').innerHTML = '<div class="dw-empty">No results found.</div>';
     document.getElementById('pagination').innerHTML = '';
     document.getElementById('result-count').textContent = '0 results';
     return;
   }
-
   const html = slice.map(e => {
     const meta = [
       e.category    ? escHtml(CATEGORY_LABELS[e.category]||e.category) : null,
-      e.license     ? escHtml(e.license)    : null,
-      e.transport   ? escHtml(e.transport)  : null,
+      e.license     ? escHtml(e.license)   : null,
+      e.transport   ? escHtml(e.transport) : null,
       e.github_stars != null ? '★ '+e.github_stars.toLocaleString() : null
     ].filter(Boolean).join(' · ');
-
     const tags = [
       e.category ? `<span class="dw-etag">${escHtml(CATEGORY_LABELS[e.category]||e.category)}</span>` : '',
       ...(e.tags||[]).slice(0,4).map(t=>`<span class="dw-etag">${escHtml(t)}</span>`),
       e.transport ? `<span class="dw-etag">${escHtml(e.transport)}</span>` : '',
       e.license && e.license !== 'unknown' ? `<span class="dw-etag">${escHtml(e.license)}</span>` : ''
     ].filter(Boolean).join('');
-
     return `<div class="dw-entry">
       <div class="dw-entry-hdr">
         <a class="dw-entry-name" href="#" onclick="navToDetail('${e._slug}');return false;">${escHtml(e.name)}</a>
@@ -626,12 +1051,9 @@ function renderEntries(entries, page) {
       <div class="dw-entry-tags">${tags}</div>
     </div>`;
   }).join('');
-
   document.getElementById('entries-list').innerHTML = html;
   document.getElementById('result-count').textContent =
-    total.toLocaleString() + ' result' + (total!==1?'s':'') +
-    ' · page ' + page + ' of ' + Math.ceil(total/PER_PAGE);
-
+    total.toLocaleString() + ' result' + (total!==1?'s':'') + ' · page ' + page + ' of ' + Math.ceil(total/PER_PAGE);
   renderPagination(total, page);
   window.scrollTo(0, 0);
 }
@@ -640,10 +1062,8 @@ function renderEntries(entries, page) {
 function renderPagination(total, page) {
   const pages = Math.ceil(total / PER_PAGE);
   if (pages <= 1) { document.getElementById('pagination').innerHTML=''; return; }
-
   let html = '<div class="dw-pagination">';
   html += `<button class="dw-page-btn" onclick="goPage(${page-1})" ${page===1?'disabled':''}>‹ prev</button>`;
-
   const range = [];
   for (let p = 1; p <= pages; p++) {
     if (p===1||p===pages||(p>=page-2&&p<=page+2)) range.push(p);
@@ -653,7 +1073,6 @@ function renderPagination(total, page) {
     if (p==='…') html+=`<span class="dw-page-info">…</span>`;
     else html+=`<button class="dw-page-btn ${p===page?'active':''}" onclick="goPage(${p})">${p}</button>`;
   });
-
   html += `<button class="dw-page-btn" onclick="goPage(${page+1})" ${page===pages?'disabled':''}>next ›</button>`;
   html += '</div>';
   document.getElementById('pagination').innerHTML = html;
@@ -675,15 +1094,12 @@ function applyFilters() {
   if (currentSort==='stars')  results.sort((a,b)=>(b.github_stars||0)-(a.github_stars||0));
   if (currentSort==='recent') results.sort((a,b)=>(b.last_updated||'').localeCompare(a.last_updated||''));
   if (currentSort==='alpha')  results.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
-
   filtered = results;
-
   let heading = 'LATEST ENTRIES';
   if (currentSort==='stars' && !currentCategory && !currentSearch) heading = 'TOP ENTRIES — sorted by GitHub stars';
   if (currentCategory) heading = (CATEGORY_LABELS[currentCategory]||currentCategory).toUpperCase()+' — ALL ENTRIES';
   if (currentSearch) heading = 'SEARCH RESULTS';
   document.getElementById('center-heading').textContent = heading;
-
   const badge = document.getElementById('filter-badge');
   if (currentCategory||currentSearch) {
     const parts=[];
@@ -691,11 +1107,9 @@ function applyFilters() {
     if (currentSearch) parts.push('"'+currentSearch+'"');
     badge.innerHTML=`<span class="dw-filter-active" onclick="clearFilters()">✕ ${parts.join(' + ')}</span>`;
   } else { badge.innerHTML=''; }
-
   document.querySelectorAll('.dw-cat-row').forEach(row=>{
     row.classList.toggle('active', row.dataset.cat===currentCategory);
   });
-
   currentPage = 1;
   renderEntries(filtered, currentPage);
 }
@@ -708,8 +1122,8 @@ function filterByCategory(cat) {
 }
 
 function showAllCategories() { currentCategory=''; document.getElementById('cat-select').value=''; applyFilters(); }
-function onSearch()  { currentSearch = document.getElementById('search-input').value.trim(); applyFilters(); }
-function doSearch()  { currentSearch = document.getElementById('search-input').value.trim(); applyFilters(); }
+function onSearch()   { currentSearch = document.getElementById('search-input').value.trim(); applyFilters(); }
+function doSearch()   { currentSearch = document.getElementById('search-input').value.trim(); applyFilters(); }
 function onCatSelect(){ currentCategory = document.getElementById('cat-select').value; applyFilters(); }
 
 function sortBy(s) {
@@ -738,18 +1152,15 @@ function goPage(p) {
 function slugify(s) {
   return (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
-
 function escHtml(s) {
   if (!s) return '';
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-
 function shortName(name) {
   if (!name) return '';
   const parts = name.split('/');
   return parts[parts.length-1] || name;
 }
-
 function fmtStars(n) {
   if (n==null) return '—';
   if (n>=1000) return (n/1000).toFixed(1).replace(/\.0$/,'')+'k';
