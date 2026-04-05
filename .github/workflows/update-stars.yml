@@ -1,0 +1,100 @@
+name: Update GitHub Star Counts
+
+on:
+  schedule:
+    # Runs once daily at 06:00 UTC — well within Cloudflare's 500 builds/month free tier
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  update-stars:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch star counts and write stars.json
+        env:
+          GH_TOKEN: ${{ secrets.STARS_TOKEN }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, urllib.request, time
+
+          token = os.environ["GH_TOKEN"]
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "AgenticWatch-StarUpdater/1.0"
+          }
+
+          with open("data/mcp-servers.json") as f:
+              data = json.load(f)
+
+          stars = {}
+          errors = []
+
+          for entry in data["entries"]:
+              url = entry.get("url", "")
+              if not url.startswith("https://github.com/"):
+                  continue
+
+              # Extract owner/repo from URL
+              parts = url.replace("https://github.com/", "").rstrip("/").split("/")
+              if len(parts) < 2:
+                  continue
+              slug = f"{parts[0]}/{parts[1]}"
+
+              api_url = f"https://api.github.com/repos/{slug}"
+              req = urllib.request.Request(api_url, headers=headers)
+
+              try:
+                  with urllib.request.urlopen(req, timeout=10) as resp:
+                      repo_data = json.loads(resp.read())
+                      stars[slug] = repo_data.get("stargazers_count", 0)
+              except urllib.error.HTTPError as e:
+                  if e.code == 404:
+                      stars[slug] = None  # repo gone or private
+                  elif e.code == 403:
+                      # Rate limited — stop and save what we have
+                      errors.append(f"Rate limited at {slug}")
+                      break
+                  else:
+                      errors.append(f"{slug}: HTTP {e.code}")
+              except Exception as e:
+                  errors.append(f"{slug}: {e}")
+
+              # Stay well under rate limits — 1,797 repos / 5,000 limit = fine
+              time.sleep(0.1)
+
+          from datetime import datetime, timezone
+          output = {
+              "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "count": len(stars),
+              "stars": stars
+          }
+
+          if errors:
+              output["errors"] = errors
+
+          with open("data/stars.json", "w") as f:
+              json.dump(output, f, separators=(",", ":"))
+
+          print(f"Done: {len(stars)} repos fetched, {len(errors)} errors")
+          EOF
+
+      - name: Commit stars.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/stars.json
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit"
+          else
+            git commit -m "chore: update star counts [skip ci]"
+            git push
+          fi
