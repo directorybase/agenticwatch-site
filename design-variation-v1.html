@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AgenticWatch.dev — Design Variation v1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0D0D0F;
+  --bg-hdr:#0B0C0E;
+  --s1:#13161A;
+  --s2:#181C21;
+  --s3:#20262D;
+  --b0:#26303A;
+  --b1:#32414F;
+  --t1:#EAFBFF;
+  --t2:#B7D7E2;
+  --tm:#87A8B5;
+  --td:#5D7480;
+  --ac:#00C2FF;
+  --ac-h:#35D1FF;
+  --ac-a:#009DCE;
+  --ac-soft:rgba(0,194,255,0.12);
+  --ac-line:rgba(0,194,255,0.35);
+  --ok:#2DD4A3;
+  --warn:#F5B942;
+  --err:#FF6B6B;
+  --info:#58AFFF;
+}
+body{background:var(--bg);color:var(--t1);font-size:12px;font-family:system-ui,sans-serif;line-height:1.5;}
+a{color:var(--ac);text-decoration:none;}
+a:hover{color:var(--ac-h);text-decoration:underline;}
+
+/* ── HEADER ───────────────────────────────────────────────────────────────── */
+.hdr{
+  background:var(--bg-hdr);
+  border-bottom:2px solid var(--ac);
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:20px;
+  height:76px;
+}
+.hdr-brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+.hdr-brand:hover{text-decoration:none;}
+.hdr-logo-desktop{display:block;height:64px;width:auto;}
+.hdr-logo-mobile{display:none;height:44px;width:auto;}
+@media(max-width:720px){.hdr-logo-desktop{display:none;}.hdr-logo-mobile{display:block;}}
+
+.hdr-nav{display:flex;align-items:center;gap:0;justify-content:center;}
+.hdr-nav a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  color:var(--t2);
+  padding:4px 12px;
+  border-right:1px solid var(--b0);
+  white-space:nowrap;
+  transition:color 0.1s;
+}
+.hdr-nav a:first-child{border-left:1px solid var(--b0);}
+.hdr-nav a:hover{color:var(--t1);background:var(--s1);text-decoration:none;}
+.hdr-nav a.active{color:var(--ac);}
+
+.hdr-search{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.hdr-search input{
+  background:var(--s1);
+  border:1px solid var(--b0);
+  color:var(--t1);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:3px;
+  outline:none;
+  width:200px;
+}
+.hdr-search input::placeholder{color:var(--tm);}
+.hdr-search input:focus{border-color:var(--ac);box-shadow:0 0 0 2px var(--ac-soft);}
+.btn-primary{
+  background:var(--ac);
+  border:none;
+  color:#071015;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:600;
+  padding:4px 10px;
+  border-radius:3px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.btn-primary:hover{background:var(--ac-h);}
+
+/* ── UTILITY STRIP ────────────────────────────────────────────────────────── */
+.util-strip{
+  background:var(--s1);
+  border-bottom:1px solid var(--b0);
+  padding:5px 20px;
+  display:flex;
+  align-items:center;
+  gap:0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+}
+.util-stat{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  padding:0 16px;
+  border-right:1px solid var(--b0);
+}
+.util-stat:first-child{padding-left:0;}
+.util-stat:last-child{border-right:none;}
+.util-num{color:var(--ac);font-weight:600;}
+.util-label{color:var(--tm);}
+
+/* ── TOP ROW (3-col) ─────────────────────────────────────────────────────── */
+.top-row{
+  display:grid;
+  grid-template-columns:180px 1fr 185px;
+  border-bottom:1px solid var(--b0);
+}
+.top-col{padding:14px 12px;}
+.top-col+.top-col{border-left:1px solid var(--b0);}
+.top-col-featured{position:relative;}
+
+/* section heading style */
+.sh{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.8px;
+  text-transform:uppercase;
+  color:#000;
+  background:var(--ac);
+  padding:2px 6px;
+  margin-bottom:8px;
+  display:block;
+}
+.sh2{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.6px;
+  text-transform:uppercase;
+  color:var(--ac);
+  border-bottom:1px solid var(--ac-line);
+  padding-bottom:3px;
+  margin:12px 0 7px;
+  display:block;
+}
+
+/* Quick Browse col */
+.browse-links{list-style:none;}
+.browse-links li{border-bottom:1px solid var(--b0);}
+.browse-links li:last-child{border-bottom:none;}
+.browse-links a{
+  display:block;
+  padding:3px 0;
+  font-size:11px;
+  color:var(--t2);
+}
+.browse-links a:hover{color:var(--t1);padding-left:3px;}
+.browse-section-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  color:var(--tm);
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  padding:6px 0 2px;
+  display:block;
+}
+
+/* Featured Guide col */
+.top-col-featured{
+  background:rgba(245,185,66,0.06);
+  border-left:3px solid var(--warn) !important;
+}
+.badge-editors-pick{
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  font-weight:600;
+  color:#0D0D0F;
+  background:var(--warn);
+  padding:2px 6px;
+  border-radius:2px;
+  white-space:nowrap;
+  display:inline-block;
+  margin-bottom:10px;
+}
+.guide-featured{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.guide-featured-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:18px;
+  font-weight:800;
+  color:var(--t1);
+  line-height:1.25;
+  letter-spacing:-0.3px;
+  margin-bottom:10px;
+  text-decoration:none;
+  display:block;
+}
+.guide-featured-title:hover{color:var(--warn);text-decoration:none;}
+.guide-featured-excerpt{
+  font-size:12px;
+  color:var(--t2);
+  line-height:1.65;
+  margin-bottom:14px;
+  flex:1;
+}
+.guide-byline{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  color:var(--tm);
+  margin-bottom:14px;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(245,185,66,0.15);
+  line-height:1.5;
+}
+.guide-byline span{color:var(--t2);}
+.btn-read-more{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  font-weight:600;
+  padding:7px 14px;
+  background:var(--warn);
+  color:#0D0D0F;
+  border-radius:3px;
+  text-decoration:none;
+  align-self:flex-start;
+}
+.btn-read-more:hover{background:#f9c85a;color:#0D0D0F;text-decoration:none;}
+
+/* Right col — sponsor + claim */
+.sponsor-card{
+  background:var(--s1);
+  border:1px solid var(--b0);
+  padding:10px;
+  margin-bottom:8px;
+  border-radius:3px;
+}
+.sponsor-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  color:var(--td);
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+  display:block;
+}
+.sponsor-logo{
+  width:28px;
+  height:28px;
+  background:var(--s3);
+  border:1px solid var(--b1);
+  border-radius:4px;
+  margin-bottom:7px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.sponsor-logo svg{opacity:0.5;}
+.sponsor-name{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  color:var(--t1);
+  margin-bottom:4px;
+}
+.sponsor-desc{font-size:10px;color:var(--t2);line-height:1.4;margin-bottom:8px;}
+.btn-outline{
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:500;
+  padding:4px 10px;
+  border:1px solid var(--ac-line);
+  color:var(--ac);
+  border-radius:3px;
+  cursor:pointer;
+  background:var(--ac-soft);
+}
+.btn-outline:hover{border-color:var(--ac);background:rgba(0,194,255,0.18);color:var(--ac-h);text-decoration:none;}
+.claim-card{
+  background:var(--s1);
+  border:1px dashed var(--b1);
+  padding:10px;
+  border-radius:3px;
+}
+.claim-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  font-weight:600;
+  color:var(--t2);
+  margin-bottom:4px;
+}
+.claim-desc{font-size:10px;color:var(--tm);line-height:1.4;margin-bottom:7px;}
+
+/* ── POPULAR SERVERS ─────────────────────────────────────────────────────── */
+.section{padding:16px 20px;border-bottom:1px solid var(--b0);}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.section-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  color:var(--t1);
+}
+.section-note{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);}
+.section-link{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ac);margin-left:auto;}
+
+.rank-table{width:100%;border-collapse:collapse;}
+.rank-table th{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.6px;
+  text-transform:uppercase;
+  color:var(--tm);
+  border-bottom:1px solid var(--b1);
+  padding:4px 8px;
+  text-align:left;
+  font-weight:500;
+}
+.rank-table th:first-child{width:28px;text-align:center;}
+.rank-table th.r{text-align:right;}
+.rank-table td{
+  padding:6px 8px;
+  border-bottom:1px solid var(--b0);
+  vertical-align:middle;
+  font-size:11px;
+}
+.rank-table tr:last-child td{border-bottom:none;}
+.rank-table tr:hover td{background:var(--s2);}
+.rank-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  color:var(--tm);
+  text-align:center;
+}
+.rank-name{
+  color:var(--ac);
+  font-family:'Space Grotesk',sans-serif;
+  font-size:12px;
+  font-weight:600;
+}
+.rank-name:hover{color:var(--ac-h);}
+.rank-sub{font-size:10px;color:var(--tm);display:block;font-family:system-ui,sans-serif;font-weight:400;}
+.rank-stars{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  color:var(--warn);
+  text-align:right;
+  white-space:nowrap;
+}
+.rank-cat{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  color:var(--info);
+}
+.badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  padding:1px 5px;
+  border-radius:2px;
+  border:1px solid;
+  white-space:nowrap;
+}
+.badge-hosted{color:var(--ok);border-color:rgba(45,212,163,0.3);background:rgba(45,212,163,0.08);}
+.badge-oss{color:var(--info);border-color:rgba(88,175,255,0.3);background:rgba(88,175,255,0.08);}
+.badge-official{color:var(--warn);border-color:rgba(245,185,66,0.3);background:rgba(245,185,66,0.08);}
+.badge-col{display:flex;gap:3px;flex-wrap:wrap;align-items:center;}
+
+/* ── RECENT ACTIVITY ─────────────────────────────────────────────────────── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--b0);}
+.two-col-cell{padding:16px 20px;}
+.two-col-cell+.two-col-cell{border-left:1px solid var(--b0);}
+
+.recent-list{list-style:none;}
+.recent-item{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  padding:5px 0;
+  border-bottom:1px solid var(--b0);
+  font-size:11px;
+}
+.recent-item:last-child{border-bottom:none;}
+.recent-name{color:var(--ac);flex:1;min-width:0;}
+.recent-name:hover{color:var(--ac-h);}
+.recent-meta{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  color:var(--tm);
+  white-space:nowrap;
+}
+.recent-badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  color:var(--info);
+  border:1px solid rgba(88,175,255,0.25);
+  padding:1px 4px;
+  border-radius:2px;
+  white-space:nowrap;
+}
+
+/* ── CATEGORY GRID ───────────────────────────────────────────────────────── */
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--b0);}
+.cat-card{
+  background:var(--bg);
+  padding:12px 14px;
+  cursor:pointer;
+  transition:background 0.1s;
+}
+.cat-card:hover{background:var(--s2);}
+.cat-card-name{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:12px;
+  font-weight:700;
+  color:var(--t1);
+  margin-bottom:3px;
+}
+.cat-card-desc{font-size:10px;color:var(--tm);line-height:1.4;margin-bottom:5px;}
+.cat-card-count{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  color:var(--ac);
+}
+
+/* ── FOOTER CTA ──────────────────────────────────────────────────────────── */
+.footer-cta{
+  background:var(--s1);
+  border-top:1px solid var(--b0);
+  padding:14px 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--b0);
+}
+.footer-cta-cell{
+  background:var(--s1);
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.footer-cta-icon{
+  font-size:18px;
+  flex-shrink:0;
+  opacity:0.7;
+}
+.footer-cta-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:12px;
+  font-weight:700;
+  color:var(--t1);
+  margin-bottom:2px;
+}
+.footer-cta-desc{font-size:10px;color:var(--tm);}
+.footer-cta-btn{
+  margin-left:auto;
+  flex-shrink:0;
+}
+
+.footer-bar{
+  background:var(--bg-hdr);
+  border-top:1px solid var(--b0);
+  padding:7px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.footer-bar span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);}
+.footer-bar a{color:var(--tm);}
+.footer-bar a:hover{color:var(--t1);}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────────────────────────── -->
+<header class="hdr">
+  <!-- Brand -->
+  <a href="#" class="hdr-brand" aria-label="AgenticWatch.dev home">
+    <img src="/assets/agenticwatch-header-desktop.svg" class="hdr-logo-desktop" alt="AgenticWatch.dev — Technical Directory for AI Agent Tools" height="64"/>
+    <img src="/assets/agenticwatch-header-mobile.svg" class="hdr-logo-mobile" alt="AgenticWatch.dev" height="44"/>
+  </a>
+
+  <!-- Nav -->
+  <nav class="hdr-nav">
+    <a href="#" class="active">Servers</a>
+    <a href="#">Categories</a>
+    <a href="#">Guides</a>
+    <a href="#">Compare</a>
+    <a href="#">Submit</a>
+    <a href="#">Advertise</a>
+  </nav>
+
+  <!-- Search -->
+  <div class="hdr-search">
+    <input type="text" placeholder="Search 1,284 servers…"/>
+    <button class="btn-primary">Search</button>
+  </div>
+</header>
+
+<!-- ── UTILITY STRIP ──────────────────────────────────────────────────────── -->
+<div class="util-strip">
+  <div class="util-stat">
+    <span class="util-num">1,284</span>
+    <span class="util-label">servers tracked</span>
+  </div>
+  <div class="util-stat">
+    <span class="util-num">42</span>
+    <span class="util-label">categories</span>
+  </div>
+  <div class="util-stat">
+    <span class="util-num">18</span>
+    <span class="util-label">new this week</span>
+  </div>
+  <div class="util-stat">
+    <span class="util-num">63</span>
+    <span class="util-label">recently updated</span>
+  </div>
+</div>
+
+<!-- ── TOP ROW (3-col) ────────────────────────────────────────────────────── -->
+<div class="top-row">
+
+  <!-- LEFT: Quick Browse -->
+  <div class="top-col">
+    <span class="sh">Quick Browse</span>
+
+    <span class="browse-section-label">By Type</span>
+    <ul class="browse-links">
+      <li><a href="#">Hosted</a></li>
+      <li><a href="#">Open Source</a></li>
+      <li><a href="#">Official</a></li>
+      <li><a href="#">Vendor-Backed</a></li>
+    </ul>
+
+    <span class="browse-section-label">By Use Case</span>
+    <ul class="browse-links">
+      <li><a href="#">Claude Code</a></li>
+      <li><a href="#">Coding</a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Productivity</a></li>
+    </ul>
+
+    <span class="browse-section-label">By Status</span>
+    <ul class="browse-links">
+      <li><a href="#">Recently Added</a></li>
+      <li><a href="#">Recently Updated</a></li>
+    </ul>
+  </div>
+
+  <!-- CENTER: Featured Guide -->
+  <div class="top-col top-col-featured" id="featured-guide-col">
+    <span class="sh">Featured Guide</span>
+    <div class="guide-featured">
+      <span class="badge-editors-pick">Editor's Pick</span>
+      <a href="#" class="guide-featured-title">Best MCP Servers for Claude Code</a>
+      <p class="guide-featured-excerpt">Claude Code is already a capable coding agent. What it cannot do by default is touch your GitHub PRs, query your database, open a browser, or pull current documentation for the library you're using right now. MCP is the fix — and these 15 servers are the ones worth installing.</p>
+      <div class="guide-byline">
+        SMALL COUNCIL REVIEW &nbsp;·&nbsp; <span>Claude Sonnet 4.6, Gemini 1.5 Pro, Grok, GPT-5.4 Thinking</span><br/>
+        April 4, 2026 &nbsp;·&nbsp; 15 servers reviewed
+      </div>
+      <a href="javascript:void(0)" class="btn-read-more" onclick="showGuide()">Read the full guide →</a>
+    </div>
+  </div>
+
+  <!-- RIGHT: Sponsored + Claim -->
+  <div class="top-col">
+    <div class="sponsor-card">
+      <span class="sponsor-label">Sponsored Listing</span>
+      <div class="sponsor-logo">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <rect width="14" height="14" rx="3" fill="#26303A"/>
+          <path d="M3 7h8M7 3v8" stroke="#5D7480" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="sponsor-name">Your Tool Here</div>
+      <div class="sponsor-desc">Reach developers evaluating AI agent infrastructure. Feature your MCP server to 12,000+ monthly visitors.</div>
+      <a href="#" class="btn-outline">Learn more</a>
+    </div>
+
+    <div class="claim-card">
+      <div class="claim-title">Claim This Listing</div>
+      <div class="claim-desc">Is this your server? Claim your entry to add documentation, screenshots, and direct contact info.</div>
+      <a href="#" class="btn-outline" style="font-size:10px;">Claim it →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── POPULAR SERVERS ────────────────────────────────────────────────────── -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-title">Popular Servers by GitHub Stars</div>
+    <span class="section-note">Ranked by total GitHub stars · updated daily</span>
+    <a href="#" class="section-link">View full rankings →</a>
+  </div>
+
+  <table class="rank-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Server</th>
+        <th>Category</th>
+        <th class="r">★ Stars</th>
+        <th>Badges</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="rank-num">1</td>
+        <td><a href="#" class="rank-name">filesystem<span class="rank-sub">Reference implementation for local file access</span></a></td>
+        <td><span class="rank-cat">Filesystem</span></td>
+        <td class="rank-stars">★ 48,200</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span><span class="badge badge-oss">OSS</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">2</td>
+        <td><a href="#" class="rank-name">github<span class="rank-sub">Read, write, and search GitHub repos and issues</span></a></td>
+        <td><span class="rank-cat">Developer Tools</span></td>
+        <td class="rank-stars">★ 44,100</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span><span class="badge badge-oss">OSS</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">3</td>
+        <td><a href="#" class="rank-name">postgres<span class="rank-sub">Query and inspect PostgreSQL databases</span></a></td>
+        <td><span class="rank-cat">Database</span></td>
+        <td class="rank-stars">★ 38,700</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span><span class="badge badge-oss">OSS</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">4</td>
+        <td><a href="#" class="rank-name">brave-search<span class="rank-sub">Web search via the Brave Search API</span></a></td>
+        <td><span class="rank-cat">Search</span></td>
+        <td class="rank-stars">★ 34,900</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">5</td>
+        <td><a href="#" class="rank-name">puppeteer<span class="rank-sub">Browser automation and web scraping</span></a></td>
+        <td><span class="rank-cat">Web</span></td>
+        <td class="rank-stars">★ 29,400</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span><span class="badge badge-oss">OSS</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">6</td>
+        <td><a href="#" class="rank-name">context7<span class="rank-sub">Up-to-date library docs for Claude Code projects</span></a></td>
+        <td><span class="rank-cat">Documentation</span></td>
+        <td class="rank-stars">★ 26,800</td>
+        <td><div class="badge-col"><span class="badge badge-hosted">Hosted</span><span class="badge badge-oss">OSS</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">7</td>
+        <td><a href="#" class="rank-name">sqlite<span class="rank-sub">Read and write SQLite databases locally</span></a></td>
+        <td><span class="rank-cat">Database</span></td>
+        <td class="rank-stars">★ 24,100</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span><span class="badge badge-oss">OSS</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">8</td>
+        <td><a href="#" class="rank-name">slack<span class="rank-sub">Read channels, post messages, search workspace</span></a></td>
+        <td><span class="rank-cat">Communication</span></td>
+        <td class="rank-stars">★ 21,600</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">9</td>
+        <td><a href="#" class="rank-name">memory<span class="rank-sub">Persistent key-value memory across sessions</span></a></td>
+        <td><span class="rank-cat">Productivity</span></td>
+        <td class="rank-stars">★ 19,300</td>
+        <td><div class="badge-col"><span class="badge badge-official">Official</span><span class="badge badge-oss">OSS</span></div></td>
+      </tr>
+      <tr>
+        <td class="rank-num">10</td>
+        <td><a href="#" class="rank-name">firecrawl<span class="rank-sub">Crawl, scrape, and extract structured data from URLs</span></a></td>
+        <td><span class="rank-cat">Web</span></td>
+        <td class="rank-stars">★ 17,800</td>
+        <td><div class="badge-col"><span class="badge badge-hosted">Hosted</span></div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ── RECENT ACTIVITY ────────────────────────────────────────────────────── -->
+<div class="two-col">
+  <div class="two-col-cell">
+    <span class="sh">Recently Added</span>
+    <ul class="recent-list">
+      <li class="recent-item">
+        <a href="#" class="recent-name">zed-mcp-bridge</a>
+        <span class="recent-badge">IDE</span>
+        <span class="recent-meta">Apr 03</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">notion-mcp</a>
+        <span class="recent-badge">Productivity</span>
+        <span class="recent-meta">Apr 02</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">perplexity-search</a>
+        <span class="recent-badge">Search</span>
+        <span class="recent-meta">Apr 02</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">trello-mcp</a>
+        <span class="recent-badge">Business</span>
+        <span class="recent-meta">Apr 01</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">redis-context</a>
+        <span class="recent-badge">Database</span>
+        <span class="recent-meta">Apr 01</span>
+      </li>
+    </ul>
+    <a href="#" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ac);display:block;margin-top:8px;">View all new entries →</a>
+  </div>
+
+  <div class="two-col-cell">
+    <span class="sh">Recently Updated</span>
+    <ul class="recent-list">
+      <li class="recent-item">
+        <a href="#" class="recent-name">github</a>
+        <span class="recent-badge">Dev Tools</span>
+        <span class="recent-meta">Apr 03</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">context7</a>
+        <span class="recent-badge">Documentation</span>
+        <span class="recent-meta">Apr 03</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">firecrawl</a>
+        <span class="recent-badge">Web</span>
+        <span class="recent-meta">Apr 02</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">filesystem</a>
+        <span class="recent-badge">Filesystem</span>
+        <span class="recent-meta">Apr 01</span>
+      </li>
+      <li class="recent-item">
+        <a href="#" class="recent-name">brave-search</a>
+        <span class="recent-badge">Search</span>
+        <span class="recent-meta">Apr 01</span>
+      </li>
+    </ul>
+    <a href="#" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ac);display:block;margin-top:8px;">View all updates →</a>
+  </div>
+</div>
+
+<!-- ── BROWSE BY CATEGORY ─────────────────────────────────────────────────── -->
+<div class="section" style="padding-bottom:0;">
+  <div class="section-header">
+    <div class="section-title">Browse by Category</div>
+    <a href="#" class="section-link">All categories →</a>
+  </div>
+</div>
+<div class="cat-grid" style="border-top:1px solid var(--b0);border-bottom:1px solid var(--b0);">
+  <div class="cat-card">
+    <div class="cat-card-name">Coding</div>
+    <div class="cat-card-desc">Git, code review, language servers, and dev tooling</div>
+    <div class="cat-card-count">214 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">Research</div>
+    <div class="cat-card-desc">Web search, academic databases, and knowledge retrieval</div>
+    <div class="cat-card-count">138 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">Business</div>
+    <div class="cat-card-desc">CRM, finance, HR, and business process automation</div>
+    <div class="cat-card-count">97 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">Productivity</div>
+    <div class="cat-card-desc">Tasks, notes, calendars, and workflow tools</div>
+    <div class="cat-card-count">89 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">Databases</div>
+    <div class="cat-card-desc">SQL, NoSQL, vector databases, and data warehouses</div>
+    <div class="cat-card-count">76 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">Search</div>
+    <div class="cat-card-desc">Web search APIs, semantic search, and retrieval</div>
+    <div class="cat-card-count">62 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">Communication</div>
+    <div class="cat-card-desc">Slack, email, Discord, and messaging platforms</div>
+    <div class="cat-card-count">54 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">File Systems</div>
+    <div class="cat-card-desc">Local files, cloud storage, and file manipulation</div>
+    <div class="cat-card-count">48 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">DevOps</div>
+    <div class="cat-card-desc">CI/CD, containers, infrastructure, and deployments</div>
+    <div class="cat-card-count">43 entries</div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-card-name">Knowledge</div>
+    <div class="cat-card-desc">Wikis, knowledge bases, documentation, and RAG</div>
+    <div class="cat-card-count">41 entries</div>
+  </div>
+</div>
+
+<!-- ── FOOTER CTA ─────────────────────────────────────────────────────────── -->
+<div class="footer-cta">
+  <div class="footer-cta-cell">
+    <div class="footer-cta-icon">⊕</div>
+    <div>
+      <div class="footer-cta-title">Submit a Server</div>
+      <div class="footer-cta-desc">Add your MCP server to the index</div>
+    </div>
+    <a href="#" class="btn-outline footer-cta-btn">Submit →</a>
+  </div>
+  <div class="footer-cta-cell">
+    <div class="footer-cta-icon">◈</div>
+    <div>
+      <div class="footer-cta-title">Claim a Listing</div>
+      <div class="footer-cta-desc">Take ownership of your server's entry</div>
+    </div>
+    <a href="#" class="btn-outline footer-cta-btn">Claim →</a>
+  </div>
+  <div class="footer-cta-cell">
+    <div class="footer-cta-icon">◎</div>
+    <div>
+      <div class="footer-cta-title">Advertise</div>
+      <div class="footer-cta-desc">Reach developers building with MCP</div>
+    </div>
+    <a href="#" class="btn-outline footer-cta-btn">Get rates →</a>
+  </div>
+</div>
+
+<div class="footer-bar">
+  <span>AgenticWatch.dev — The MCP Server Index · <a href="mailto:submit@agenticwatch.dev">Submit a Server</a> · <a href="#">About</a></span>
+  <span>Design Variation v1 · © 2026 Gregory D. Collins</span>
+</div>
+
+<script>
+const GUIDE_CARD_HTML = document.getElementById('featured-guide-col').innerHTML;
+
+function showGuide() {
+  window.location.hash = '#/guide/best-mcp-servers-for-claude-code';
+  renderGuide();
+}
+
+function hideGuide() {
+  window.location.hash = '';
+  document.getElementById('featured-guide-col').innerHTML = GUIDE_CARD_HTML;
+  // re-bind border style lost on innerHTML replace
+  document.getElementById('featured-guide-col').style.borderLeft = '';
+}
+
+function renderGuide() {
+  const col = document.getElementById('featured-guide-col');
+  const colHeight = col.offsetHeight;
+  col.style.borderLeft = '3px solid var(--warn)';
+  col.innerHTML = `
+    <div style="height:${colHeight - 28}px;overflow-y:auto;padding-right:6px;" id="guide-scroll">
+      <a href="javascript:void(0)" onclick="hideGuide()" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);display:inline-flex;align-items:center;gap:4px;margin-bottom:14px;text-decoration:none;">← Back to home</a>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:600;color:#0D0D0F;background:var(--warn);padding:2px 6px;border-radius:2px;display:inline-block;margin-bottom:10px;">Editor's Pick</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:800;color:var(--t1);line-height:1.2;letter-spacing:-0.3px;margin-bottom:6px;">Best MCP Servers for Claude Code</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--tm);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(245,185,66,0.15);">SMALL COUNCIL REVIEW &nbsp;·&nbsp; Claude Sonnet 4.6, Gemini 1.5 Pro, Grok, GPT-5.4 Thinking &nbsp;·&nbsp; April 4, 2026 &nbsp;·&nbsp; 15 servers</div>
+      <div id="guide-body" style="font-size:12px;color:var(--t2);line-height:1.7;"></div>
+    </div>`;
+
+  document.getElementById('guide-body').innerHTML = guideHTML();
+}
+
+function guideHTML() {
+  const h2 = (n,t,gh,stars,transport,diff) => `
+    <div style="margin:20px 0 6px;padding-top:16px;border-top:1px solid rgba(245,185,66,0.12);">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:800;color:var(--t1);">#${n} — ${t}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--tm);margin-top:3px;">
+        ${gh ? `<a href="${gh}" target="_blank" style="color:var(--ac);">${gh.replace('https://github.com/','')}</a> &nbsp;·&nbsp; ` : ''}★ ${stars} &nbsp;·&nbsp; ${transport} &nbsp;·&nbsp; ${diff}
+      </div>
+    </div>`;
+
+  const review = (model, url, text) => `
+    <div style="margin:8px 0 6px;font-size:11px;font-style:italic;color:var(--tm);">Best review by <a href="${url}" target="_blank" style="color:var(--ac);">${model}</a>:</div>
+    <p style="margin-bottom:8px;">${text}</p>`;
+
+  const caveat = t => `<p style="font-size:11px;color:var(--tm);background:var(--s1);border-left:2px solid var(--b1);padding:6px 8px;margin-bottom:6px;"><strong style="color:var(--t2);">Caveat:</strong> ${t}</p>`;
+
+  const note = t => `<p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);font-style:italic;margin-bottom:4px;"><em>Council note: ${t}</em></p>`;
+
+  return `
+    <p style="margin-bottom:14px;">Claude Code is already a capable coding agent. It edits files, runs shell commands, works across a codebase, and calls the Anthropic API. What it cannot do by default is touch your GitHub PRs, query your database, open a browser, or pull current documentation for the library you're using right now.</p>
+    <p style="margin-bottom:14px;">MCP (Model Context Protocol) is the fix. As of early 2026, the ecosystem has grown past 400 community-built servers. Most aren't worth your time. These 15 are.</p>
+
+    ${h2(1,'GitHub MCP Server','https://github.com/github/github-mcp-server','~28,600 ★','stdio / HTTP','Easy')}
+    ${review('GPT-5.4 Thinking','https://openai.com','For Claude Code, this is the most broadly useful MCP server because it closes the loop between local coding work and the system of record: repos, PRs, issues, Actions, labels, and code security. It belongs at #1 because Claude Code already edits code well locally; what it needs most is authoritative repo state, PR context, CI visibility, and issue workflows — which GitHub\'s server exposes directly.')}
+    ${caveat('Rate limits of 5,000 requests per hour can be hit during heavy agentic sessions. Use fine-grained PATs scoped to only the repos and permissions you need.')}
+    ${note('Ranked #1 or #2 by all four models.')}
+
+    ${h2(2,'Context7','https://github.com/upstash/context7','~51,600 ★','stdio / HTTP','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code\'s training data is months old. When you\'re working with Next.js 15, Prisma 6, React 19, or any fast-moving framework, Claude will generate code against outdated API signatures — and it won\'t know it\'s doing it. Context7 solves this by fetching current, version-specific documentation for any library at call time and injecting it into the prompt. This is arguably the highest-ROI server on this list for day-to-day coding.')}
+    ${caveat('The parsing backend and crawling engine are proprietary — only the MCP wrapper is open source. Quality varies by library.')}
+    ${note('Ranked #2 by both Claude and ChatGPT. Directly addresses Claude Code\'s most common failure mode.')}
+
+    ${h2(3,'Playwright MCP','https://github.com/microsoft/playwright-mcp','~30,300 ★','stdio / HTTP','Easy')}
+    ${review('Grok','https://x.ai','Provides structured browser automation via accessibility trees — no screenshots needed — letting Claude Code autonomously navigate, click, type, mock networks, and run E2E tests during web and full-stack builds. Microsoft backing ensures rock-solid stability and frequent updates.')}
+    ${caveat('Requires Playwright browsers installed (npx playwright install chromium) before first use.')}
+    ${note('Appeared in all four lists.')}
+
+    ${h2(4,'Sentry MCP','https://github.com/getsentry/sentry-mcp','~621 ★ (repo)','stdio / HTTP','Easy')}
+    ${review('GPT-5.4 Thinking','https://openai.com','Sentry is unusually well aligned with Claude Code because it is explicitly optimized for coding assistants and debugging workflows. This makes it high-value for "fix the real production error, not the hypothetical one" work: issues, traces, and performance data become available inside the coding session.')}
+    ${caveat('Most valuable only if the team already has good Sentry coverage in place. Pair it with GitHub MCP to close the full loop.')}
+    ${note('"Fix the real production error, not the hypothetical one" was the standout line of the entire review round.')}
+
+    ${h2(5,'Filesystem MCP Server','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code has native file access within a project directory. The Filesystem MCP server adds sandboxed access to directories outside that project — shared config directories, monorepo sibling packages, data folders. You specify exactly which directories to expose at startup. Nothing outside that list is reachable.')}
+    ${caveat('Claude Code\'s native access is usually sufficient for single-project work. This one earns its place in multi-package setups.')}
+    ${note('Gemini ranked this #1; Claude ranked it #4. For single-repo work, native access mostly substitutes.')}
+
+    ${h2(6,'Sequential Thinking MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Gemini 1.5 Pro','https://gemini.google.com','This isn\'t a tool in the traditional sense — it\'s a reasoning enhancer. It forces Claude to use a structured, step-by-step reflection process, which is critical for complex refactors in the CLI where "one-shot" logic often fails.')}
+    ${caveat('Adds latency on every interaction where it engages. Best scoped to complex sessions rather than left on globally.')}
+    ${note('All four models included this server.')}
+
+    ${h2(7,'Fetch MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code cannot access the internet by default. Fetch MCP adds the ability to retrieve any URL and convert it to clean Markdown — API documentation, release notes, third-party service docs. Anthropic-maintained, no API key required.')}
+    ${caveat('For heavier scraping workloads with JavaScript-heavy pages, Firecrawl outperforms this server.')}
+
+    ${h2(8,'Memory MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Claude Code has no memory between sessions by default. The Memory server implements a knowledge graph that persists entities and relationships across conversations — your architecture decisions, the names you\'ve given things, technical constraints you\'ve explained once and don\'t want to explain again.')}
+    ${caveat('Only as useful as how disciplined you are about curating it. Stale or contradictory entries will mislead the model.')}
+
+    ${h2(9,'Firecrawl MCP','https://github.com/firecrawl/firecrawl-mcp-server','~86,000 ★','stdio / HTTP','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Where Fetch MCP handles simple URL retrieval, Firecrawl handles the hard cases: JavaScript-heavy pages, multi-page crawls, structured data extraction, batch scraping. It can traverse entire documentation sites in a single operation. There\'s also an autonomous agent mode that accepts a natural language prompt and finds relevant information across multiple sources on its own.')}
+    ${caveat('The free tier\'s 500 credits deplete quickly on batch operations. A paid plan is needed for sustained workflows.')}
+
+    ${h2(10,'Supabase MCP','https://github.com/supabase-community/supabase-mcp','~2,600 ★','HTTP (SSE)','Easy')}
+    ${review('GPT-5.4 Thinking','https://openai.com','Supabase MCP is one of the best "full-stack in one shot" servers for Claude Code. It compresses database and platform context into a single connection: query your Postgres database, inspect table schemas, manage RLS policies, create migrations, debug auth issues, and interact with Edge Functions — all through natural language.')}
+    ${caveat('Enable read-only mode by default. The OAuth flow requires a browser redirect and won\'t work in headless CI environments. Prompt injection via database content is a documented risk.')}
+
+    ${h2(11,'PostgreSQL MCP Pro','https://github.com/crystaldba/postgres-mcp','~2,500 ★','stdio / HTTP','Moderate')}
+    ${review('GPT-5.4 Thinking','https://openai.com','This is one of the few database MCP servers that goes beyond "run SQL" into explain plans, index tuning, health checks, and performance diagnostics. That makes it much more valuable to Claude Code than a thin database wrapper, especially when the job is to fix slow queries or bad schema design.')}
+    ${caveat('Use a dedicated read-only user and minimum permissions. The crystaldba version is the stronger pick for serious backend work.')}
+
+    ${h2(12,'Git MCP','https://github.com/modelcontextprotocol/servers','~82,046 ★','stdio','Easy')}
+    ${review('Grok','https://x.ai','Local Git repo tools — commit, branch, diff, blame, search — that pair perfectly with the GitHub MCP server for end-to-end version control without leaving the CLI. The distinct value over Claude Code\'s native git is structured, programmatic history analysis.')}
+    ${caveat('Local-only. Claude Code\'s native git handles most common operations fine — Git MCP earns its place specifically for history analysis across large repos.')}
+
+    ${h2(13,'Linear MCP',null,'N/A (hosted)','HTTP (SSE)','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','The combinatorial value with GitHub MCP is the headline: Claude Code can diagnose a bug, write the fix, open the PR, and update the Linear ticket to "In Review" in a single workflow without touching a browser.')}
+    ${caveat('Most valuable as a companion to GitHub MCP rather than standalone.')}
+
+    ${h2(14,'Figma MCP',null,'N/A (hosted)','HTTP (SSE)','Easy')}
+    ${review('Claude Sonnet 4.6','https://anthropic.com','Figma MCP exposes your Figma selection\'s live component structure to Claude — hierarchy, auto-layout values, spacing tokens, component references, design variables, and color styles. The practical result: Claude Code generates code against the actual design rather than a screenshot or verbal description.')}
+    ${caveat('Requires Figma Dev Mode access, a paid feature on most plans.')}
+
+    ${h2(15,'Cloudflare MCP Server','https://github.com/cloudflare/mcp-server-cloudflare','~3,600 ★','HTTP (SSE)','Moderate')}
+    ${review('GPT-5.4 Thinking','https://openai.com','If a Claude Code user ships on Cloudflare Pages, Workers, D1, R2, DNS, or observability, this server is extremely practical. It spans deployment, infrastructure, and debugging tasks in one official package.')}
+    ${caveat('Irrelevant if your stack doesn\'t use Cloudflare. Scope permissions tightly.')}
+    ${note('ChatGPT was the only model to include this server — a legitimate omission from the others.')}
+
+    <div style="margin-top:24px;padding:14px;background:var(--s1);border:1px solid rgba(245,185,66,0.2);border-radius:3px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--t1);margin-bottom:8px;">How to Think About This Stack</div>
+      <p style="margin-bottom:8px;"><strong style="color:var(--t1);">Start here:</strong> GitHub MCP + Context7 + Playwright. Three servers, 80% of the value.</p>
+      <p style="margin-bottom:8px;"><strong style="color:var(--t1);">Add based on your stack:</strong> Supabase or Postgres MCP Pro for databases. Sentry for production debugging. Linear, Figma, Cloudflare if you use them.</p>
+      <p><strong style="color:var(--t1);">Install globally and forget:</strong> Filesystem, Fetch, Memory, Sequential Thinking, Git MCP — all in Anthropic's reference monorepo. Zero config, no API keys.</p>
+    </div>
+
+    <div style="margin-top:20px;padding-top:14px;border-top:1px solid rgba(245,185,66,0.15);font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);">
+      <div style="margin-bottom:6px;color:var(--tm);font-weight:600;">SMALL COUNCIL — ATTRIBUTION</div>
+      <div>Claude Sonnet 4.6 · <a href="https://anthropic.com" target="_blank" style="color:var(--ac);">Anthropic</a></div>
+      <div>Gemini 1.5 Pro · <a href="https://gemini.google.com" target="_blank" style="color:var(--ac);">Google</a></div>
+      <div>Grok · <a href="https://x.ai" target="_blank" style="color:var(--ac);">xAI</a></div>
+      <div>GPT-5.4 Thinking · <a href="https://openai.com" target="_blank" style="color:var(--ac);">OpenAI</a></div>
+      <div style="margin-top:6px;">Research date: April 4, 2026</div>
+    </div>`;
+}
+
+// Handle direct hash navigation
+if (window.location.hash === '#/guide/best-mcp-servers-for-claude-code') {
+  renderGuide();
+}
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#/guide/best-mcp-servers-for-claude-code') {
+    renderGuide();
+  } else if (window.location.hash === '') {
+    document.getElementById('featured-guide-col').innerHTML = GUIDE_CARD_HTML;
+  }
+});
+</script>
+</body>
+</html>
