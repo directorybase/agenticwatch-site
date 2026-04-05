@@ -2,8 +2,9 @@ name: Update GitHub Star Counts
 
 on:
   schedule:
-    # Runs once daily at 06:00 UTC — well within Cloudflare's 500 builds/month free tier
+    # Runs twice daily — 06:00 UTC and 18:00 UTC (60 builds/month, within Cloudflare free tier)
     - cron: '0 6 * * *'
+    - cron: '0 18 * * *'
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions UI
 
@@ -87,14 +88,10 @@ jobs:
           print(f"Done: {len(stars)} repos fetched, {len(errors)} errors")
           EOF
 
-      - name: Commit stars.json if changed
+      - name: Commit and push stars.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/stars.json
-          if git diff --cached --quiet; then
-            echo "No changes — skipping commit"
-          else
-            git commit -m "chore: update star counts [skip ci]"
-            git push
-          fi
+          git commit -m "chore: update star counts $(date -u +%Y-%m-%d\ %H:%M\ UTC)"
+          git push

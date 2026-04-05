@@ -299,18 +299,39 @@ const CATEGORY_LABELS = {
 };
 
 // ─── Load data ────────────────────────────────────────────────────────────────
-fetch('/data/mcp-servers.json')
-  .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
-  .then(data => {
+Promise.all([
+  fetch('/data/mcp-servers.json').then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }),
+  fetch('/data/stars.json').then(r => r.ok ? r.json() : null).catch(() => null)
+])
+  .then(([data, starsData]) => {
     allEntries = data.entries || [];
+
+    // Merge live star counts if stars.json is available
+    if (starsData && starsData.stars) {
+      allEntries.forEach(e => {
+        if (e.url && e.url.startsWith('https://github.com/')) {
+          const parts = e.url.replace('https://github.com/','').replace(/\/$/,'').split('/');
+          if (parts.length >= 2) {
+            const slug = parts[0] + '/' + parts[1];
+            const live = starsData.stars[slug];
+            if (live !== undefined && live !== null) e.github_stars = live;
+          }
+        }
+      });
+    }
+
     // build slug index
     allEntries.forEach((e, i) => {
       e._idx = i;
       e._slug = slugify(e.name) + '-' + i;
       indexBySlug[e._slug] = e;
     });
+
+    const starsUpdated = starsData ? starsData.updated : null;
     document.getElementById('hdr-meta').innerHTML =
-      allEntries.length.toLocaleString() + ' entries · Updated: ' + (data.generated || '—');
+      allEntries.length.toLocaleString() + ' entries · Stars: ' +
+      (starsUpdated ? starsUpdated.replace('T',' ').replace('Z',' UTC') : 'static');
+
     renderStats(data);
     renderRankings(allEntries);
     renderCategoryList(allEntries);
