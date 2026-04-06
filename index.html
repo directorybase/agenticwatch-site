@@ -454,18 +454,20 @@ a:hover{color:var(--ac-h);text-decoration:underline;}
     </ul>
   </div>
 
-  <!-- CENTER: Featured Guide -->
+  <!-- CENTER: Small Council Reviews -->
   <div class="top-col top-col-featured" id="featured-guide-col">
-    <span class="sh">Featured Guide</span>
+    <span class="sh" style="background:var(--warn);color:#000;">Small Council Reviews</span>
     <div class="guide-featured">
-      <span class="badge-editors-pick">Editor's Pick</span>
-      <a href="javascript:void(0)" class="guide-featured-title" onclick="showGuide()">Best MCP Servers for Claude Code</a>
-      <p class="guide-featured-excerpt">Claude Code is already a capable coding agent. What it cannot do by default is touch your GitHub PRs, query your database, open a browser, or pull current documentation for the library you're using right now. MCP is the fix — and these 15 servers are the ones worth installing.</p>
+      <a href="javascript:void(0)" class="guide-featured-title" style="pointer-events:none;cursor:default;">The Small Council: Discover What Each Model Gets Wrong</a>
+      <p class="guide-featured-excerpt">Confident answers aren't the same as correct ones. Every AI model carries blind spots it can't see and won't tell you about. The Small Council sends the same briefing to four competing frontier models — no collaboration, no shared results — then compares every answer in public. You get consensus where it exists, disagreement where it matters, and the best review per entry by name. Stop wasting time. Save hours. Catch the gaps. Trust the Small Council.</p>
+      <div style="border-top:1px solid rgba(245,185,66,0.25);margin-bottom:12px;"></div>
+      <div class="guide-byline" style="margin-bottom:8px;">First Review</div>
+      <a href="javascript:void(0)" class="guide-featured-title" onclick="showGuide()" style="font-size:14px;margin-bottom:10px;">Best MCP Servers for Claude Code</a>
       <div class="guide-byline">
-        SMALL COUNCIL REVIEW &nbsp;·&nbsp; <span>Claude Sonnet 4.6, Gemini 1.5 Pro, Grok, GPT-5.4 Thinking</span><br/>
+        Claude Sonnet 4.6 &nbsp;·&nbsp; Gemini 1.5 Pro &nbsp;·&nbsp; Grok &nbsp;·&nbsp; GPT-5.4 Thinking<br/>
         April 4, 2026 &nbsp;·&nbsp; 15 servers reviewed
       </div>
-      <button class="btn-read-more" onclick="showGuide()">Read the full guide →</button>
+      <button class="btn-read-more" onclick="showGuide()">Read the review →</button>
     </div>
   </div>
 
