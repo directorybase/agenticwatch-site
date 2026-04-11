@@ -1,0 +1,46 @@
+name: AgenticWatch Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      listing_id:
+        description: 'Listing ID (UUID)'
+        required: true
+        default: '8d890339-13f4-42b5-93b8-723c6c54c245'
+      product_name:
+        description: 'Product name'
+        required: true
+        default: 'Playwright MCP'
+      product_url:
+        description: 'Product URL'
+        required: true
+        default: 'https://github.com/microsoft/playwright-mcp'
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Run pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LISTING_ID: ${{ inputs.listing_id }}
+          PRODUCT_NAME: ${{ inputs.product_name }}
+          PRODUCT_URL: ${{ inputs.product_url }}
+        run: python3 .github/scripts/pipeline.py
+
+      - name: Commit card to pending review
+        run: |
+          git config user.name "agenticwatch-pipeline[bot]"
+          git config user.email "pipeline@agenticwatch.dev"
+          git add data/pending-review.json
+          git diff --staged --quiet || git commit -m "pipeline: queue ${{ inputs.product_name }} for review"
+          git push
