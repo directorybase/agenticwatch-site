@@ -33,7 +33,9 @@ logging.basicConfig(
 log = logging.getLogger("publish")
 
 ROOT      = Path(__file__).parent.parent
-LIVE_FILE = ROOT / "data" / "mcp-servers.json"
+LIVE_FILE   = ROOT / "data" / "mcp-servers.json"
+RECENT_FILE = ROOT / "data" / "recent.json"
+RECENT_MAX  = 50
 
 GITEA_URL   = os.environ.get("GITEA_URL", "http://192.168.7.70:30008").rstrip("/")
 GITEA_TOKEN = os.environ.get("GITEA_TOKEN", "cffbb73974a0c0ae718c8e78d3d1d044a975412b")
@@ -169,10 +171,14 @@ def main() -> None:
         return
 
     # Append entries
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     new_entries = [build_entry(r) for r in batch]
+    for e in new_entries:
+        e["added_at"] = now
+
     live["entries"].extend(new_entries)
     live["count"] = len(live["entries"])
-    live["generated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    live["generated"] = now
 
     with open(LIVE_FILE, "w") as f:
         json.dump(live, f, indent=2)
@@ -180,10 +186,31 @@ def main() -> None:
 
     log.info("Wrote %d new entries to mcp-servers.json (%d total)", len(new_entries), live["count"])
 
+    # Update recent.json
+    if RECENT_FILE.exists():
+        with open(RECENT_FILE) as f:
+            recent = json.load(f)
+    else:
+        recent = {"entries": []}
+
+    recent_entries = new_entries + recent["entries"]
+    recent_entries = recent_entries[:RECENT_MAX]
+    recent_out = {
+        "updated": now,
+        "count": len(recent_entries),
+        "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
+        "entries": recent_entries,
+    }
+    with open(RECENT_FILE, "w") as f:
+        json.dump(recent_out, f, indent=2)
+        f.write("\n")
+
+    log.info("Updated recent.json (%d entries)", len(recent_entries))
+
     # Git commit and push
     repo = ROOT
     try:
-        subprocess.run(["git", "add", "data/mcp-servers.json"], cwd=repo, check=True)
+        subprocess.run(["git", "add", "data/mcp-servers.json", "data/recent.json"], cwd=repo, check=True)
         msg = f"publish: add {len(new_entries)} MCP entries from describe pipeline"
         subprocess.run(["git", "commit", "-m", msg], cwd=repo, check=True)
         subprocess.run(["git", "push"], cwd=repo, check=True)

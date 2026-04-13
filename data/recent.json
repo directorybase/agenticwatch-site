@@ -1,0 +1,857 @@
+{
+  "updated": "2026-04-13T13:40:27Z",
+  "count": 50,
+  "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
+  "entries": [
+    {
+      "name": "u14app/deep-research",
+      "url": "https://github.com/u14app/deep-research",
+      "description": "Connects to Large Language Models (LLMs) via SSE API and MCP server, enabling agents to query, create, update, and search for deep research information. Best suited for agents requiring advanced research capabilities and integration with existing research workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "chongdashu/unreal-mcp",
+      "url": "https://github.com/chongdashu/unreal-mcp",
+      "description": "Connects to Unreal Engine via the Model Context Protocol (MCP), enabling agents to query, create, update, and monitor assets and scenes. Best suited for agents that need to automate tasks within Unreal Engine, such as content creation, scene management, and runtime operations.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "open-webui/mcpo",
+      "url": "https://github.com/open-webui/mcpo",
+      "description": "Connects to a proxy server that translates MCP commands into OpenAPI requests. Enables querying, creating, updating, and monitoring data within the system. Best suited for agents that need to interact with a variety of internal services and automate tasks across different platforms.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "joey-zhou/xiaozhi-esp32-server-java",
+      "url": "https://github.com/joey-zhou/xiaozhi-esp32-server-java",
+      "description": "Connects to a Java enterprise management platform for ESP32 devices, enabling monitoring, customization, role switching, and dialogue record management. Agents can query device status, execute commands, and manage user configurations. Best suited for agents requiring device management and automation capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "1Panel-dev/MaxKB",
+      "url": "https://github.com/1Panel-dev/MaxKB",
+      "description": "Connects to a platform for building enterprise-grade agents, enabling actions like querying, creating, updating, and searching. Best suited for agents requiring a flexible and extensible framework for complex tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "martin-ger/esp32_nat_router",
+      "url": "https://github.com/martin-ger/esp32_nat_router",
+      "description": "Connects to an ESP32 device to enable network routing and firewall functionality. Agents can query device status, monitor network traffic, and potentially execute network configuration changes. Best suited for agents that need to manage network security and routing on embedded systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "OpenAgentPlatform/Dive",
+      "url": "https://github.com/OpenAgentPlatform/Dive",
+      "description": "Connects to a language model to enable code scanning, image uploading, and tool call logs. Best suited for agents that need to analyze code, interact with images, and manage tool usage within a coding context.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "Devin-AXIS/A2V",
+      "url": "https://github.com/Devin-AXIS/A2V",
+      "description": "Connects to a compute platform, enabling agents to query and execute various actions. Best suited for agents that need to interact with a wide range of computational resources and services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "ravitemer/mcphub.nvim",
+      "url": "https://github.com/ravitemer/mcphub.nvim",
+      "description": "Connects to a client for a NeoVim editor that integrates with MCP servers. Enables querying, creating, updating, and monitoring MCP servers for use with chat plugins. Best suited for agents that need to manage and utilize external server resources within an editing workflow.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "iFurySt/RedNote-MCP",
+      "url": "https://github.com/iFurySt/RedNote-MCP",
+      "description": "Connects to a server that accesses RedNote (XiaoHongShu). Enables querying, creating, updating, and searching within the RedNote data. Best suited for agents that need to retrieve and manage information from this social media platform.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "firecrawl/firecrawl-mcp-server",
+      "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "description": "Connects to a web scraping and search service, enabling agents to query web content, search for information, and monitor web data. Best suited for agents that require automated web data extraction and analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "archestra-ai/archestra",
+      "url": "https://github.com/archestra-ai/archestra",
+      "description": "Connects to a platform providing enterprise AI capabilities including a registry, gateway, and orchestrator. Enables querying, creating, updating, and monitoring various features like image storage, code scanning, and content management. Best suited for agents requiring a comprehensive set of AI tools for enterprise applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "drhelius/Gearboy",
+      "url": "https://github.com/drhelius/Gearboy",
+      "description": "Connects to a game emulator and debugger, enabling actions like query, create, update, search, monitor, and execute related to Game Boy, Game Boy Color, and Super Game Boy. Best suited for agents that need to interact with retro gaming systems or analyze game code.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "PaperDebugger/paperdebugger",
+      "url": "https://github.com/PaperDebugger/paperdebugger",
+      "description": "Connects to a multi-agent system for academic writing, review, and editing, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents working on in-editor writing tasks and review workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "openops-cloud/openops",
+      "url": "https://github.com/openops-cloud/openops",
+      "description": "Connects to a FinOps automation platform, enabling agents to query billing data, create and update cost-optimization plans, and monitor financial performance. Best suited for agents that need to automate financial management tasks and gain insights into cloud spending.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "mcpjungle/MCPJungle",
+      "url": "https://github.com/mcpjungle/MCPJungle",
+      "description": "Connects to a self-hosted gateway for AI agents, providing access to various features like code scanning, image uploads, and chat functionalities. Enables agents to query, create, update, and monitor these features. Best suited for agents that require integration with a range of AI services and need to manage their own infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "ref-tools/ref-tools-mcp",
+      "url": "https://github.com/ref-tools/ref-tools-mcp",
+      "description": "Connects to a library of public and private code repositories, enabling agents to query, create, update, search, and monitor code without exceeding context window limitations. Best suited for coding agents and tasks requiring efficient code management and access to external libraries.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "chunkhound/chunkhound",
+      "url": "https://github.com/chunkhound/chunkhound",
+      "description": "Connects to a codebase to provide intelligence and facilitate code-related actions. Enables querying, updating, and searching codebase information, as well as executing code actions and monitoring code changes. Best suited for agents that require in-depth code analysis and manipulation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "robotmcp/ros-mcp-server",
+      "url": "https://github.com/robotmcp/ros-mcp-server",
+      "description": "Connects AI models like Claude and GPT with robots using MCP and ROS. Enables actions such as query, create, update, search, monitor, and execute tasks within a robotic environment. Best suited for agents that require integration between AI and robotics for complex automation and task management.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "brightdata/brightdata-mcp",
+      "url": "https://github.com/brightdata/brightdata-mcp",
+      "description": "Connects to a Model Context Protocol (MCP) server, enabling agents to query and update various features like image storage, code scanning, and content management. Best suited for agents that need to interact with a wide range of services and manage contextual information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "wgpsec/ENScan_GO",
+      "url": "https://github.com/wgpsec/ENScan_GO",
+      "description": "Connects to various enterprise information APIs to collect and aggregate data about domestic companies, including ICP registration, apps, mini-programs, and WeChat official accounts. Enables querying, creating, updating, and searching for this information. Best suited for agents that need to gather and analyze company data for business intelligence or competitive analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "BlackSnufkin/LitterBox",
+      "url": "https://github.com/BlackSnufkin/LitterBox",
+      "description": "Connects to a sandbox environment for testing malware payloads against detection mechanisms. Enables actions like query, create, update, search, monitor, and execute within the sandbox. Best suited for agents focused on security analysis and threat hunting.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "httprunner/httprunner",
+      "url": "https://github.com/httprunner/httprunner",
+      "description": "Queries and updates a set of API endpoints. Enables actions like search, monitor, and execute. Best suited for agents that need to interact with and manage external services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "SecretiveShell/MCP-Bridge",
+      "url": "https://github.com/SecretiveShell/MCP-Bridge",
+      "description": "Connects to a set of tools via an OpenAI compatible endpoint, enabling actions like code scanning, image uploading, and file manipulation. Best suited for agents that need to interact with a variety of developer tools and APIs.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "inkeep/agents",
+      "url": "https://github.com/inkeep/agents",
+      "description": "Connects to a platform for creating AI agents using a visual builder or TypeScript SDK, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents and tasks requiring the creation and management of AI assistants and multi-agent workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "Connects to a workflow automation platform with AI capabilities, enabling actions like code scanning, image uploading, and interacting with code repositories. Best suited for agents that need to automate complex workflows involving code, content, and AI-powered tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "description": "Connects to a code repository and provides actions for code building, evaluation, and analysis. Enables agents to query code, create, update, search, monitor, and execute code-related tasks. Best suited for agents that need to manage and analyze code within a development workflow.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "liaokongVFX/MCP-Chinese-Getting-Started-Guide",
+      "url": "https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide",
+      "description": "Connects to a model context protocol, enabling agents to query and update various features within a coding environment. Best suited for agents that need to interact with code editing tools, such as code scanning, file upload, and code completion.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "stickerdaniel/linkedin-mcp-server",
+      "url": "https://github.com/stickerdaniel/linkedin-mcp-server",
+      "description": "Connects to LinkedIn data via an open-source MCP server, enabling agents to query profiles, companies, jobs, and messages. Agents can use the tool to search, monitor, and potentially execute actions on LinkedIn data. Best suited for agents that need to access and interact with LinkedIn information for tasks like recruitment, market research, or automated content generation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "0xJacky/nginx-ui",
+      "url": "https://github.com/0xJacky/nginx-ui",
+      "description": "Connects to Nginx via a WebUI, enabling actions like viewing and modifying Nginx configurations, monitoring Nginx status, and executing commands. Best suited for agents that need to manage and interact with Nginx services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "davepoon/buildwithclaude",
+      "url": "https://github.com/davepoon/buildwithclaude",
+      "description": "Connects to a hub of extensions for the Claude ecosystem, enabling agents to query, create, update, and search Claude Skills, Agents, Commands, Hooks, Plugins, and Marketplace collections. Best suited for agents that need to extend Claude Code, Claude Desktop, Agent SDK, or OpenClaw functionality.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "Dataojitori/nocturne_memory",
+      "url": "https://github.com/Dataojitori/nocturne_memory",
+      "description": "Connects to a long-term memory server for MCP agents, enabling persistent, graph-like memory storage for tasks like search, monitor, and update. Best suited for agents requiring a robust, model-agnostic memory solution to overcome limitations of vector-based retrieval.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "alioshr/memory-bank-mcp",
+      "url": "https://github.com/alioshr/memory-bank-mcp",
+      "description": "Connects to a remote memory bank management server. Enables querying, creating, updating, and searching stored data. Best suited for agents that need to manage and access persistent information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "refreshdotdev/web-eval-agent",
+      "url": "https://github.com/refreshdotdev/web-eval-agent",
+      "description": "Connects to a server that automatically evaluates web applications. Enables querying, creating, updating, and monitoring web application states, and executing actions like code scanning and image uploads. Best suited for agents that need to analyze and manage web application behavior.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "svnscha/mcp-windbg",
+      "url": "https://github.com/svnscha/mcp-windbg",
+      "description": "Connects to a model context protocol for Windows debugging. Enables querying, creating, updating, and searching debugging information. Best suited for agents that need to analyze and interact with Windows system state during debugging.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "llmsresearch/paperbanana",
+      "url": "https://github.com/llmsresearch/paperbanana",
+      "description": "Connects to Google's Agent2Agent protocol, enabling cross-agent task delegation and capability negotiation. Allows agents to query, create, update, and monitor tasks, and execute actions across different frameworks. Best suited for building multi-agent systems that span different frameworks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "rusq/slackdump",
+      "url": "https://github.com/rusq/slackdump",
+      "description": "Connects to Slack to save and export private and public messages, threads, files, and users. Enables actions like query, create, update, search, monitor, and execute on Slack data. Best suited for agents that need to archive or analyze Slack data for various purposes.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "firerpa/lamda",
+      "url": "https://github.com/firerpa/lamda",
+      "description": "Connects to a mobile automation framework, enabling actions like task creation, execution, and monitoring. Best suited for agents that require robust mobile automation capabilities and framework integration.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "sparfenyuk/mcp-proxy",
+      "url": "https://github.com/sparfenyuk/mcp-proxy",
+      "description": "Connects to Streamable HTTP and standard input/output (stdio) MCP transports, enabling agents to query, create, update, and search data. Best suited for agents that need to interact with various data sources and systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "YuzeHao2023/Awesome-MCP-Servers",
+      "url": "https://github.com/YuzeHao2023/Awesome-MCP-Servers",
+      "description": "Connects to a list of Model Context Protocol (MCP) servers, enabling actions like query, create, update, search, and monitor. Best suited for agents that need to interact with various code hosting and development services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "go-nunu/nunu",
+      "url": "https://github.com/go-nunu/nunu",
+      "description": "Connects to a Go application building tool, enabling actions like code scanning, version control integration, and file manipulation. Best suited for agents that need to automate Go application development workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "sansan0/TrendRadar",
+      "url": "https://github.com/sansan0/TrendRadar",
+      "description": "Connects to a platform for monitoring public opinion and trends by aggregating data from multiple sources, including RSS feeds. Enables querying, searching, and monitoring of trending topics, with AI-powered analysis and alerts. Best suited for agents that need to analyze real-time public sentiment and identify emerging trends.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "JetBrains/mcp-jetbrains",
+      "url": "https://github.com/JetBrains/mcp-jetbrains",
+      "description": "Connects to JetBrains IDEs (IntelliJ, PyCharm, WebStorm, Android Studio) to enable actions like code scanning, file upload, and code completion. Best suited for agents that need to interact with code editing environments and leverage the IDE's features.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "modelcontextprotocol/csharp-sdk",
+      "url": "https://github.com/modelcontextprotocol/csharp-sdk",
+      "description": "Connects to a Model Context Protocol server, enabling agents to query and update various features like image storage, code scanning, and content management. Best suited for agents that need to interact with a wide range of services and manage contextual information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "microsoft/mcp-for-beginners",
+      "url": "https://github.com/microsoft/mcp-for-beginners",
+      "description": "Connects to a curriculum providing practical examples of Model Context Protocol (MCP) in .NET, Java, TypeScript, JavaScript, Rust, and Python. Enables querying, creating, updating, and monitoring AI workflows from session setup to service orchestration. Best suited for agents developing modular, scalable, and secure AI applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "0x4m4/hexstrike-ai",
+      "url": "https://github.com/0x4m4/hexstrike-ai",
+      "description": "Connects to a suite of cybersecurity tools for automated pen testing, vulnerability discovery, and security research. Enables agents to query, execute, and monitor these tools for security analysis. Best suited for agents requiring automated security assessments and real-world offensive security capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "yzfly/Awesome-MCP-ZH",
+      "url": "https://github.com/yzfly/Awesome-MCP-ZH",
+      "description": "Connects to a collection of resources and tools related to Microsoft's Machine Learning and AI services. Enables actions such as querying, creating, updating, and searching for MCP resources, monitoring their status, and potentially executing commands. Best suited for agents that need to interact with and manage various AI services offered by Microsoft.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "D4Vinci/Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "description": "Connects to a web scraping framework, enabling agents to query, create, update, search, monitor, and execute web scraping tasks. Best suited for agents that require automated web data extraction and crawling.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "Azure/data-api-builder",
+      "url": "https://github.com/Azure/data-api-builder",
+      "description": "Connects to Azure databases and on-premise stores, enabling actions like querying, creating, updating, and searching data. Best suited for agents that need to interact with data stored in these systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "metatool-ai/metamcp",
+      "url": "https://github.com/metatool-ai/metamcp",
+      "description": "Connects to a system that provides various functionalities, including code scanning, image uploading, and interaction with a code completion agent. Enables agents to query, create, update, and monitor code-related data and perform actions like code scanning, image manipulation, and model selection. Best suited for agents that require integration with code analysis tools and code completion services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    }
+  ]
+}
