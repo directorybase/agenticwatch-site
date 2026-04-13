@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T07:52:20Z",
+  "generated": "2026-04-13T08:07:19Z",
   "source": "star-update-script v1",
-  "count": 2067,
+  "count": 2073,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35545,6 +35545,108 @@
       "name": "openags/paper-search-mcp",
       "url": "https://github.com/openags/paper-search-mcp",
       "description": "Connects to multiple academic paper repositories (arXiv, PubMed, bioRxiv, etc.) to search and download papers. Enables querying, searching, and monitoring of scientific literature. Best suited for agents that need to access and analyze a large volume of research.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "f/mcptools",
+      "url": "https://github.com/f/mcptools",
+      "description": "Connects to a command-line interface for interacting with Model Context Protocol (MCP) servers. Enables actions like querying, creating, updating, and searching data within the MCP environment. Best suited for agents that need to manage and interact with data stored in MCP servers.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "assafelovic/gpt-researcher",
+      "url": "https://github.com/assafelovic/gpt-researcher",
+      "description": "Queries and interacts with various LLM providers to conduct in-depth research on data. Enables tasks such as data analysis, summarization, and question answering. Best suited for agents requiring comprehensive data exploration and knowledge extraction.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "lemonade-sdk/lemonade",
+      "url": "https://github.com/lemonade-sdk/lemonade",
+      "description": "Connects to a platform that allows agents to run local AI applications on GPUs and NPUs. Enables querying, creating, updating, and monitoring these applications. Best suited for agents that need to leverage local AI models for various tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "timescale/pg-aiguide",
+      "url": "https://github.com/timescale/pg-aiguide",
+      "description": "Connects to a PostgreSQL database and a cloud plugin to provide skills and documentation for AI coding tools. Enables querying, updating, and searching PostgreSQL code and documentation to improve code generation. Best suited for agents that need to assist with PostgreSQL development and code analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "mcp-router/mcp-router",
+      "url": "https://github.com/mcp-router/mcp-router",
+      "description": "Connects to a server management system, enabling actions like querying server status, updating configurations, and monitoring resource usage. Best suited for agents that need to manage and maintain infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "jxnxts/mcp-brasil",
+      "url": "https://github.com/jxnxts/mcp-brasil",
+      "description": "Connects to a set of public Brazilian APIs, enabling agents to query, create, update, and monitor various services. Best suited for agents that need to interact with Brazilian-specific APIs for tasks like data processing, content management, or service integration.",
       "category": "other",
       "platforms": [
         "Any"
