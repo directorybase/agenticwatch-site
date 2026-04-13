@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T09:07:24Z",
+  "generated": "2026-04-13T09:22:25Z",
   "source": "star-update-script v1",
-  "count": 2095,
+  "count": 2101,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36021,6 +36021,108 @@
       "name": "alioshr/memory-bank-mcp",
       "url": "https://github.com/alioshr/memory-bank-mcp",
       "description": "Connects to a remote memory bank management server. Enables querying, creating, updating, and searching stored data. Best suited for agents that need to manage and access persistent information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "Dataojitori/nocturne_memory",
+      "url": "https://github.com/Dataojitori/nocturne_memory",
+      "description": "Connects to a long-term memory server for MCP agents, enabling persistent, graph-like memory storage for tasks like search, monitor, and update. Best suited for agents requiring a robust, model-agnostic memory solution to overcome limitations of vector-based retrieval.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "davepoon/buildwithclaude",
+      "url": "https://github.com/davepoon/buildwithclaude",
+      "description": "Connects to a hub of extensions for the Claude ecosystem, enabling agents to query, create, update, and search Claude Skills, Agents, Commands, Hooks, Plugins, and Marketplace collections. Best suited for agents that need to extend Claude Code, Claude Desktop, Agent SDK, or OpenClaw functionality.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "0xJacky/nginx-ui",
+      "url": "https://github.com/0xJacky/nginx-ui",
+      "description": "Connects to Nginx via a WebUI, enabling actions like viewing and modifying Nginx configurations, monitoring Nginx status, and executing commands. Best suited for agents that need to manage and interact with Nginx services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "stickerdaniel/linkedin-mcp-server",
+      "url": "https://github.com/stickerdaniel/linkedin-mcp-server",
+      "description": "Connects to LinkedIn data via an open-source MCP server, enabling agents to query profiles, companies, jobs, and messages. Agents can use the tool to search, monitor, and potentially execute actions on LinkedIn data. Best suited for agents that need to access and interact with LinkedIn information for tasks like recruitment, market research, or automated content generation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "liaokongVFX/MCP-Chinese-Getting-Started-Guide",
+      "url": "https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide",
+      "description": "Connects to a model context protocol, enabling agents to query and update various features within a coding environment. Best suited for agents that need to interact with code editing tools, such as code scanning, file upload, and code completion.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "description": "Connects to a code repository and provides actions for code building, evaluation, and analysis. Enables agents to query code, create, update, search, monitor, and execute code-related tasks. Best suited for agents that need to manage and analyze code within a development workflow.",
       "category": "other",
       "platforms": [
         "Any"
