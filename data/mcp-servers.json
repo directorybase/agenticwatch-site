@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T10:07:27Z",
+  "generated": "2026-04-13T10:22:34Z",
   "source": "star-update-script v1",
-  "count": 2120,
+  "count": 2126,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36446,6 +36446,108 @@
       "name": "Devin-AXIS/A2V",
       "url": "https://github.com/Devin-AXIS/A2V",
       "description": "Connects to a compute platform, enabling agents to query and execute various actions. Best suited for agents that need to interact with a wide range of computational resources and services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "OpenAgentPlatform/Dive",
+      "url": "https://github.com/OpenAgentPlatform/Dive",
+      "description": "Connects to a language model to enable code scanning, image uploading, and tool call logs. Best suited for agents that need to analyze code, interact with images, and manage tool usage within a coding context.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "martin-ger/esp32_nat_router",
+      "url": "https://github.com/martin-ger/esp32_nat_router",
+      "description": "Connects to an ESP32 device to enable network routing and firewall functionality. Agents can query device status, monitor network traffic, and potentially execute network configuration changes. Best suited for agents that need to manage network security and routing on embedded systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "1Panel-dev/MaxKB",
+      "url": "https://github.com/1Panel-dev/MaxKB",
+      "description": "Connects to a platform for building enterprise-grade agents, enabling actions like querying, creating, updating, and searching. Best suited for agents requiring a flexible and extensible framework for complex tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "joey-zhou/xiaozhi-esp32-server-java",
+      "url": "https://github.com/joey-zhou/xiaozhi-esp32-server-java",
+      "description": "Connects to a Java enterprise management platform for ESP32 devices, enabling monitoring, customization, role switching, and dialogue record management. Agents can query device status, execute commands, and manage user configurations. Best suited for agents requiring device management and automation capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "open-webui/mcpo",
+      "url": "https://github.com/open-webui/mcpo",
+      "description": "Connects to a proxy server that translates MCP commands into OpenAPI requests. Enables querying, creating, updating, and monitoring data within the system. Best suited for agents that need to interact with a variety of internal services and automate tasks across different platforms.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "chongdashu/unreal-mcp",
+      "url": "https://github.com/chongdashu/unreal-mcp",
+      "description": "Connects to Unreal Engine via the Model Context Protocol (MCP), enabling agents to query, create, update, and monitor assets and scenes. Best suited for agents that need to automate tasks within Unreal Engine, such as content creation, scene management, and runtime operations.",
       "category": "other",
       "platforms": [
         "Any"
