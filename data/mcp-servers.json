@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T08:37:24Z",
+  "generated": "2026-04-13T08:52:27Z",
   "source": "star-update-script v1",
-  "count": 2085,
+  "count": 2091,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35851,6 +35851,108 @@
       "name": "JetBrains/mcp-jetbrains",
       "url": "https://github.com/JetBrains/mcp-jetbrains",
       "description": "Connects to JetBrains IDEs (IntelliJ, PyCharm, WebStorm, Android Studio) to enable actions like code scanning, file upload, and code completion. Best suited for agents that need to interact with code editing environments and leverage the IDE's features.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "sansan0/TrendRadar",
+      "url": "https://github.com/sansan0/TrendRadar",
+      "description": "Connects to a platform for monitoring public opinion and trends by aggregating data from multiple sources, including RSS feeds. Enables querying, searching, and monitoring of trending topics, with AI-powered analysis and alerts. Best suited for agents that need to analyze real-time public sentiment and identify emerging trends.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "go-nunu/nunu",
+      "url": "https://github.com/go-nunu/nunu",
+      "description": "Connects to a Go application building tool, enabling actions like code scanning, version control integration, and file manipulation. Best suited for agents that need to automate Go application development workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "YuzeHao2023/Awesome-MCP-Servers",
+      "url": "https://github.com/YuzeHao2023/Awesome-MCP-Servers",
+      "description": "Connects to a list of Model Context Protocol (MCP) servers, enabling actions like query, create, update, search, and monitor. Best suited for agents that need to interact with various code hosting and development services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "sparfenyuk/mcp-proxy",
+      "url": "https://github.com/sparfenyuk/mcp-proxy",
+      "description": "Connects to Streamable HTTP and standard input/output (stdio) MCP transports, enabling agents to query, create, update, and search data. Best suited for agents that need to interact with various data sources and systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "firerpa/lamda",
+      "url": "https://github.com/firerpa/lamda",
+      "description": "Connects to a mobile automation framework, enabling actions like task creation, execution, and monitoring. Best suited for agents that require robust mobile automation capabilities and framework integration.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "rusq/slackdump",
+      "url": "https://github.com/rusq/slackdump",
+      "description": "Connects to Slack to save and export private and public messages, threads, files, and users. Enables actions like query, create, update, search, monitor, and execute on Slack data. Best suited for agents that need to archive or analyze Slack data for various purposes.",
       "category": "other",
       "platforms": [
         "Any"
