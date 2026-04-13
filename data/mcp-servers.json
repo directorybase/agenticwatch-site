@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T06:45:30Z",
+  "generated": "2026-04-13T07:07:50Z",
   "source": "star-update-script v1",
-  "count": 2037,
+  "count": 2047,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35035,6 +35035,176 @@
       "name": "sheshbabu/zen",
       "url": "https://github.com/sheshbabu/zen",
       "description": "Connects to a self-hosted notes application, enabling agents to query, create, update, search, and monitor Markdown notes stored in SQLite. It's best suited for agents that need to manage and retrieve information from a local notes database, with low resource usage.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "description": "Connects to a platform that optimizes the context window for AI coding agents, reducing tool output by 98%. Enables actions like query, create, update, search, monitor, and execute code-related tasks. Best suited for agents that require efficient code analysis and generation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "bytebase/dbhub",
+      "url": "https://github.com/bytebase/dbhub",
+      "description": "Connects to a database server, enabling agents to query, create, update, and search data across multiple database systems (PostgreSQL, MySQL, SQL Server, MariaDB, SQLite). Best suited for agents that require data access and manipulation capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "mbailey/voicemode",
+      "url": "https://github.com/mbailey/voicemode",
+      "description": "Connects to Claude Code, enabling natural (2-way) voice conversations for code assistance. Agents can query, create, update, and search code, and monitor code changes. Best suited for agents that require real-time code interaction and assistance.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "chrisryugj/korean-law-mcp",
+      "url": "https://github.com/chrisryugj/korean-law-mcp",
+      "description": "Connects to a set of Korean legal APIs, providing tools to query, search, and analyze legal statutes, precedents, ordinances, and treaties. Best suited for agents requiring access to comprehensive Korean legal information for tasks like legal research, compliance monitoring, and automated legal analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "JoeanAmier/XHS-Downloader",
+      "url": "https://github.com/JoeanAmier/XHS-Downloader",
+      "description": "Connects to a social media platform to extract links and information from posts, collections, likes, and comments. Enables querying for download links and collecting data on posts and users. Best suited for agents that need to gather data from social media for analysis or content aggregation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "ridafkih/keeper.sh",
+      "url": "https://github.com/ridafkih/keeper.sh",
+      "description": "Aggregate calendars from multiple providers (Google, Outlook, Office 365, iCloud, CalDAV, ICS) and synchronize them. Agents can query calendar events, create events, and monitor calendar availability. Best suited for agents managing complex scheduling and time-related tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "atilaahmettaner/tradingview-mcp",
+      "url": "https://github.com/atilaahmettaner/tradingview-mcp",
+      "description": "Connects to TradingView's real-time data and technical analysis APIs. Enables querying historical and current market data, technical indicators, and candlestick patterns. Best suited for agents that require advanced financial market analysis and automated trading strategies.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "deedy5/ddgs",
+      "url": "https://github.com/deedy5/ddgs",
+      "description": "Queries and aggregates results from multiple web search services. Enables actions like searching, monitoring, and potentially creating or updating information across various sources. Best suited for agents that require broad information retrieval and analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "xpzouying/xiaohongshu-mcp",
+      "url": "https://github.com/xpzouying/xiaohongshu-mcp",
+      "description": "Connects to Xiaohongshu.com, enabling agents to query and update content, search for information, and monitor user activity. Best suited for agents that need to analyze and interact with social media content.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "Queries and interacts with Google's Gemini API to enable code scanning, image uploads, and various chat functionalities. Best suited for agents that need to analyze code, process images, or engage in conversational tasks.",
       "category": "other",
       "platforms": [
         "Any"
