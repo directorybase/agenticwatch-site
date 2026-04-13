@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T08:22:29Z",
+  "generated": "2026-04-13T08:37:24Z",
   "source": "star-update-script v1",
-  "count": 2079,
+  "count": 2085,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35749,6 +35749,108 @@
       "name": "Azure/data-api-builder",
       "url": "https://github.com/Azure/data-api-builder",
       "description": "Connects to Azure databases and on-premise stores, enabling actions like querying, creating, updating, and searching data. Best suited for agents that need to interact with data stored in these systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "D4Vinci/Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "description": "Connects to a web scraping framework, enabling agents to query, create, update, search, monitor, and execute web scraping tasks. Best suited for agents that require automated web data extraction and crawling.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "yzfly/Awesome-MCP-ZH",
+      "url": "https://github.com/yzfly/Awesome-MCP-ZH",
+      "description": "Connects to a collection of resources and tools related to Microsoft's Machine Learning and AI services. Enables actions such as querying, creating, updating, and searching for MCP resources, monitoring their status, and potentially executing commands. Best suited for agents that need to interact with and manage various AI services offered by Microsoft.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "0x4m4/hexstrike-ai",
+      "url": "https://github.com/0x4m4/hexstrike-ai",
+      "description": "Connects to a suite of cybersecurity tools for automated pen testing, vulnerability discovery, and security research. Enables agents to query, execute, and monitor these tools for security analysis. Best suited for agents requiring automated security assessments and real-world offensive security capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "microsoft/mcp-for-beginners",
+      "url": "https://github.com/microsoft/mcp-for-beginners",
+      "description": "Connects to a curriculum providing practical examples of Model Context Protocol (MCP) in .NET, Java, TypeScript, JavaScript, Rust, and Python. Enables querying, creating, updating, and monitoring AI workflows from session setup to service orchestration. Best suited for agents developing modular, scalable, and secure AI applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "modelcontextprotocol/csharp-sdk",
+      "url": "https://github.com/modelcontextprotocol/csharp-sdk",
+      "description": "Connects to a Model Context Protocol server, enabling agents to query and update various features like image storage, code scanning, and content management. Best suited for agents that need to interact with a wide range of services and manage contextual information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "JetBrains/mcp-jetbrains",
+      "url": "https://github.com/JetBrains/mcp-jetbrains",
+      "description": "Connects to JetBrains IDEs (IntelliJ, PyCharm, WebStorm, Android Studio) to enable actions like code scanning, file upload, and code completion. Best suited for agents that need to interact with code editing environments and leverage the IDE's features.",
       "category": "other",
       "platforms": [
         "Any"
