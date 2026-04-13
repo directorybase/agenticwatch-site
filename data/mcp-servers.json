@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T04:41:57Z",
+  "generated": "2026-04-13T06:45:30Z",
   "source": "star-update-script v1",
-  "count": 2032,
+  "count": 2037,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -34955,6 +34955,91 @@
         "Any"
       ],
       "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "ForLoopCodes/contextplus",
+      "url": "https://github.com/ForLoopCodes/contextplus",
+      "description": "Connects to a large codebase to create a searchable, hierarchical feature graph using semantic intelligence techniques like RAG, AST analysis, and spectral clustering. Enables querying the codebase for features, searching for related code, and monitoring code changes. Best suited for agents that need to understand and reason about large software projects.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "opensolon/solon",
+      "url": "https://github.com/opensolon/solon",
+      "description": "Connects to a Java enterprise application development framework, enabling actions like code scanning, model selection, and integration with various Copilot features. Best suited for agents that need to automate and enhance Java application development workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "FunnyWolf/Viper",
+      "url": "https://github.com/FunnyWolf/Viper",
+      "description": "Connects to a platform for adversary simulation and red teaming, enabling agents to query, create, update, search, monitor, and execute actions related to security testing scenarios. Best suited for security assessment and threat modeling agents.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "NPC-Worldwide/npcpy",
+      "url": "https://github.com/NPC-Worldwide/npcpy",
+      "description": "Connects to a Python library for NLP, multimodal LLMs, agents, and knowledge graphs. Enables querying, creating, updating, and searching data within these systems. Best suited for agents requiring advanced data manipulation and reasoning capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "sheshbabu/zen",
+      "url": "https://github.com/sheshbabu/zen",
+      "description": "Connects to a self-hosted notes application, enabling agents to query, create, update, search, and monitor Markdown notes stored in SQLite. It's best suited for agents that need to manage and retrieve information from a local notes database, with low resource usage.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
       "auth": null,
       "difficulty": null,
       "github_stars": null,
