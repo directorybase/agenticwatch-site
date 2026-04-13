@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T07:22:21Z",
+  "generated": "2026-04-13T07:37:21Z",
   "source": "star-update-script v1",
-  "count": 2053,
+  "count": 2061,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35307,6 +35307,142 @@
       "name": "splx-ai/agentic-radar",
       "url": "https://github.com/splx-ai/agentic-radar",
       "description": "Connects to a platform for analyzing LLM agent workflows, enabling querying, monitoring, and potentially updating agent configurations. Best suited for agents that need to assess the security posture of their LLM-powered applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "huangjunsen0406/py-xiaozhi",
+      "url": "https://github.com/huangjunsen0406/py-xiaozhi",
+      "description": "https://github.com/huangjunsen0406/py-xiaozhi connects to a Python-based AI system. It enables querying, searching, and monitoring of code and content, and potentially executing actions within a code environment. Best suited for agents that need to analyze and interact with code and text.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "samanhappy/mcphub",
+      "url": "https://github.com/samanhappy/mcphub",
+      "description": "Connects to multiple MCP servers/APIs to create unified endpoints with flexible routing. Enables querying, creating, updating, and monitoring of these APIs. Best suited for agents that need to manage and orchestrate complex API workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "getsentry/XcodeBuildMCP",
+      "url": "https://github.com/getsentry/XcodeBuildMCP",
+      "description": "Connects to Xcode build systems, enabling actions like query, create, update, and monitor build processes. Best suited for agents that need to automate iOS and macOS project workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "mongodb-js/mongodb-mcp-server",
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "description": "Connects to MongoDB databases and MongoDB Atlas clusters to enable querying, creating, updating, and monitoring data. Best suited for agents that need to interact with and manage large datasets.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "BrowserMCP/mcp",
+      "url": "https://github.com/BrowserMCP/mcp",
+      "description": "Connects to a browser to enable actions like tab size customization, image uploads, and code scanning. Best suited for agents that need to interact with web browsers for tasks such as code analysis, content management, or user interface automation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "description": "Connects to the Claude Code API to enable code review, idea discovery, and experiment automation. Allows agents to query, create, update, and monitor code changes across different LLM agents. Best suited for agents involved in software research and development.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "punitarani/fli",
+      "url": "https://github.com/punitarani/fli",
+      "description": "Connects to Google Flights MCP and a Python library, enabling agents to query flight data, search for flights, and monitor flight status. Best suited for agents that need to integrate with flight booking APIs and automate travel planning tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "Klavis-AI/klavis",
+      "url": "https://github.com/Klavis-AI/klavis",
+      "description": "Connects to a platform that provides tools for AI agents to reliably use external systems at scale. Enables actions like querying, creating, updating, and searching data within those systems. Best suited for agents that need to integrate with various APIs and services.",
       "category": "other",
       "platforms": [
         "Any"
