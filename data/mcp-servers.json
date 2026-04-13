@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T10:22:34Z",
+  "generated": "2026-04-13T10:37:30Z",
   "source": "star-update-script v1",
-  "count": 2126,
+  "count": 2127,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36548,6 +36548,23 @@
       "name": "chongdashu/unreal-mcp",
       "url": "https://github.com/chongdashu/unreal-mcp",
       "description": "Connects to Unreal Engine via the Model Context Protocol (MCP), enabling agents to query, create, update, and monitor assets and scenes. Best suited for agents that need to automate tasks within Unreal Engine, such as content creation, scene management, and runtime operations.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "u14app/deep-research",
+      "url": "https://github.com/u14app/deep-research",
+      "description": "Connects to Large Language Models (LLMs) via SSE API and MCP server, enabling agents to query, create, update, and search for deep research information. Best suited for agents requiring advanced research capabilities and integration with existing research workflows.",
       "category": "other",
       "platforms": [
         "Any"
