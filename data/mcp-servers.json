@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T08:07:19Z",
+  "generated": "2026-04-13T08:22:29Z",
   "source": "star-update-script v1",
-  "count": 2073,
+  "count": 2079,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35647,6 +35647,108 @@
       "name": "jxnxts/mcp-brasil",
       "url": "https://github.com/jxnxts/mcp-brasil",
       "description": "Connects to a set of public Brazilian APIs, enabling agents to query, create, update, and monitor various services. Best suited for agents that need to interact with Brazilian-specific APIs for tasks like data processing, content management, or service integration.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "alpic-ai/skybridge",
+      "url": "https://github.com/alpic-ai/skybridge",
+      "description": "Connects to a framework for building ChatGPT and MCP applications. Enables actions like querying, creating, updating, and searching within these applications. Best suited for agents that need to extend existing AI capabilities with custom functionality.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "DeusData/codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "description": "Queries a code database to retrieve and analyze code, enabling tasks like code completion, vulnerability detection, and documentation generation. Best suited for agents working with code analysis and software development workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "osaurus-ai/osaurus",
+      "url": "https://github.com/osaurus-ai/osaurus",
+      "description": "Connects to a macOS environment, enabling agents to execute code, manage persistent memory, and run autonomously. It allows for querying, creating, updating, and monitoring system resources, and is best suited for agents requiring offline operation and cryptographic identity.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "taielab/awesome-hacking-lists",
+      "url": "https://github.com/taielab/awesome-hacking-lists",
+      "description": "Connects to a collection of penetration testing tools and utilities. Enables querying, searching, and monitoring of these tools for security assessments and automation. Best suited for security agents and tasks requiring access to a wide range of hacking and security testing capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "metatool-ai/metamcp",
+      "url": "https://github.com/metatool-ai/metamcp",
+      "description": "Connects to a system that provides various functionalities, including code scanning, image uploading, and interaction with a code completion agent. Enables agents to query, create, update, and monitor code-related data and perform actions like code scanning, image manipulation, and model selection. Best suited for agents that require integration with code analysis tools and code completion services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "Azure/data-api-builder",
+      "url": "https://github.com/Azure/data-api-builder",
+      "description": "Connects to Azure databases and on-premise stores, enabling actions like querying, creating, updating, and searching data. Best suited for agents that need to interact with data stored in these systems.",
       "category": "other",
       "platforms": [
         "Any"
