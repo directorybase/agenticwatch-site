@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T08:52:27Z",
+  "generated": "2026-04-13T09:07:24Z",
   "source": "star-update-script v1",
-  "count": 2091,
+  "count": 2095,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35953,6 +35953,74 @@
       "name": "rusq/slackdump",
       "url": "https://github.com/rusq/slackdump",
       "description": "Connects to Slack to save and export private and public messages, threads, files, and users. Enables actions like query, create, update, search, monitor, and execute on Slack data. Best suited for agents that need to archive or analyze Slack data for various purposes.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "llmsresearch/paperbanana",
+      "url": "https://github.com/llmsresearch/paperbanana",
+      "description": "Connects to Google's Agent2Agent protocol, enabling cross-agent task delegation and capability negotiation. Allows agents to query, create, update, and monitor tasks, and execute actions across different frameworks. Best suited for building multi-agent systems that span different frameworks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "svnscha/mcp-windbg",
+      "url": "https://github.com/svnscha/mcp-windbg",
+      "description": "Connects to a model context protocol for Windows debugging. Enables querying, creating, updating, and searching debugging information. Best suited for agents that need to analyze and interact with Windows system state during debugging.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "refreshdotdev/web-eval-agent",
+      "url": "https://github.com/refreshdotdev/web-eval-agent",
+      "description": "Connects to a server that automatically evaluates web applications. Enables querying, creating, updating, and monitoring web application states, and executing actions like code scanning and image uploads. Best suited for agents that need to analyze and manage web application behavior.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "alioshr/memory-bank-mcp",
+      "url": "https://github.com/alioshr/memory-bank-mcp",
+      "description": "Connects to a remote memory bank management server. Enables querying, creating, updating, and searching stored data. Best suited for agents that need to manage and access persistent information.",
       "category": "other",
       "platforms": [
         "Any"
