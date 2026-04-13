@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T07:07:50Z",
+  "generated": "2026-04-13T07:22:21Z",
   "source": "star-update-script v1",
-  "count": 2047,
+  "count": 2053,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35205,6 +35205,108 @@
       "name": "google-gemini/gemini-cli",
       "url": "https://github.com/google-gemini/gemini-cli",
       "description": "Queries and interacts with Google's Gemini API to enable code scanning, image uploads, and various chat functionalities. Best suited for agents that need to analyze code, process images, or engage in conversational tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "open-metadata/OpenMetadata",
+      "url": "https://github.com/open-metadata/OpenMetadata",
+      "description": "Connects to a central metadata repository to enable data discovery, observability, and governance actions. Agents can query metadata, search for data assets, monitor data pipelines, and potentially update metadata. Best suited for agents requiring comprehensive data context and lineage for data-related tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "triggerdotdev/trigger.dev",
+      "url": "https://github.com/triggerdotdev/trigger.dev",
+      "description": "Connects to a platform for building and deploying AI agents and workflows. Enables actions such as querying, creating, updating, and executing tasks within the platform. Best suited for agents and tasks requiring AI-powered automation of complex workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "description": "Connects to a platform for orchestrating multi-agent workflows on cloud platforms. Enables querying, creating, updating, and monitoring agent states, as well as executing tasks and integrating with other tools like Code/Codex and RAG. Best suited for agents requiring complex workflow management and integration with cloud services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "apify/apify-mcp-server",
+      "url": "https://github.com/apify/apify-mcp-server",
+      "description": "Queries external websites and APIs using a library of pre-built scrapers and crawlers. Enables agents to extract data from various sources like social media, e-commerce sites, and maps. Best suited for agents that need to gather information from diverse online resources.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "datagouv/datagouv-mcp",
+      "url": "https://github.com/datagouv/datagouv-mcp",
+      "description": "Connects to the French national open data platform, enabling agents to search, explore, and analyze datasets directly through conversation. Allows agents to query, search, and monitor datasets for various tasks like data analysis and information retrieval. Best suited for agents that need to access and process structured data from open government sources.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "splx-ai/agentic-radar",
+      "url": "https://github.com/splx-ai/agentic-radar",
+      "description": "Connects to a platform for analyzing LLM agent workflows, enabling querying, monitoring, and potentially updating agent configurations. Best suited for agents that need to assess the security posture of their LLM-powered applications.",
       "category": "other",
       "platforms": [
         "Any"
