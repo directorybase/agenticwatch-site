@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T09:22:25Z",
+  "generated": "2026-04-13T09:37:30Z",
   "source": "star-update-script v1",
-  "count": 2101,
+  "count": 2108,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36123,6 +36123,125 @@
       "name": "evalstate/fast-agent",
       "url": "https://github.com/evalstate/fast-agent",
       "description": "Connects to a code repository and provides actions for code building, evaluation, and analysis. Enables agents to query code, create, update, search, monitor, and execute code-related tasks. Best suited for agents that need to manage and analyze code within a development workflow.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "Connects to a workflow automation platform with AI capabilities, enabling actions like code scanning, image uploading, and interacting with code repositories. Best suited for agents that need to automate complex workflows involving code, content, and AI-powered tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "inkeep/agents",
+      "url": "https://github.com/inkeep/agents",
+      "description": "Connects to a platform for creating AI agents using a visual builder or TypeScript SDK, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents and tasks requiring the creation and management of AI assistants and multi-agent workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "SecretiveShell/MCP-Bridge",
+      "url": "https://github.com/SecretiveShell/MCP-Bridge",
+      "description": "Connects to a set of tools via an OpenAI compatible endpoint, enabling actions like code scanning, image uploading, and file manipulation. Best suited for agents that need to interact with a variety of developer tools and APIs.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "httprunner/httprunner",
+      "url": "https://github.com/httprunner/httprunner",
+      "description": "Queries and updates a set of API endpoints. Enables actions like search, monitor, and execute. Best suited for agents that need to interact with and manage external services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "BlackSnufkin/LitterBox",
+      "url": "https://github.com/BlackSnufkin/LitterBox",
+      "description": "Connects to a sandbox environment for testing malware payloads against detection mechanisms. Enables actions like query, create, update, search, monitor, and execute within the sandbox. Best suited for agents focused on security analysis and threat hunting.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "wgpsec/ENScan_GO",
+      "url": "https://github.com/wgpsec/ENScan_GO",
+      "description": "Connects to various enterprise information APIs to collect and aggregate data about domestic companies, including ICP registration, apps, mini-programs, and WeChat official accounts. Enables querying, creating, updating, and searching for this information. Best suited for agents that need to gather and analyze company data for business intelligence or competitive analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "brightdata/brightdata-mcp",
+      "url": "https://github.com/brightdata/brightdata-mcp",
+      "description": "Connects to a Model Context Protocol (MCP) server, enabling agents to query and update various features like image storage, code scanning, and content management. Best suited for agents that need to interact with a wide range of services and manage contextual information.",
       "category": "other",
       "platforms": [
         "Any"
