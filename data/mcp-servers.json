@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T07:37:21Z",
+  "generated": "2026-04-13T07:52:20Z",
   "source": "star-update-script v1",
-  "count": 2061,
+  "count": 2067,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -35443,6 +35443,108 @@
       "name": "Klavis-AI/klavis",
       "url": "https://github.com/Klavis-AI/klavis",
       "description": "Connects to a platform that provides tools for AI agents to reliably use external systems at scale. Enables actions like querying, creating, updating, and searching data within those systems. Best suited for agents that need to integrate with various APIs and services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "apioo/fusio",
+      "url": "https://github.com/apioo/fusio",
+      "description": "Connects to a self-hosted API management system, enabling agents to query and update various features and functionalities. Best suited for agents that need to integrate with and manage internal tools and services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "bytedance/UI-TARS-desktop",
+      "url": "https://github.com/bytedance/UI-TARS-desktop",
+      "description": "Connects to a multi-modal AI agent stack, enabling actions like querying AI models, creating and updating content, searching for information, and monitoring system status. Best suited for agents requiring access to advanced AI models and agent infrastructure for diverse tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "maximhq/bifrost",
+      "url": "https://github.com/maximhq/bifrost",
+      "description": "https://github.com/maxiimhq/bifrost connects to a platform for enterprise AI processing, enabling agents to query, create, update, and monitor large language models with support for 1000+ models. It is best suited for agents requiring high throughput and low latency for complex AI tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "AgentDeskAI/browser-tools-mcp",
+      "url": "https://github.com/AgentDeskAI/browser-tools-mcp",
+      "description": "Monitor browser logs directly from Cursor and other compatible IDEs. It enables querying, searching, and monitoring of browser activity. Best suited for agents that require detailed browser history analysis and debugging.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "xinnan-tech/xiaozhi-esp32-server",
+      "url": "https://github.com/xinnan-tech/xiaozhi-esp32-server",
+      "description": "Connects to a backend service for ESP32 devices, enabling actions like query, create, update, and monitor device control. Best suited for agents that need to manage and interact with embedded systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "openags/paper-search-mcp",
+      "url": "https://github.com/openags/paper-search-mcp",
+      "description": "Connects to multiple academic paper repositories (arXiv, PubMed, bioRxiv, etc.) to search and download papers. Enables querying, searching, and monitoring of scientific literature. Best suited for agents that need to access and analyze a large volume of research.",
       "category": "other",
       "platforms": [
         "Any"
