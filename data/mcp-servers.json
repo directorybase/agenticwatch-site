@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T09:37:30Z",
+  "generated": "2026-04-13T09:52:29Z",
   "source": "star-update-script v1",
-  "count": 2108,
+  "count": 2113,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36242,6 +36242,91 @@
       "name": "brightdata/brightdata-mcp",
       "url": "https://github.com/brightdata/brightdata-mcp",
       "description": "Connects to a Model Context Protocol (MCP) server, enabling agents to query and update various features like image storage, code scanning, and content management. Best suited for agents that need to interact with a wide range of services and manage contextual information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "robotmcp/ros-mcp-server",
+      "url": "https://github.com/robotmcp/ros-mcp-server",
+      "description": "Connects AI models like Claude and GPT with robots using MCP and ROS. Enables actions such as query, create, update, search, monitor, and execute tasks within a robotic environment. Best suited for agents that require integration between AI and robotics for complex automation and task management.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "chunkhound/chunkhound",
+      "url": "https://github.com/chunkhound/chunkhound",
+      "description": "Connects to a codebase to provide intelligence and facilitate code-related actions. Enables querying, updating, and searching codebase information, as well as executing code actions and monitoring code changes. Best suited for agents that require in-depth code analysis and manipulation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "ref-tools/ref-tools-mcp",
+      "url": "https://github.com/ref-tools/ref-tools-mcp",
+      "description": "Connects to a library of public and private code repositories, enabling agents to query, create, update, search, and monitor code without exceeding context window limitations. Best suited for coding agents and tasks requiring efficient code management and access to external libraries.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "mcpjungle/MCPJungle",
+      "url": "https://github.com/mcpjungle/MCPJungle",
+      "description": "Connects to a self-hosted gateway for AI agents, providing access to various features like code scanning, image uploads, and chat functionalities. Enables agents to query, create, update, and monitor these features. Best suited for agents that require integration with a range of AI services and need to manage their own infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "openops-cloud/openops",
+      "url": "https://github.com/openops-cloud/openops",
+      "description": "Connects to a FinOps automation platform, enabling agents to query billing data, create and update cost-optimization plans, and monitor financial performance. Best suited for agents that need to automate financial management tasks and gain insights into cloud spending.",
       "category": "other",
       "platforms": [
         "Any"
