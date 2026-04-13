@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T09:52:29Z",
+  "generated": "2026-04-13T10:07:27Z",
   "source": "star-update-script v1",
-  "count": 2113,
+  "count": 2120,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36327,6 +36327,125 @@
       "name": "openops-cloud/openops",
       "url": "https://github.com/openops-cloud/openops",
       "description": "Connects to a FinOps automation platform, enabling agents to query billing data, create and update cost-optimization plans, and monitor financial performance. Best suited for agents that need to automate financial management tasks and gain insights into cloud spending.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "PaperDebugger/paperdebugger",
+      "url": "https://github.com/PaperDebugger/paperdebugger",
+      "description": "Connects to a multi-agent system for academic writing, review, and editing, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents working on in-editor writing tasks and review workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "drhelius/Gearboy",
+      "url": "https://github.com/drhelius/Gearboy",
+      "description": "Connects to a game emulator and debugger, enabling actions like query, create, update, search, monitor, and execute related to Game Boy, Game Boy Color, and Super Game Boy. Best suited for agents that need to interact with retro gaming systems or analyze game code.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "archestra-ai/archestra",
+      "url": "https://github.com/archestra-ai/archestra",
+      "description": "Connects to a platform providing enterprise AI capabilities including a registry, gateway, and orchestrator. Enables querying, creating, updating, and monitoring various features like image storage, code scanning, and content management. Best suited for agents requiring a comprehensive set of AI tools for enterprise applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "firecrawl/firecrawl-mcp-server",
+      "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "description": "Connects to a web scraping and search service, enabling agents to query web content, search for information, and monitor web data. Best suited for agents that require automated web data extraction and analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "iFurySt/RedNote-MCP",
+      "url": "https://github.com/iFurySt/RedNote-MCP",
+      "description": "Connects to a server that accesses RedNote (XiaoHongShu). Enables querying, creating, updating, and searching within the RedNote data. Best suited for agents that need to retrieve and manage information from this social media platform.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "ravitemer/mcphub.nvim",
+      "url": "https://github.com/ravitemer/mcphub.nvim",
+      "description": "Connects to a client for a NeoVim editor that integrates with MCP servers. Enables querying, creating, updating, and monitoring MCP servers for use with chat plugins. Best suited for agents that need to manage and utilize external server resources within an editing workflow.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false
+    },
+    {
+      "name": "Devin-AXIS/A2V",
+      "url": "https://github.com/Devin-AXIS/A2V",
+      "description": "Connects to a compute platform, enabling agents to query and execute various actions. Best suited for agents that need to interact with a wide range of computational resources and services.",
       "category": "other",
       "platforms": [
         "Any"
