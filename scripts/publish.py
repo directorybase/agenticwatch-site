@@ -179,6 +179,7 @@ def main() -> None:
     live["entries"].extend(new_entries)
     live["count"] = len(live["entries"])
     live["generated"] = now
+    live["last_updated"] = now  # agent-facing: ISO 8601 UTC timestamp of last publish run
 
     with open(LIVE_FILE, "w") as f:
         json.dump(live, f, indent=2)
