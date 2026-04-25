@@ -1,10 +1,10 @@
 # AgenticWatch
 
-*Powered by toolidx.dev*
+***Powered by toolidx.dev***
 
 This is where AI tools are tested.
 
-Not described. Not assumed. Tested and reviewed.
+Not described. Not assumed. Tested and independantly reviewed.
 
 ---
 
