@@ -105,7 +105,7 @@ That’s what gets recorded.
 - toolidx.dev provides structured data  
 - AgenticWatch shows real behavior  
 
-Each handles a different part of the problem.
+Each solves a different part of the problem.
 
 ---
 
