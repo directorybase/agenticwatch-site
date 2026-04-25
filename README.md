@@ -1,8 +1,10 @@
 # AgenticWatch
 
+*Powered by toolidx.dev*
+
 This is where AI tools are tested.
 
-Not described. Not assumed. Tested.
+Not described. Not assumed. Tested and reviewed.
 
 ---
 
@@ -31,9 +33,45 @@ Each tool is:
 - installed  
 - started  
 - exercised  
-- observed  
+- reviewed by multiple models  
+- compared across those reviews  
 
 Results are written down.
+
+---
+
+## Multi-model review
+
+Each tool is reviewed by 5 independent AI models.
+
+They do not share results.
+
+Each evaluates the tool on its own.
+
+Then the results are compared.
+
+You can see:
+
+- what all models agree on  
+- where they disagree  
+- what one model missed and another caught  
+
+This exposes blind spots that a single model won’t show.
+
+---
+## Why this matters
+
+Single-model reviews look clean.
+
+But they miss things.
+
+Multi-model review shows:
+
+- disagreement  
+- uncertainty  
+- weak assumptions  
+
+That’s where most failures hide.
 
 ---
 
