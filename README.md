@@ -4,7 +4,7 @@
 
 This is where AI tools are tested.
 
-Not described. Not assumed. Tested and independantly reviewed.
+Not described. Not assumed. Tested.
 
 ---
 
@@ -33,8 +33,7 @@ Each tool is:
 - installed  
 - started  
 - exercised  
-- reviewed by multiple models  
-- compared across those reviews  
+- reviewed across multiple models  
 
 Results are written down.
 
@@ -56,7 +55,7 @@ You can see:
 - where they disagree  
 - what one model missed and another caught  
 
-This exposes blind spots that a single model won’t show.
+This shows where a single model would be wrong.
 
 ---
 ## Why this matters
