@@ -1,61 +1,89 @@
-# AgenticWatch.dev
+# AgenticWatch
 
-DistroWatch-style directory of MCP (Model Context Protocol) servers.
-Tracks 2,001+ servers ranked by GitHub stars, with categories, license info, transport type, and descriptions.
+This is where AI tools are tested.
 
-## What This Is
+Not described. Not assumed. Tested.
 
-A plain static HTML site. No build step, no dependencies, no framework.
-Cloudflare Pages serves `index.html` directly from the `main` branch of this repo.
+---
 
-Part of the **DirectoryBase** brand — DistroWatch-style directories for the agentic web.
-Local path: `/Users/gregory/Developer/DirectoryBase/agenticwatch-site/`
+## The problem
 
-## File Structure
+Most AI tools look good on paper.
 
-```
-agenticwatch-site/
-├── index.html     — the entire site (DW1 DistroWatch design, standalone)
-├── robots.txt     — explicitly welcomes all crawlers and AI agents
-├── sitemap.xml    — single-URL sitemap for https://agenticwatch.dev/
-└── README.md      — this file
-```
+Docs look clean. Examples work.
 
-## Design Reference
+But real use is different.
 
-Source mockup (internal, not in this repo):
-`/Users/gregory/Developer/Fortress/outputs/directory-mockups-review.html`
+- installs fail  
+- tools don’t behave as expected  
+- outputs break workflows  
 
-Winning design: **DW1 — AgenticWatch DistroWatch Style**
+You don’t see that until you try it.
 
-Design specs:
-- Background: `#0D0D0F` | Accent: `#00C2FF` (cyan)
-- Three-column layout: 180px left sidebar | flex center | 185px right sidebar
-- Fonts: Space Grotesk (headings), JetBrains Mono (data/mono), 12px base
-- All CSS is inline in `<style>` tags — no external stylesheets
+---
 
-## Infrastructure
+## What this is
 
-- **Primary remote:** `http://192.168.7.70:30008/directorybase/agenticwatch-site.git` (Gitea on TrueNAS)
-- **GitHub mirror:** `https://github.com/WolfNinja32/agenticwatch-site` (auto-syncs on every commit)
-- **Deployment:** Cloudflare Pages → connected to GitHub → deploys `main` branch
-- **Build:** None. Framework preset: None. Output directory: `/`
+AgenticWatch runs tools and records what actually happens.
 
-## How to Update Content
+Each tool is:
 
-1. Edit `index.html` directly
-2. `git add index.html && git commit -m "update: [what changed]"`
-3. `git push` — Gitea push mirror syncs to GitHub automatically
-4. Cloudflare Pages detects the GitHub push and deploys (typically under 60 seconds)
+- installed  
+- started  
+- exercised  
+- observed  
 
-## Domain
+Results are written down.
 
-`https://agenticwatch.dev` — DNS managed via Cloudflare. A/AAAA records point to Cloudflare Pages.
+---
 
-## Bus Test
+## What you get
 
-A competent stranger can rebuild this from this README alone:
-1. Clone the repo from Gitea or GitHub
-2. Edit `index.html` with any text editor
-3. Push to `main` — Cloudflare Pages handles the rest
-4. No npm, no build tools, no config files needed
+- what worked  
+- what failed  
+- what was missing  
+- what surprised us  
+
+No assumptions.
+
+---
+
+## Example
+
+A tool claims to expose 5 functions.
+
+After install:
+
+- 3 functions load  
+- 1 errors  
+- 1 is missing  
+
+That’s what gets recorded.
+
+---
+
+## How it fits
+
+- datatool.dev fixes broken output  
+- toolidx.dev provides structured data  
+- AgenticWatch shows real behavior  
+
+Each handles a different part of the problem.
+
+---
+
+## Focus
+
+- real runs, not docs  
+- no guessing  
+- failures included  
+- repeatable results  
+
+---
+
+## Notes
+
+Everything here is connected.
+
+**Built to work.**  
+**Built to work together.**
