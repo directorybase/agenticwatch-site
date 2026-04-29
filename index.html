@@ -397,6 +397,75 @@ a:hover{color:var(--ac-h);text-decoration:underline;}
 .dw-footer span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);}
 .dw-footer a{color:var(--tm);}
 .dw-footer a:hover{color:var(--t1);}
+
+/* ── HAMBURGER TOGGLE (hidden on desktop) ─────────────────────────────────── */
+.hdr-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  border:1px solid var(--b0);
+  width:40px;
+  height:40px;
+  border-radius:3px;
+  cursor:pointer;
+  padding:0;
+}
+.hdr-toggle:hover{border-color:var(--ac);}
+.hdr-toggle span{display:block;width:20px;height:2px;background:var(--ac);margin:3px auto;border-radius:2px;}
+
+/* ── MOBILE STACK (≤900px): collapse 3-col grids to single column ─────────── */
+@media(max-width:900px){
+  .top-row{grid-template-columns:1fr;}
+  .top-col+.top-col{border-left:none;border-top:1px solid var(--b0);}
+  .top-col-featured{border-left:none !important;border-top:3px solid var(--warn);}
+  .dw-wrap{grid-template-columns:1fr;min-height:auto;}
+  .dw-left{border-right:none;border-bottom:1px solid var(--b1);}
+  .dw-right{border-left:none;border-top:1px solid var(--b1);}
+  .footer-cta{grid-template-columns:repeat(2,1fr);}
+}
+
+/* ── MOBILE COMPACT (≤600px): hamburger nav, full-width inputs ────────────── */
+@media(max-width:600px){
+  .hdr{padding:0 12px;grid-template-columns:auto auto;height:56px;position:relative;}
+  .hdr-toggle{display:flex;}
+  .hdr-nav{
+    display:none;
+    position:absolute;
+    top:56px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    background:var(--bg-hdr);
+    border-bottom:2px solid var(--ac);
+    z-index:50;
+  }
+  .hdr-nav.open{display:flex;}
+  .hdr-nav a{
+    padding:14px 20px;
+    font-size:13px;
+    border-right:none;
+    border-left:none !important;
+    border-bottom:1px solid var(--b0);
+    text-align:left;
+  }
+  .util-strip{flex-wrap:wrap;padding:6px 12px;row-gap:4px;}
+  .util-stat{padding:0 10px;}
+  .top-col,.dw-left,.dw-right{padding:12px;}
+  .dw-center{padding:12px;}
+  .dw-search-bar{padding:6px 12px;}
+  .dw-search-bar input{width:100%;flex:1;min-width:0;}
+  .footer-cta{grid-template-columns:1fr;}
+  .footer-cta-cell{padding:12px;}
+  .footer-cta-btn{margin-left:auto;}
+  .detail-name{font-size:18px;}
+  .detail-table td:first-child{width:90px;font-size:9px;}
+  .dw-footer{padding:7px 12px;flex-direction:column;gap:4px;align-items:flex-start;}
+  .dw-rank td{padding:6px 3px;}
+  .dw-entry{padding:12px 0;}
+  .dw-entry-name{font-size:14px;}
+  .browse-links a{padding:8px 0;font-size:12px;}
+}
 </style>
 </head>
 <body>
@@ -407,13 +476,16 @@ a:hover{color:var(--ac-h);text-decoration:underline;}
     <img src="/assets/agenticwatch-header-desktop.svg" class="hdr-logo-desktop" alt="AgenticWatch.dev — Technical Directory for AI Agent Tools" height="64"/>
     <img src="/assets/agenticwatch-header-mobile.svg" class="hdr-logo-mobile" alt="AgenticWatch.dev" height="44"/>
   </a>
-  <nav class="hdr-nav">
-    <a href="#" id="nav-home" class="active" onclick="goHome();return false;">Servers</a>
-    <a href="#" onclick="goHome();showAllCategories();return false;">Categories</a>
-    <a href="#" onclick="showGuide();return false;">Guides</a>
-    <a href="#">Compare</a>
-    <a href="mailto:submit@agenticwatch.dev">Submit</a>
-    <a href="#">Advertise</a>
+  <button class="hdr-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav(this)">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="hdr-nav" id="hdr-nav">
+    <a href="#" id="nav-home" class="active" onclick="goHome();closeNav();return false;">Servers</a>
+    <a href="#" onclick="goHome();showAllCategories();closeNav();return false;">Categories</a>
+    <a href="#" onclick="showGuide();closeNav();return false;">Guides</a>
+    <a href="#" onclick="closeNav();">Compare</a>
+    <a href="mailto:submit@agenticwatch.dev" onclick="closeNav();">Submit</a>
+    <a href="#" onclick="closeNav();">Advertise</a>
   </nav>
   <div class="hdr-search">
     <input type="text" id="hdr-search-input" placeholder="Search servers…" onkeydown="if(event.key==='Enter')doHeaderSearch()"/>
@@ -620,6 +692,19 @@ const CATEGORY_LABELS = {
 
 // Save guide card HTML before any JS touches it
 const GUIDE_CARD_HTML = document.getElementById('featured-guide-col').innerHTML;
+
+// ─── Mobile nav toggle ────────────────────────────────────────────────────────
+function toggleNav(btn){
+  const nav = document.getElementById('hdr-nav');
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+function closeNav(){
+  const nav = document.getElementById('hdr-nav');
+  nav.classList.remove('open');
+  const btn = document.querySelector('.hdr-toggle');
+  if(btn) btn.setAttribute('aria-expanded','false');
+}
 
 // ─── Load data ────────────────────────────────────────────────────────────────
 Promise.all([
