@@ -20,7 +20,7 @@ jobs:
 
       - name: Fetch star counts and write stars.json
         env:
-          GH_TOKEN: ${{ secrets.STAS_TOKEN }}
+          GH_TOKEN: ${{ secrets.STARS_TOKEN }}
         run: |
           python3 - <<'EOF'
           import json, os, urllib.request, time
