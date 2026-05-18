@@ -20,7 +20,7 @@ jobs:
 
       - name: Fetch star counts and write stars.json
         env:
-          GH_TOKEN: ${{ secrets.STARS_TOKEN }}
+          GH_TOKEN: ${{ secrets.STAS_TOKEN }}
         run: |
           python3 - <<'EOF'
           import json, os, urllib.request, time
@@ -92,6 +92,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/stars.json
+          git add -f data/stars.json
           git commit -m "chore: update star counts $(date -u +%Y-%m-%d\ %H:%M\ UTC)"
           git push
