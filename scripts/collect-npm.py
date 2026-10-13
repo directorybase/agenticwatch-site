@@ -3,15 +3,22 @@
 collect-npm.py — Search npm registry for MCP server packages.
 Outputs raw JSON to data/raw/npm-raw.json for dedup and merge.
 
-Rate limit fallback: if a 429 is hit mid-search, automatically retries
-the remaining results using alphabetical chunks (term + a*, term + b*, etc.)
+npm's search API is a fuzzy relevance search across the whole registry, not
+a substring filter -- a generic multi-word term like "mcp-server" or
+"model-context-protocol" matches hundreds of thousands of loosely-related
+packages (confirmed live: "mcp-server" -> total 404,845; "model-context-
+protocol" -> total 281,252). The old alphabetical-chunking rate-limit
+fallback assumed "total" meant "relevant results," and would have chunked
+through that entire false population. Fixed by capping how deep into the
+relevance-ranked results we look (npm's own scoring puts true matches at
+the top) and filtering client-side for an actual "mcp" substring, the same
+way collect-pypi.py already does.
 """
 
 import json
 import urllib.request
 import urllib.parse
 import time
-import string
 from datetime import datetime, timezone
 
 SEARCH_TERMS = [
@@ -22,11 +29,13 @@ SEARCH_TERMS = [
 
 OUTPUT_FILE = "data/raw/npm-raw.json"
 REGISTRY_URL = "https://registry.npmjs.org/-/v1/search"
-RATE_LIMIT_DELAY = 10  # seconds to wait before switching to chunked mode
+MAX_PAGES_PER_TERM = 3  # 3 x 250 = top 750 by relevance score, well past where true matches end
+PAGE_SIZE = 250
+RELEVANCE_FILTER_TERMS = ("mcp",)  # client-side substring check; drop anything that doesn't contain this
 
 
-def fetch_page(query, from_offset, size=250):
-    """Fetch one page. Returns (objects, total) or raises on error."""
+def fetch_page(query, from_offset, size=PAGE_SIZE):
+    """Fetch one page. Returns (objects, total)."""
     params = urllib.parse.urlencode({"text": query, "size": size, "from": from_offset})
     url = f"{REGISTRY_URL}?{params}"
     req = urllib.request.Request(url, headers={"User-Agent": "AgenticWatch-Collector/1.0"})
@@ -35,61 +44,34 @@ def fetch_page(query, from_offset, size=250):
         return data.get("objects", []), data.get("total", 0)
 
 
-def search_full(query):
-    """Try to fetch all results for a query. Returns (results, hit_limit)."""
+def search_npm(query):
+    """Fetch up to MAX_PAGES_PER_TERM pages of npm's relevance-ranked results for query."""
     results = []
     from_offset = 0
-
-    while True:
+    for page in range(MAX_PAGES_PER_TERM):
         try:
             objects, total = fetch_page(query, from_offset)
-            results.extend(objects)
-            print(f"  [{query}] fetched {from_offset + len(objects)}/{total}")
-            if from_offset + len(objects) >= total or not objects:
-                return results, False
-            from_offset += len(objects)
-            time.sleep(0.3)
         except urllib.error.HTTPError as e:
-            if e.code == 429:
-                print(f"  [{query}] rate limited at offset {from_offset} — switching to chunked mode")
-                return results, True
-            else:
-                print(f"  [{query}] HTTP {e.code} at offset {from_offset} — stopping")
-                return results, False
+            print(f"  [{query}] HTTP {e.code} at offset {from_offset} — stopping this term")
+            break
         except Exception as e:
-            print(f"  [{query}] error at offset {from_offset}: {e} — stopping")
-            return results, False
-
-
-def search_with_fallback(query, depth=0, max_depth=4):
-    """
-    Search query, recursively chunking a-z if rate limited.
-    depth=0: "mcp-server"
-    depth=1: "mcp-server a" ... "mcp-server z"
-    depth=2: "mcp-server aa" ... "mcp-server az"
-    etc. up to max_depth.
-    """
-    indent = "  " * (depth + 1)
-    results, hit_limit = search_full(query)
-
-    if hit_limit:
-        if depth >= max_depth:
-            print(f"{indent}Max depth reached for '{query}' — keeping partial results")
-            return results
-
-        print(f"{indent}Chunking '{query}' into a-z suffixes (depth {depth + 1})")
-        for letter in string.ascii_lowercase:
-            chunk_query = f"{query}{letter}"
-            chunk_results = search_with_fallback(chunk_query, depth=depth + 1, max_depth=max_depth)
-            results.extend(chunk_results)
-            time.sleep(0.5)
-
+            print(f"  [{query}] error at offset {from_offset}: {e} — stopping this term")
+            break
+        if not objects:
+            break
+        results.extend(objects)
+        print(f"  [{query}] fetched {from_offset + len(objects)} (registry reports {total:,} total matches — only the top {MAX_PAGES_PER_TERM * PAGE_SIZE} by relevance are considered)")
+        if from_offset + len(objects) >= total:
+            break
+        from_offset += len(objects)
+        time.sleep(0.3)
     return results
 
 
-def search_npm(query):
-    """Search npm, recursively chunking on rate limit."""
-    return search_with_fallback(query)
+def is_relevant(pkg):
+    p = pkg.get("package", {})
+    haystack = f"{p.get('name', '')} {p.get('description', '')}".lower()
+    return any(term in haystack for term in RELEVANCE_FILTER_TERMS)
 
 
 def normalize(pkg):
@@ -118,16 +100,23 @@ def main():
 
     seen = set()
     all_results = []
+    dropped_irrelevant = 0
 
     for term in SEARCH_TERMS:
         print(f"\nSearching npm for: {term}")
         raw = search_npm(term)
         for pkg in raw:
             name = pkg.get("package", {}).get("name", "")
-            if name and name not in seen:
-                seen.add(name)
-                all_results.append(normalize(pkg))
+            if not name or name in seen:
+                continue
+            if not is_relevant(pkg):
+                dropped_irrelevant += 1
+                continue
+            seen.add(name)
+            all_results.append(normalize(pkg))
         time.sleep(2)
+
+    print(f"\nDropped {dropped_irrelevant} relevance-ranked results that didn't contain 'mcp' in name/description.")
 
     output = {
         "collected": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
