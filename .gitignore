@@ -1,2 +1,6 @@
 # macOS
 .DS_Store
+
+# local artifacts
+data/raw/
+scripts/__pycache__/
