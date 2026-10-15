@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T12:02:39Z",
+  "generated": "2026-10-15T12:18:15Z",
   "source": "star-update-script v1",
-  "count": 2175,
+  "count": 2181,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37441,8 +37441,116 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "@apify/actors-mcp-server",
+      "url": "https://github.com/apify/apify-mcp-server.git",
+      "description": "Connects to a server that provides a set of tools for managing and interacting with a machine learning model. Agents can query the model's status, execute tasks, and monitor its performance. Best suited for agents that need to manage and automate workflows involving large language models.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "docfork/docfork",
+      "url": "https://github.com/docfork/docfork",
+      "description": "Connects to a documentation platform, enabling agents to query and update documentation content. Facilitates information retrieval and modification for AI agent workflows. Best suited for agents requiring access to and management of documentation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "hookdeck/hookdeck-cli",
+      "url": "https://github.com/hookdeck/hookdeck-cli",
+      "description": "Connects to a local host for webhooks, allowing agents to forward webhooks and manage Event Gateway resources. It enables querying, updating, and monitoring of these resources, as well as running an MCP server for AI agents. Best suited for agents that need to interact with event processing systems and manage related infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "samvallad33/vestige",
+      "url": "https://github.com/samvallad33/vestige",
+      "description": "Connects to a single Rust binary and provides a command-line interface for interacting with a cognitive memory system. Enables querying, creating, updating, and monitoring memory states, and executing actions based on stored knowledge. Best suited for agents requiring persistent memory and reasoning capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "AmoyLab/Unla",
+      "url": "https://github.com/AmoyLab/Unla",
+      "description": "Connects to a platform that transforms existing MCP servers and APIs into new servers with minimal code changes. Enables actions like query, create, update, and monitor, making it suitable for agents that need to integrate with existing infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "hyper-mcp-rs/hyper-mcp",
+      "url": "https://github.com/hyper-mcp-rs/hyper-mcp",
+      "description": "Connects to a server that extends functionality through WebAssembly plugins. Enables querying, creating, updating, and monitoring server state, and executing actions. Best suited for agents that require flexible and extensible server interaction.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T12:02:39Z"
+  "last_updated": "2026-10-15T12:18:15Z"
 }

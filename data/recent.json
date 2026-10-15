@@ -1,8 +1,116 @@
 {
-  "updated": "2026-10-15T12:02:39Z",
+  "updated": "2026-10-15T12:18:15Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "@apify/actors-mcp-server",
+      "url": "https://github.com/apify/apify-mcp-server.git",
+      "description": "Connects to a server that provides a set of tools for managing and interacting with a machine learning model. Agents can query the model's status, execute tasks, and monitor its performance. Best suited for agents that need to manage and automate workflows involving large language models.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "docfork/docfork",
+      "url": "https://github.com/docfork/docfork",
+      "description": "Connects to a documentation platform, enabling agents to query and update documentation content. Facilitates information retrieval and modification for AI agent workflows. Best suited for agents requiring access to and management of documentation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "hookdeck/hookdeck-cli",
+      "url": "https://github.com/hookdeck/hookdeck-cli",
+      "description": "Connects to a local host for webhooks, allowing agents to forward webhooks and manage Event Gateway resources. It enables querying, updating, and monitoring of these resources, as well as running an MCP server for AI agents. Best suited for agents that need to interact with event processing systems and manage related infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "samvallad33/vestige",
+      "url": "https://github.com/samvallad33/vestige",
+      "description": "Connects to a single Rust binary and provides a command-line interface for interacting with a cognitive memory system. Enables querying, creating, updating, and monitoring memory states, and executing actions based on stored knowledge. Best suited for agents requiring persistent memory and reasoning capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "AmoyLab/Unla",
+      "url": "https://github.com/AmoyLab/Unla",
+      "description": "Connects to a platform that transforms existing MCP servers and APIs into new servers with minimal code changes. Enables actions like query, create, update, and monitor, making it suitable for agents that need to integrate with existing infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "hyper-mcp-rs/hyper-mcp",
+      "url": "https://github.com/hyper-mcp-rs/hyper-mcp",
+      "description": "Connects to a server that extends functionality through WebAssembly plugins. Enables querying, creating, updating, and monitoring server state, and executing actions. Best suited for agents that require flexible and extensible server interaction.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:18:15Z"
+    },
     {
       "name": "MorDavid/BloodHound-MCP-AI",
       "url": "https://github.com/MorDavid/BloodHound-MCP-AI",
@@ -794,112 +902,6 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T07:18:03Z"
-    },
-    {
-      "name": "@sap-ux/fiori-mcp-server",
-      "url": "https://github.com/SAP/open-ux-tools.git",
-      "description": "Connects to a SAP Fiori Model Context Protocol (MCP) server, enabling agents to query and update model context data. It supports actions like search, monitor, and execute operations related to model context. Best suited for agents that need to interact with SAP Fiori models and manage their context.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": "stdio",
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T06:32:47Z"
-    },
-    {
-      "name": "ChiR24/Unreal_mcp",
-      "url": "https://github.com/ChiR24/Unreal_mcp",
-      "description": "Connects to the Unreal Engine Automation Bridge via a Model Context Protocol (MCP) server, enabling agents to execute actions like creating, updating, and monitoring game assets and scenarios. Best suited for agents that require direct control over Unreal Engine workflows and asset management.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T06:03:25Z"
-    },
-    {
-      "name": "@transcend-io/mcp-server-consent",
-      "url": "https://github.com/transcend-io/tools",
-      "description": "Connects to a consent management system to query and update consent settings. Enables agents to monitor consent status, manage user preferences, and execute consent-related actions. Best suited for agents that require real-time control over user data privacy.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": "stdio",
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T06:03:25Z"
-    },
-    {
-      "name": "kontext-dev/browser-use-mcp-server",
-      "url": "https://github.com/kontext-dev/browser-use-mcp-server",
-      "description": "Connects to a web browsing system, enabling agents to query, search, and monitor web content. It allows agents to execute web-based tasks and access information from the web. Best suited for agents that require web interaction and information retrieval.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T06:03:25Z"
-    },
-    {
-      "name": "u14app/deep-research",
-      "url": "https://github.com/u14app/deep-research",
-      "description": "Connects to Large Language Models (LLMs) via SSE API and MCP server, enabling agents to query, create, update, and search for deep research information. Best suited for agents requiring advanced research capabilities and integration with existing research workflows.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "chongdashu/unreal-mcp",
-      "url": "https://github.com/chongdashu/unreal-mcp",
-      "description": "Connects to Unreal Engine via the Model Context Protocol (MCP), enabling agents to query, create, update, and monitor assets and scenes. Best suited for agents that need to automate tasks within Unreal Engine, such as content creation, scene management, and runtime operations.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
     }
   ]
 }
