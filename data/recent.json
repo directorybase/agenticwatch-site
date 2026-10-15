@@ -1,8 +1,98 @@
 {
-  "updated": "2026-10-15T11:32:50Z",
+  "updated": "2026-10-15T11:48:21Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "tiny-http-mcp-server",
+      "url": "https://github.com/poe-platform/poe-code",
+      "description": "Connects to a minimal HTTP server to execute commands. Enables querying, creating, updating, and monitoring actions. Best suited for agents that require low-level control over HTTP requests and data.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "thorsten/phpMyFAQ",
+      "url": "https://github.com/thorsten/phpMyFAQ",
+      "description": "Connects to a web application for managing and querying frequently asked questions. Enables querying, updating, and searching FAQ content. Best suited for agents that need to manage knowledge bases and provide automated responses to user inquiries.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "19-84/redd-archiver",
+      "url": "https://github.com/19-84/redd-archiver",
+      "description": "Connects to a PostgreSQL database to generate browsable HTML archives of content from link aggregator platforms like Reddit, Vaat, and Rqqus. Enables querying, creating, updating, and searching archived data. Best suited for agents that need to process and present large collections of online content.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "cloudwego/abcoder",
+      "url": "https://github.com/cloudwego/abcoder",
+      "description": "Connects to a code repository containing React components and assets. Enables actions like querying, creating, updating, and searching code-related information. Best suited for agents that need to access and manage React codebases.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "microsoft/wassette",
+      "url": "https://github.com/microsoft/wassette",
+      "description": "Connects to a runtime environment that uses WebAssembly components via a mechanism for managing component persistence. Enables actions like querying component state, updating component configurations, and monitoring component execution. Best suited for agents that need to interact with and manage complex, potentially evolving software components.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
     {
       "name": "whillhill/mcpstore",
       "url": "https://github.com/whillhill/mcpstore",
@@ -791,91 +881,6 @@
       "name": "ravitemer/mcphub.nvim",
       "url": "https://github.com/ravitemer/mcphub.nvim",
       "description": "Connects to a client for a NeoVim editor that integrates with MCP servers. Enables querying, creating, updating, and monitoring MCP servers for use with chat plugins. Best suited for agents that need to manage and utilize external server resources within an editing workflow.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "iFurySt/RedNote-MCP",
-      "url": "https://github.com/iFurySt/RedNote-MCP",
-      "description": "Connects to a server that accesses RedNote (XiaoHongShu). Enables querying, creating, updating, and searching within the RedNote data. Best suited for agents that need to retrieve and manage information from this social media platform.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "firecrawl/firecrawl-mcp-server",
-      "url": "https://github.com/firecrawl/firecrawl-mcp-server",
-      "description": "Connects to a web scraping and search service, enabling agents to query web content, search for information, and monitor web data. Best suited for agents that require automated web data extraction and analysis.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "archestra-ai/archestra",
-      "url": "https://github.com/archestra-ai/archestra",
-      "description": "Connects to a platform providing enterprise AI capabilities including a registry, gateway, and orchestrator. Enables querying, creating, updating, and monitoring various features like image storage, code scanning, and content management. Best suited for agents requiring a comprehensive set of AI tools for enterprise applications.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "drhelius/Gearboy",
-      "url": "https://github.com/drhelius/Gearboy",
-      "description": "Connects to a game emulator and debugger, enabling actions like query, create, update, search, monitor, and execute related to Game Boy, Game Boy Color, and Super Game Boy. Best suited for agents that need to interact with retro gaming systems or analyze game code.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "PaperDebugger/paperdebugger",
-      "url": "https://github.com/PaperDebugger/paperdebugger",
-      "description": "Connects to a multi-agent system for academic writing, review, and editing, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents working on in-editor writing tasks and review workflows.",
       "category": "other",
       "platforms": [
         "Any"

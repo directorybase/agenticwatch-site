@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T11:32:50Z",
+  "generated": "2026-10-15T11:48:21Z",
   "source": "star-update-script v1",
-  "count": 2163,
+  "count": 2168,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37225,8 +37225,98 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T11:32:50Z"
+    },
+    {
+      "name": "tiny-http-mcp-server",
+      "url": "https://github.com/poe-platform/poe-code",
+      "description": "Connects to a minimal HTTP server to execute commands. Enables querying, creating, updating, and monitoring actions. Best suited for agents that require low-level control over HTTP requests and data.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "thorsten/phpMyFAQ",
+      "url": "https://github.com/thorsten/phpMyFAQ",
+      "description": "Connects to a web application for managing and querying frequently asked questions. Enables querying, updating, and searching FAQ content. Best suited for agents that need to manage knowledge bases and provide automated responses to user inquiries.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "19-84/redd-archiver",
+      "url": "https://github.com/19-84/redd-archiver",
+      "description": "Connects to a PostgreSQL database to generate browsable HTML archives of content from link aggregator platforms like Reddit, Vaat, and Rqqus. Enables querying, creating, updating, and searching archived data. Best suited for agents that need to process and present large collections of online content.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "cloudwego/abcoder",
+      "url": "https://github.com/cloudwego/abcoder",
+      "description": "Connects to a code repository containing React components and assets. Enables actions like querying, creating, updating, and searching code-related information. Best suited for agents that need to access and manage React codebases.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "microsoft/wassette",
+      "url": "https://github.com/microsoft/wassette",
+      "description": "Connects to a runtime environment that uses WebAssembly components via a mechanism for managing component persistence. Enables actions like querying component state, updating component configurations, and monitoring component execution. Best suited for agents that need to interact with and manage complex, potentially evolving software components.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:48:21Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T11:32:50Z"
+  "last_updated": "2026-10-15T11:48:21Z"
 }
