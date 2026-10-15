@@ -1,8 +1,26 @@
 {
-  "updated": "2026-10-15T06:03:25Z",
+  "updated": "2026-10-15T06:32:47Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "@sap-ux/fiori-mcp-server",
+      "url": "https://github.com/SAP/open-ux-tools.git",
+      "description": "Connects to a SAP Fiori Model Context Protocol (MCP) server, enabling agents to query and update model context data. It supports actions like search, monitor, and execute operations related to model context. Best suited for agents that need to interact with SAP Fiori models and manage their context.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:32:47Z"
+    },
     {
       "name": "ChiR24/Unreal_mcp",
       "url": "https://github.com/ChiR24/Unreal_mcp",
@@ -826,23 +844,6 @@
       "name": "0x4m4/hexstrike-ai",
       "url": "https://github.com/0x4m4/hexstrike-ai",
       "description": "Connects to a suite of cybersecurity tools for automated pen testing, vulnerability discovery, and security research. Enables agents to query, execute, and monitor these tools for security analysis. Best suited for agents requiring automated security assessments and real-world offensive security capabilities.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "yzfly/Awesome-MCP-ZH",
-      "url": "https://github.com/yzfly/Awesome-MCP-ZH",
-      "description": "Connects to a collection of resources and tools related to Microsoft's Machine Learning and AI services. Enables actions such as querying, creating, updating, and searching for MCP resources, monitoring their status, and potentially executing commands. Best suited for agents that need to interact with and manage various AI services offered by Microsoft.",
       "category": "other",
       "platforms": [
         "Any"

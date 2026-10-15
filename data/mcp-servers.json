@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T06:03:25Z",
+  "generated": "2026-10-15T06:32:47Z",
   "source": "star-update-script v1",
-  "count": 2130,
+  "count": 2131,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36631,8 +36631,26 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T06:03:25Z"
+    },
+    {
+      "name": "@sap-ux/fiori-mcp-server",
+      "url": "https://github.com/SAP/open-ux-tools.git",
+      "description": "Connects to a SAP Fiori Model Context Protocol (MCP) server, enabling agents to query and update model context data. It supports actions like search, monitor, and execute operations related to model context. Best suited for agents that need to interact with SAP Fiori models and manage their context.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:32:47Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T06:03:25Z"
+  "last_updated": "2026-10-15T06:32:47Z"
 }
