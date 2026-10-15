@@ -1,8 +1,26 @@
 {
-  "updated": "2026-10-15T13:03:31Z",
+  "updated": "2026-10-15T13:18:31Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "tinystruct/tinystruct",
+      "url": "https://github.com/tinystruct/tinystruct",
+      "description": "Connects to a Java application framework for AI integration, enabling agents to query, create, update, and monitor application states. Best suited for agents building robust, scalable applications with plugin architectures.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:18:31Z"
+    },
     {
       "name": "cyberkaida/reverse-engineering-assistant",
       "url": "https://github.com/cyberkaida/reverse-engineering-assistant",
@@ -871,24 +889,6 @@
       "name": "boshyxd/robloxstudio-mcp",
       "url": "https://github.com/boshyxd/robloxstudio-mcp",
       "description": "Connects to ROBLOX Studio to create AI workflows. Enables actions like query, create, update, and execute within the studio environment. Best suited for agents that need to automate tasks and workflows within the ROBLOX Studio platform.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T11:02:47Z"
-    },
-    {
-      "name": "baryhuang/mcp-remote-macos-use",
-      "url": "https://github.com/baryhuang/mcp-remote-macos-use",
-      "description": "Connects to a local macOS environment via the Cloud Desktop App, enabling actions like file management, process monitoring, and remote control. Best suited for agents that require direct access to macOS systems for tasks like system administration or troubleshooting.",
       "category": "other",
       "platforms": [
         "Any"

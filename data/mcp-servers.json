@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T13:03:31Z",
+  "generated": "2026-10-15T13:18:31Z",
   "source": "star-update-script v1",
-  "count": 2198,
+  "count": 2199,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37855,8 +37855,26 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T13:03:31Z"
+    },
+    {
+      "name": "tinystruct/tinystruct",
+      "url": "https://github.com/tinystruct/tinystruct",
+      "description": "Connects to a Java application framework for AI integration, enabling agents to query, create, update, and monitor application states. Best suited for agents building robust, scalable applications with plugin architectures.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:18:31Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T13:03:31Z"
+  "last_updated": "2026-10-15T13:18:31Z"
 }
