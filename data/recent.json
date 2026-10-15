@@ -1,8 +1,62 @@
 {
-  "updated": "2026-04-13T13:40:27Z",
+  "updated": "2026-10-15T06:03:25Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "ChiR24/Unreal_mcp",
+      "url": "https://github.com/ChiR24/Unreal_mcp",
+      "description": "Connects to the Unreal Engine Automation Bridge via a Model Context Protocol (MCP) server, enabling agents to execute actions like creating, updating, and monitoring game assets and scenarios. Best suited for agents that require direct control over Unreal Engine workflows and asset management.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:03:25Z"
+    },
+    {
+      "name": "@transcend-io/mcp-server-consent",
+      "url": "https://github.com/transcend-io/tools",
+      "description": "Connects to a consent management system to query and update consent settings. Enables agents to monitor consent status, manage user preferences, and execute consent-related actions. Best suited for agents that require real-time control over user data privacy.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:03:25Z"
+    },
+    {
+      "name": "kontext-dev/browser-use-mcp-server",
+      "url": "https://github.com/kontext-dev/browser-use-mcp-server",
+      "description": "Connects to a web browsing system, enabling agents to query, search, and monitor web content. It allows agents to execute web-based tasks and access information from the web. Best suited for agents that require web interaction and information retrieval.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:03:25Z"
+    },
     {
       "name": "u14app/deep-research",
       "url": "https://github.com/u14app/deep-research",
@@ -789,57 +843,6 @@
       "name": "yzfly/Awesome-MCP-ZH",
       "url": "https://github.com/yzfly/Awesome-MCP-ZH",
       "description": "Connects to a collection of resources and tools related to Microsoft's Machine Learning and AI services. Enables actions such as querying, creating, updating, and searching for MCP resources, monitoring their status, and potentially executing commands. Best suited for agents that need to interact with and manage various AI services offered by Microsoft.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "D4Vinci/Scrapling",
-      "url": "https://github.com/D4Vinci/Scrapling",
-      "description": "Connects to a web scraping framework, enabling agents to query, create, update, search, monitor, and execute web scraping tasks. Best suited for agents that require automated web data extraction and crawling.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "Azure/data-api-builder",
-      "url": "https://github.com/Azure/data-api-builder",
-      "description": "Connects to Azure databases and on-premise stores, enabling actions like querying, creating, updating, and searching data. Best suited for agents that need to interact with data stored in these systems.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "metatool-ai/metamcp",
-      "url": "https://github.com/metatool-ai/metamcp",
-      "description": "Connects to a system that provides various functionalities, including code scanning, image uploading, and interaction with a code completion agent. Enables agents to query, create, update, and monitor code-related data and perform actions like code scanning, image manipulation, and model selection. Best suited for agents that require integration with code analysis tools and code completion services.",
       "category": "other",
       "platforms": [
         "Any"

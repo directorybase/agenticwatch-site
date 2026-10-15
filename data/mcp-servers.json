@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T10:37:30Z",
+  "generated": "2026-10-15T06:03:25Z",
   "source": "star-update-script v1",
-  "count": 2127,
+  "count": 2130,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36577,7 +36577,62 @@
       "license": "unknown",
       "tags": [],
       "featured": false
+    },
+    {
+      "name": "ChiR24/Unreal_mcp",
+      "url": "https://github.com/ChiR24/Unreal_mcp",
+      "description": "Connects to the Unreal Engine Automation Bridge via a Model Context Protocol (MCP) server, enabling agents to execute actions like creating, updating, and monitoring game assets and scenarios. Best suited for agents that require direct control over Unreal Engine workflows and asset management.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:03:25Z"
+    },
+    {
+      "name": "@transcend-io/mcp-server-consent",
+      "url": "https://github.com/transcend-io/tools",
+      "description": "Connects to a consent management system to query and update consent settings. Enables agents to monitor consent status, manage user preferences, and execute consent-related actions. Best suited for agents that require real-time control over user data privacy.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:03:25Z"
+    },
+    {
+      "name": "kontext-dev/browser-use-mcp-server",
+      "url": "https://github.com/kontext-dev/browser-use-mcp-server",
+      "description": "Connects to a web browsing system, enabling agents to query, search, and monitor web content. It allows agents to execute web-based tasks and access information from the web. Best suited for agents that require web interaction and information retrieval.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T06:03:25Z"
     }
   ],
-  "stars_updated": "2026-10-14T14:15:41Z"
+  "stars_updated": "2026-10-14T14:15:41Z",
+  "last_updated": "2026-10-15T06:03:25Z"
 }
