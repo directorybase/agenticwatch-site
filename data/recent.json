@@ -1,8 +1,98 @@
 {
-  "updated": "2026-10-15T10:48:11Z",
+  "updated": "2026-10-15T11:02:47Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "VikashLoomba/copilot-mcp",
+      "url": "https://github.com/VikashLoomba/copilot-mcp",
+      "description": "Connects to GitHub Copilot, Claude Code, and Codex CLI to find and install agent skills and MCP apps. Enables actions like query, create, update, and execute to extend code development workflows. Best suited for agents that need to integrate with code generation tools and leverage their capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:02:47Z"
+    },
+    {
+      "name": "yuniko-software/minecraft-mcp-server",
+      "url": "https://github.com/yuniko-software/minecraft-mcp-server",
+      "description": "Connects to a Minecraft server via the Mineflayer API, enabling agents to control a character in real-time for tasks like building, exploration, and interactive gameplay. Best suited for agents that require natural language interaction with a game environment.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:02:47Z"
+    },
+    {
+      "name": "orneryd/NornicDB",
+      "url": "https://github.com/orneryd/NornicDB",
+      "description": "Connects to a graph database for efficient data storage and retrieval, enabling agents to query, search, and monitor relationships between entities. Best suited for agents that require complex data analysis, knowledge graph exploration, and reasoning over interconnected information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:02:47Z"
+    },
+    {
+      "name": "boshyxd/robloxstudio-mcp",
+      "url": "https://github.com/boshyxd/robloxstudio-mcp",
+      "description": "Connects to ROBLOX Studio to create AI workflows. Enables actions like query, create, update, and execute within the studio environment. Best suited for agents that need to automate tasks and workflows within the ROBLOX Studio platform.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:02:47Z"
+    },
+    {
+      "name": "baryhuang/mcp-remote-macos-use",
+      "url": "https://github.com/baryhuang/mcp-remote-macos-use",
+      "description": "Connects to a local macOS environment via the Cloud Desktop App, enabling actions like file management, process monitoring, and remote control. Best suited for agents that require direct access to macOS systems for tasks like system administration or troubleshooting.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:02:47Z"
+    },
     {
       "name": "glidea/zenfeed",
       "url": "https://github.com/glidea/zenfeed",
@@ -776,91 +866,6 @@
       "name": "SecretiveShell/MCP-Bridge",
       "url": "https://github.com/SecretiveShell/MCP-Bridge",
       "description": "Connects to a set of tools via an OpenAI compatible endpoint, enabling actions like code scanning, image uploading, and file manipulation. Best suited for agents that need to interact with a variety of developer tools and APIs.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "inkeep/agents",
-      "url": "https://github.com/inkeep/agents",
-      "description": "Connects to a platform for creating AI agents using a visual builder or TypeScript SDK, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents and tasks requiring the creation and management of AI assistants and multi-agent workflows.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "n8n-io/n8n",
-      "url": "https://github.com/n8n-io/n8n",
-      "description": "Connects to a workflow automation platform with AI capabilities, enabling actions like code scanning, image uploading, and interacting with code repositories. Best suited for agents that need to automate complex workflows involving code, content, and AI-powered tasks.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "evalstate/fast-agent",
-      "url": "https://github.com/evalstate/fast-agent",
-      "description": "Connects to a code repository and provides actions for code building, evaluation, and analysis. Enables agents to query code, create, update, search, monitor, and execute code-related tasks. Best suited for agents that need to manage and analyze code within a development workflow.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "liaokongVFX/MCP-Chinese-Getting-Started-Guide",
-      "url": "https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide",
-      "description": "Connects to a model context protocol, enabling agents to query and update various features within a coding environment. Best suited for agents that need to interact with code editing tools, such as code scanning, file upload, and code completion.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "stickerdaniel/linkedin-mcp-server",
-      "url": "https://github.com/stickerdaniel/linkedin-mcp-server",
-      "description": "Connects to LinkedIn data via an open-source MCP server, enabling agents to query profiles, companies, jobs, and messages. Agents can use the tool to search, monitor, and potentially execute actions on LinkedIn data. Best suited for agents that need to access and interact with LinkedIn information for tasks like recruitment, market research, or automated content generation.",
       "category": "other",
       "platforms": [
         "Any"
