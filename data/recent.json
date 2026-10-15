@@ -1,8 +1,98 @@
 {
-  "updated": "2026-10-15T09:32:39Z",
+  "updated": "2026-10-15T10:32:50Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
+      "url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
+      "description": "Connects to a collection of language model agent skeletons and tools for building, deploying, and understanding AI agents. Enables querying, creating, updating, and monitoring agent functionality, and supports various tasks like code generation, data processing, and workflow automation. Best suited for developers and researchers building custom AI agents and workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "rulego/rulego",
+      "url": "https://github.com/rulego/rulego",
+      "description": "Connects to a Go framework for orchestrating rules. Enables querying, creating, updating, and monitoring rule states. Best suited for agents that need to manage and automate complex workflows within a Go application.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "scryfall-mcp-server",
+      "url": "https://www.npmjs.com/package/scryfall-mcp-server",
+      "description": "Connects to the Scr\u6837fall Mtg API, enabling agents to query card data, search for cards, and monitor game state. Best suited for agents that need to access and manipulate Magic: The Gathering card information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "LeslieLeung/glean",
+      "url": "https://github.com/LeslieLeung/glean",
+      "description": "Connects to an RSS feed source to query for new content and monitor updates. Enables agents to fetch, parse, and manage a personal knowledge base. Best suited for agents that need to stay informed and organize information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "assafelovic/gptr-mcp",
+      "url": "https://github.com/assafelovic/gptr-mcp",
+      "description": "Connects to a server that enables LLM applications to perform deep research using the MCP protocol. It enables querying, creating, updating, and searching data. Best suited for agents requiring advanced research capabilities and integration with existing data systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
     {
       "name": "ashwwwin/automation-mcp",
       "url": "https://github.com/ashwwwin/automation-mcp",
@@ -765,91 +855,6 @@
       "name": "svnscha/mcp-windbg",
       "url": "https://github.com/svnscha/mcp-windbg",
       "description": "Connects to a model context protocol for Windows debugging. Enables querying, creating, updating, and searching debugging information. Best suited for agents that need to analyze and interact with Windows system state during debugging.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "llmsresearch/paperbanana",
-      "url": "https://github.com/llmsresearch/paperbanana",
-      "description": "Connects to Google's Agent2Agent protocol, enabling cross-agent task delegation and capability negotiation. Allows agents to query, create, update, and monitor tasks, and execute actions across different frameworks. Best suited for building multi-agent systems that span different frameworks.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "rusq/slackdump",
-      "url": "https://github.com/rusq/slackdump",
-      "description": "Connects to Slack to save and export private and public messages, threads, files, and users. Enables actions like query, create, update, search, monitor, and execute on Slack data. Best suited for agents that need to archive or analyze Slack data for various purposes.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "firerpa/lamda",
-      "url": "https://github.com/firerpa/lamda",
-      "description": "Connects to a mobile automation framework, enabling actions like task creation, execution, and monitoring. Best suited for agents that require robust mobile automation capabilities and framework integration.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "sparfenyuk/mcp-proxy",
-      "url": "https://github.com/sparfenyuk/mcp-proxy",
-      "description": "Connects to Streamable HTTP and standard input/output (stdio) MCP transports, enabling agents to query, create, update, and search data. Best suited for agents that need to interact with various data sources and systems.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "YuzeHao2023/Awesome-MCP-Servers",
-      "url": "https://github.com/YuzeHao2023/Awesome-MCP-Servers",
-      "description": "Connects to a list of Model Context Protocol (MCP) servers, enabling actions like query, create, update, search, and monitor. Best suited for agents that need to interact with various code hosting and development services.",
       "category": "other",
       "platforms": [
         "Any"

@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T09:32:39Z",
+  "generated": "2026-10-15T10:32:50Z",
   "source": "star-update-script v1",
-  "count": 2137,
+  "count": 2142,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36757,8 +36757,98 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T09:32:39Z"
+    },
+    {
+      "name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
+      "url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
+      "description": "Connects to a collection of language model agent skeletons and tools for building, deploying, and understanding AI agents. Enables querying, creating, updating, and monitoring agent functionality, and supports various tasks like code generation, data processing, and workflow automation. Best suited for developers and researchers building custom AI agents and workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "rulego/rulego",
+      "url": "https://github.com/rulego/rulego",
+      "description": "Connects to a Go framework for orchestrating rules. Enables querying, creating, updating, and monitoring rule states. Best suited for agents that need to manage and automate complex workflows within a Go application.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "scryfall-mcp-server",
+      "url": "https://www.npmjs.com/package/scryfall-mcp-server",
+      "description": "Connects to the Scr\u6837fall Mtg API, enabling agents to query card data, search for cards, and monitor game state. Best suited for agents that need to access and manipulate Magic: The Gathering card information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "LeslieLeung/glean",
+      "url": "https://github.com/LeslieLeung/glean",
+      "description": "Connects to an RSS feed source to query for new content and monitor updates. Enables agents to fetch, parse, and manage a personal knowledge base. Best suited for agents that need to stay informed and organize information.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "assafelovic/gptr-mcp",
+      "url": "https://github.com/assafelovic/gptr-mcp",
+      "description": "Connects to a server that enables LLM applications to perform deep research using the MCP protocol. It enables querying, creating, updating, and searching data. Best suited for agents requiring advanced research capabilities and integration with existing data systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:32:50Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T09:32:39Z"
+  "last_updated": "2026-10-15T10:32:50Z"
 }
