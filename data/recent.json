@@ -1,8 +1,116 @@
 {
-  "updated": "2026-10-15T10:32:50Z",
+  "updated": "2026-10-15T10:48:11Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "glidea/zenfeed",
+      "url": "https://github.com/glidea/zenfeed",
+      "description": "Connects to a system that manages RSS feeds, enabling agents to query, search, and monitor content. It supports actions like creating, updating, and executing tasks related to RSS data. Best suited for agents that need to process and act upon real-time news and information streams.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "cgoinglove/better-chatbot",
+      "url": "https://github.com/cgoinglove/better-chatbot",
+      "description": "Connects to a platform that enables agents to interact with various tools and workflows. Agents can query, create, update, and monitor actions within the system. Best suited for agents that need to automate tasks and integrate with existing systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "aahl/mcp-aktools",
+      "url": "https://github.com/aahl/mcp-aktools",
+      "description": "Connects to a data source providing stock and cryptocurrency information. Enables querying, searching, and monitoring of financial data. Best suited for agents that require real-time market insights and analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "argoproj-labs/mcp-for-argocd",
+      "url": "https://github.com/argoproj-labs/mcp-for-argocd",
+      "description": "Connects to a Model Context Protocol (MCP) server for Argo CD, enabling agents to query and update Argo CD configurations. Best suited for agents that need to manage and interact with Argo CD deployments.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "OTA-Tech-AI/web-agent-protocol",
+      "url": "https://github.com/OTA-Tech-AI/web-agent-protocol",
+      "description": "Connects to a browser's user interaction history, enabling agents to record and replay user actions. Allows querying, monitoring, and potentially executing actions within the browser context. Best suited for agents that need to automate or analyze user workflows in web applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "vibheksoni/stealth-browser-mcp",
+      "url": "https://github.com/vibheksoni/stealth-browser-mcp",
+      "description": "Connects to a browser automation system that bypasses anti-bot measures, enabling agents to query and update browser states, create and clone UI elements, and execute actions via chat. Best suited for agents requiring advanced browser automation and UI interaction.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
     {
       "name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
       "url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
@@ -753,108 +861,6 @@
       "name": "stickerdaniel/linkedin-mcp-server",
       "url": "https://github.com/stickerdaniel/linkedin-mcp-server",
       "description": "Connects to LinkedIn data via an open-source MCP server, enabling agents to query profiles, companies, jobs, and messages. Agents can use the tool to search, monitor, and potentially execute actions on LinkedIn data. Best suited for agents that need to access and interact with LinkedIn information for tasks like recruitment, market research, or automated content generation.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "0xJacky/nginx-ui",
-      "url": "https://github.com/0xJacky/nginx-ui",
-      "description": "Connects to Nginx via a WebUI, enabling actions like viewing and modifying Nginx configurations, monitoring Nginx status, and executing commands. Best suited for agents that need to manage and interact with Nginx services.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "davepoon/buildwithclaude",
-      "url": "https://github.com/davepoon/buildwithclaude",
-      "description": "Connects to a hub of extensions for the Claude ecosystem, enabling agents to query, create, update, and search Claude Skills, Agents, Commands, Hooks, Plugins, and Marketplace collections. Best suited for agents that need to extend Claude Code, Claude Desktop, Agent SDK, or OpenClaw functionality.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "Dataojitori/nocturne_memory",
-      "url": "https://github.com/Dataojitori/nocturne_memory",
-      "description": "Connects to a long-term memory server for MCP agents, enabling persistent, graph-like memory storage for tasks like search, monitor, and update. Best suited for agents requiring a robust, model-agnostic memory solution to overcome limitations of vector-based retrieval.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "alioshr/memory-bank-mcp",
-      "url": "https://github.com/alioshr/memory-bank-mcp",
-      "description": "Connects to a remote memory bank management server. Enables querying, creating, updating, and searching stored data. Best suited for agents that need to manage and access persistent information.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "refreshdotdev/web-eval-agent",
-      "url": "https://github.com/refreshdotdev/web-eval-agent",
-      "description": "Connects to a server that automatically evaluates web applications. Enables querying, creating, updating, and monitoring web application states, and executing actions like code scanning and image uploads. Best suited for agents that need to analyze and manage web application behavior.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "svnscha/mcp-windbg",
-      "url": "https://github.com/svnscha/mcp-windbg",
-      "description": "Connects to a model context protocol for Windows debugging. Enables querying, creating, updating, and searching debugging information. Best suited for agents that need to analyze and interact with Windows system state during debugging.",
       "category": "other",
       "platforms": [
         "Any"

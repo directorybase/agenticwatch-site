@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T10:32:50Z",
+  "generated": "2026-10-15T10:48:11Z",
   "source": "star-update-script v1",
-  "count": 2142,
+  "count": 2148,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36847,8 +36847,116 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T10:32:50Z"
+    },
+    {
+      "name": "glidea/zenfeed",
+      "url": "https://github.com/glidea/zenfeed",
+      "description": "Connects to a system that manages RSS feeds, enabling agents to query, search, and monitor content. It supports actions like creating, updating, and executing tasks related to RSS data. Best suited for agents that need to process and act upon real-time news and information streams.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "cgoinglove/better-chatbot",
+      "url": "https://github.com/cgoinglove/better-chatbot",
+      "description": "Connects to a platform that enables agents to interact with various tools and workflows. Agents can query, create, update, and monitor actions within the system. Best suited for agents that need to automate tasks and integrate with existing systems.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "aahl/mcp-aktools",
+      "url": "https://github.com/aahl/mcp-aktools",
+      "description": "Connects to a data source providing stock and cryptocurrency information. Enables querying, searching, and monitoring of financial data. Best suited for agents that require real-time market insights and analysis.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "argoproj-labs/mcp-for-argocd",
+      "url": "https://github.com/argoproj-labs/mcp-for-argocd",
+      "description": "Connects to a Model Context Protocol (MCP) server for Argo CD, enabling agents to query and update Argo CD configurations. Best suited for agents that need to manage and interact with Argo CD deployments.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "OTA-Tech-AI/web-agent-protocol",
+      "url": "https://github.com/OTA-Tech-AI/web-agent-protocol",
+      "description": "Connects to a browser's user interaction history, enabling agents to record and replay user actions. Allows querying, monitoring, and potentially executing actions within the browser context. Best suited for agents that need to automate or analyze user workflows in web applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
+    },
+    {
+      "name": "vibheksoni/stealth-browser-mcp",
+      "url": "https://github.com/vibheksoni/stealth-browser-mcp",
+      "description": "Connects to a browser automation system that bypasses anti-bot measures, enabling agents to query and update browser states, create and clone UI elements, and execute actions via chat. Best suited for agents requiring advanced browser automation and UI interaction.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T10:48:11Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T10:32:50Z"
+  "last_updated": "2026-10-15T10:48:11Z"
 }
