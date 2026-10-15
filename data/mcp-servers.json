@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T07:32:37Z",
+  "generated": "2026-10-15T08:02:46Z",
   "source": "star-update-script v1",
-  "count": 2134,
+  "count": 2136,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36703,8 +36703,44 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T07:32:37Z"
+    },
+    {
+      "name": "decocms/studio",
+      "url": "https://github.com/decocms/studio",
+      "description": "Connects to a control plane for AI agents, enabling actions like tool connection, agent management, and tracking resource usage. Best suited for agents that require a centralized platform for managing and monitoring AI workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T08:02:46Z"
+    },
+    {
+      "name": "0xMassi/webclaw",
+      "url": "https://github.com/0xMassi/webclaw",
+      "description": "Connects to a web content extraction system to query, search, and monitor structured data from web pages. Best suited for agents that need to process and analyze large volumes of web content for information extraction tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T08:02:46Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T07:32:37Z"
+  "last_updated": "2026-10-15T08:02:46Z"
 }

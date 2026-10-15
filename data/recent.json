@@ -1,8 +1,44 @@
 {
-  "updated": "2026-10-15T07:32:37Z",
+  "updated": "2026-10-15T08:02:46Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "decocms/studio",
+      "url": "https://github.com/decocms/studio",
+      "description": "Connects to a control plane for AI agents, enabling actions like tool connection, agent management, and tracking resource usage. Best suited for agents that require a centralized platform for managing and monitoring AI workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T08:02:46Z"
+    },
+    {
+      "name": "0xMassi/webclaw",
+      "url": "https://github.com/0xMassi/webclaw",
+      "description": "Connects to a web content extraction system to query, search, and monitor structured data from web pages. Best suited for agents that need to process and analyze large volumes of web content for information extraction tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T08:02:46Z"
+    },
     {
       "name": "afrise/MCPSharp",
       "url": "https://github.com/afrise/MCPSharp",
@@ -813,40 +849,6 @@
       "name": "go-nunu/nunu",
       "url": "https://github.com/go-nunu/nunu",
       "description": "Connects to a Go application building tool, enabling actions like code scanning, version control integration, and file manipulation. Best suited for agents that need to automate Go application development workflows.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "sansan0/TrendRadar",
-      "url": "https://github.com/sansan0/TrendRadar",
-      "description": "Connects to a platform for monitoring public opinion and trends by aggregating data from multiple sources, including RSS feeds. Enables querying, searching, and monitoring of trending topics, with AI-powered analysis and alerts. Best suited for agents that need to analyze real-time public sentiment and identify emerging trends.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "JetBrains/mcp-jetbrains",
-      "url": "https://github.com/JetBrains/mcp-jetbrains",
-      "description": "Connects to JetBrains IDEs (IntelliJ, PyCharm, WebStorm, Android Studio) to enable actions like code scanning, file upload, and code completion. Best suited for agents that need to interact with code editing environments and leverage the IDE's features.",
       "category": "other",
       "platforms": [
         "Any"
