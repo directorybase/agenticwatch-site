@@ -231,10 +231,14 @@ def gitea_create_file(path: str, content: dict, message: str) -> None:
 def get_existing_job_urls() -> set[str]:
     """Return URLs already queued in agenticwatch-jobs to avoid resubmitting."""
     try:
-        url = f"{GITEA_URL}/api/v1/repos/{GITEA_OWNER}/{JOBS_REPO}/git/trees/main?recursive=true"
-        req = urllib.request.Request(url, headers=GITEA_HEADERS)
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            tree = json.loads(resp.read())
+        tree = {"tree": []}
+        _page = 1
+        while True:
+            _r = json.loads(urllib.request.urlopen(urllib.request.Request(f"{GITEA_URL}/api/v1/repos/{GITEA_OWNER}/{JOBS_REPO}/git/trees/main?recursive=true&per_page=1000&page={_page}", headers=GITEA_HEADERS), timeout=30).read())
+            tree["tree"] += _r.get("tree", [])
+            if not _r.get("truncated") or not _r.get("tree"):
+                break
+            _page += 1
     except Exception as e:
         log.warning("Could not fetch job tree: %s", e)
         return set()

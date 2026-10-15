@@ -61,8 +61,15 @@ def gitea_get(path: str) -> bytes:
 
 
 def fetch_tree() -> list[dict]:
-    data = json.loads(gitea_get("git/trees/main?recursive=true"))
-    return data.get("tree", [])
+    tree = {"tree": []}
+    _page = 1
+    while True:
+        _r = json.loads(gitea_get(f"git/trees/main?recursive=true&per_page=1000&page={_page}"))
+        tree["tree"] += _r.get("tree", [])
+        if not _r.get("truncated") or not _r.get("tree"):
+            break
+        _page += 1
+    return tree["tree"]
 
 
 def fetch_file(path: str) -> dict:
