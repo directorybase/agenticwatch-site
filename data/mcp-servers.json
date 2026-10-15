@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T12:18:15Z",
+  "generated": "2026-10-15T12:32:36Z",
   "source": "star-update-script v1",
-  "count": 2181,
+  "count": 2186,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37549,8 +37549,98 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T12:18:15Z"
+    },
+    {
+      "name": "Davidyz/VectorCode",
+      "url": "https://github.com/Davidyz/VectorCode",
+      "description": "Connects to a code repository to provide context for LLM tasks. Enables querying, creating, updating, and searching code within the repository. Best suited for agents that need to leverage code for tasks like code generation, analysis, or debugging.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:32:36Z"
+    },
+    {
+      "name": "@zencoderai/slack-mcp-server",
+      "url": "https://github.com/zencoderai/slack-mcp-server",
+      "description": "Connects to a Slack instance to enable agents to query and update messages, create and manage channels, and monitor channel activity. Best suited for agents that need to interact with Slack for communication and collaboration tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": "stdio",
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:32:36Z"
+    },
+    {
+      "name": "Context-Engine-AI/Context-Engine",
+      "url": "https://github.com/Context-Engine-AI/Context-Engine",
+      "description": "Connects to a system that manages agent context and provides tools for querying, creating, updating, and monitoring agent states. Best suited for agents that require dynamic and context-aware task execution.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:32:36Z"
+    },
+    {
+      "name": "agentic-box/memora",
+      "url": "https://github.com/agentic-box/memora",
+      "description": "Connects to a persistent memory store, enabling agents to retain information across sessions. Allows agents to query, update, and search stored data. Best suited for agents requiring long-term memory and context management.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:32:36Z"
+    },
+    {
+      "name": "alpacahq/alpaca-mcp-server",
+      "url": "https://github.com/alpacahq/alpaca-mcp-server",
+      "description": "Connects to a financial data platform to query stock, ETF, crypto, and options data, and execute trading strategies. Best suited for agents that need to analyze financial markets and automate trading workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:32:36Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T12:18:15Z"
+  "last_updated": "2026-10-15T12:32:36Z"
 }
