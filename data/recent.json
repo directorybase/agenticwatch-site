@@ -1,8 +1,116 @@
 {
-  "updated": "2026-10-15T12:32:36Z",
+  "updated": "2026-10-15T12:48:23Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "cohnen/mcp-google-ads",
+      "url": "https://github.com/cohnen/mcp-google-ads",
+      "description": "Connects to Google Ads to query campaign data, performance metrics, and keywords. Enables actions like searching for ad management information and monitoring campaign status. Best suited for agents that need to analyze and manage advertising campaigns.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "cloudflare/mcp",
+      "url": "https://github.com/cloudflare/mcp",
+      "description": "Connects to the Cloudflare API, enabling agents to query the API for server status, create and update server configurations, and monitor performance metrics. Best suited for agents that need to manage and maintain Cloudflare infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "opensolon/solon-ai",
+      "url": "https://github.com/opensolon/solon-ai",
+      "description": "Connects to a Java AI application development framework, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents developing custom AI tools and integrating with existing Java applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "marmotdata/marmot",
+      "url": "https://github.com/marmotdata/marmot",
+      "description": "Connects to a data catalog API to query, create, update, and search for data assets. It enables agents to access and enrich data with context, making it accessible for AI tools. Best suited for agents that need to discover and utilize data assets within an organization.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "onebirdrocks/ebook-mcp",
+      "url": "https://github.com/onebirdrocks/ebook-mcp",
+      "description": "Connects to a server that supports various eBook formats (EPUB, PDF, etc.) to simplify user experience with LLM. Enables querying, updating, and monitoring eBook content and metadata. Best suited for agents that need to enhance eBook user interfaces and manage eBook content.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "joreilly/GalwayBus",
+      "url": "https://github.com/joreilly/GalwayBus",
+      "description": "Connects to a Kotlin multiplatform project using Jetpack Compose and SwiftUI, enabling agents to query and update UI elements, search for data, and monitor application state. Best suited for agents that need to interact with a mobile application's user interface.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
     {
       "name": "Davidyz/VectorCode",
       "url": "https://github.com/Davidyz/VectorCode",
@@ -794,114 +902,6 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T10:48:11Z"
-    },
-    {
-      "name": "oxbshw/LLM-Agents-Ecosystem-Handbook",
-      "url": "https://github.com/oxbshw/LLM-Agents-Ecosystem-Handbook",
-      "description": "Connects to a collection of language model agent skeletons and tools for building, deploying, and understanding AI agents. Enables querying, creating, updating, and monitoring agent functionality, and supports various tasks like code generation, data processing, and workflow automation. Best suited for developers and researchers building custom AI agents and workflows.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T10:32:50Z"
-    },
-    {
-      "name": "rulego/rulego",
-      "url": "https://github.com/rulego/rulego",
-      "description": "Connects to a Go framework for orchestrating rules. Enables querying, creating, updating, and monitoring rule states. Best suited for agents that need to manage and automate complex workflows within a Go application.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T10:32:50Z"
-    },
-    {
-      "name": "scryfall-mcp-server",
-      "url": "https://www.npmjs.com/package/scryfall-mcp-server",
-      "description": "Connects to the Scr\u6837fall Mtg API, enabling agents to query card data, search for cards, and monitor game state. Best suited for agents that need to access and manipulate Magic: The Gathering card information.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": "stdio",
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T10:32:50Z"
-    },
-    {
-      "name": "LeslieLeung/glean",
-      "url": "https://github.com/LeslieLeung/glean",
-      "description": "Connects to an RSS feed source to query for new content and monitor updates. Enables agents to fetch, parse, and manage a personal knowledge base. Best suited for agents that need to stay informed and organize information.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T10:32:50Z"
-    },
-    {
-      "name": "assafelovic/gptr-mcp",
-      "url": "https://github.com/assafelovic/gptr-mcp",
-      "description": "Connects to a server that enables LLM applications to perform deep research using the MCP protocol. It enables querying, creating, updating, and searching data. Best suited for agents requiring advanced research capabilities and integration with existing data systems.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T10:32:50Z"
-    },
-    {
-      "name": "ashwwwin/automation-mcp",
-      "url": "https://github.com/ashwwwin/automation-mcp",
-      "description": "Connects to macOS to manage mouse, keyboard, screen, and window actions. Enables actions like query, create, update, search, monitor, and execute to automate macOS tasks. Best suited for agents that require detailed control over the macOS user interface for automation workflows.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false,
-      "added_at": "2026-10-15T09:32:39Z"
     }
   ]
 }

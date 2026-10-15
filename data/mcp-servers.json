@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T12:32:36Z",
+  "generated": "2026-10-15T12:48:23Z",
   "source": "star-update-script v1",
-  "count": 2186,
+  "count": 2192,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37639,8 +37639,116 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T12:32:36Z"
+    },
+    {
+      "name": "cohnen/mcp-google-ads",
+      "url": "https://github.com/cohnen/mcp-google-ads",
+      "description": "Connects to Google Ads to query campaign data, performance metrics, and keywords. Enables actions like searching for ad management information and monitoring campaign status. Best suited for agents that need to analyze and manage advertising campaigns.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "cloudflare/mcp",
+      "url": "https://github.com/cloudflare/mcp",
+      "description": "Connects to the Cloudflare API, enabling agents to query the API for server status, create and update server configurations, and monitor performance metrics. Best suited for agents that need to manage and maintain Cloudflare infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "opensolon/solon-ai",
+      "url": "https://github.com/opensolon/solon-ai",
+      "description": "Connects to a Java AI application development framework, enabling actions like query, create, update, search, monitor, and execute. Best suited for agents developing custom AI tools and integrating with existing Java applications.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "marmotdata/marmot",
+      "url": "https://github.com/marmotdata/marmot",
+      "description": "Connects to a data catalog API to query, create, update, and search for data assets. It enables agents to access and enrich data with context, making it accessible for AI tools. Best suited for agents that need to discover and utilize data assets within an organization.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "onebirdrocks/ebook-mcp",
+      "url": "https://github.com/onebirdrocks/ebook-mcp",
+      "description": "Connects to a server that supports various eBook formats (EPUB, PDF, etc.) to simplify user experience with LLM. Enables querying, updating, and monitoring eBook content and metadata. Best suited for agents that need to enhance eBook user interfaces and manage eBook content.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "joreilly/GalwayBus",
+      "url": "https://github.com/joreilly/GalwayBus",
+      "description": "Connects to a Kotlin multiplatform project using Jetpack Compose and SwiftUI, enabling agents to query and update UI elements, search for data, and monitor application state. Best suited for agents that need to interact with a mobile application's user interface.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:48:23Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T12:32:36Z"
+  "last_updated": "2026-10-15T12:48:23Z"
 }
