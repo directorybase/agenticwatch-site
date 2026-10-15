@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T08:02:46Z",
+  "generated": "2026-10-15T09:32:39Z",
   "source": "star-update-script v1",
-  "count": 2136,
+  "count": 2137,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36739,8 +36739,26 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T08:02:46Z"
+    },
+    {
+      "name": "ashwwwin/automation-mcp",
+      "url": "https://github.com/ashwwwin/automation-mcp",
+      "description": "Connects to macOS to manage mouse, keyboard, screen, and window actions. Enables actions like query, create, update, search, monitor, and execute to automate macOS tasks. Best suited for agents that require detailed control over the macOS user interface for automation workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T09:32:39Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T08:02:46Z"
+  "last_updated": "2026-10-15T09:32:39Z"
 }

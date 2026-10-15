@@ -1,8 +1,26 @@
 {
-  "updated": "2026-10-15T08:02:46Z",
+  "updated": "2026-10-15T09:32:39Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "ashwwwin/automation-mcp",
+      "url": "https://github.com/ashwwwin/automation-mcp",
+      "description": "Connects to macOS to manage mouse, keyboard, screen, and window actions. Enables actions like query, create, update, search, monitor, and execute to automate macOS tasks. Best suited for agents that require detailed control over the macOS user interface for automation workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T09:32:39Z"
+    },
     {
       "name": "decocms/studio",
       "url": "https://github.com/decocms/studio",
@@ -832,23 +850,6 @@
       "name": "YuzeHao2023/Awesome-MCP-Servers",
       "url": "https://github.com/YuzeHao2023/Awesome-MCP-Servers",
       "description": "Connects to a list of Model Context Protocol (MCP) servers, enabling actions like query, create, update, search, and monitor. Best suited for agents that need to interact with various code hosting and development services.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "go-nunu/nunu",
-      "url": "https://github.com/go-nunu/nunu",
-      "description": "Connects to a Go application building tool, enabling actions like code scanning, version control integration, and file manipulation. Best suited for agents that need to automate Go application development workflows.",
       "category": "other",
       "platforms": [
         "Any"
