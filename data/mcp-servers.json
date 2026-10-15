@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T11:48:21Z",
+  "generated": "2026-10-15T12:02:39Z",
   "source": "star-update-script v1",
-  "count": 2168,
+  "count": 2175,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37315,8 +37315,134 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T11:48:21Z"
+    },
+    {
+      "name": "MorDavid/BloodHound-MCP-AI",
+      "url": "https://github.com/MorDavid/BloodHound-MCP-AI",
+      "description": "Connects to an Active Directory system via Model Context Protocol, enabling agents to query attack paths using natural language instead of complex queries. Best suited for security agents needing to analyze Active Directory.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "erwinkramer/bank-api",
+      "url": "https://github.com/erwinkramer/bank-api",
+      "description": "Connects to a bank API to query account information, update transaction details, and monitor account activity. Best suited for agents that need to interact with banking systems for financial management tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "formulahendry/mcp-server-spec-driven-development",
+      "url": "https://github.com/formulahendry/mcp-server-spec-driven-development",
+      "description": "Connects to a server specification system, enabling agents to query, create, update, and search server configurations. Best suited for agents that require dynamic and version-controlled server setup for development workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "FuzzingLabs/mcp-security-hub",
+      "url": "https://github.com/FuzzingLabs/mcp-security-hub",
+      "description": "Connects to a collection of offensive security tools, enabling agents to query, execute, and monitor various security assessments like Nmap, Ghidra, and SQLMap. Best suited for security-focused agents and tasks requiring vulnerability analysis and exploitation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "miscusi-peek/cheatengine-mcp-bridge",
+      "url": "https://github.com/miscusi-peek/cheatengine-mcp-bridge",
+      "description": "Connects to a memory and pointer analysis system via MCP, enabling agents to automate reverse engineering, pointer scanning, and memory analysis using natural language. Best suited for agents requiring automated analysis of executable code and memory states.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "CursorTouch/Android-MCP",
+      "url": "https://github.com/CursorTouch/Android-MCP",
+      "description": "Connects to Android devices via a server, enabling actions like querying device state, executing commands, and monitoring system events. Best suited for agents that need to interact with Android devices for automation or data collection.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "Cyfrin/aderyn",
+      "url": "https://github.com/Cyfrin/aderyn",
+      "description": "Connects to a Solidity static analysis tool to query code quality, create reports, and monitor for potential issues. Best suited for agents that need to ensure code correctness and maintainability.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T11:48:21Z"
+  "last_updated": "2026-10-15T12:02:39Z"
 }

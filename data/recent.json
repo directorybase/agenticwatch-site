@@ -1,8 +1,134 @@
 {
-  "updated": "2026-10-15T11:48:21Z",
+  "updated": "2026-10-15T12:02:39Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "MorDavid/BloodHound-MCP-AI",
+      "url": "https://github.com/MorDavid/BloodHound-MCP-AI",
+      "description": "Connects to an Active Directory system via Model Context Protocol, enabling agents to query attack paths using natural language instead of complex queries. Best suited for security agents needing to analyze Active Directory.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "erwinkramer/bank-api",
+      "url": "https://github.com/erwinkramer/bank-api",
+      "description": "Connects to a bank API to query account information, update transaction details, and monitor account activity. Best suited for agents that need to interact with banking systems for financial management tasks.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "formulahendry/mcp-server-spec-driven-development",
+      "url": "https://github.com/formulahendry/mcp-server-spec-driven-development",
+      "description": "Connects to a server specification system, enabling agents to query, create, update, and search server configurations. Best suited for agents that require dynamic and version-controlled server setup for development workflows.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "FuzzingLabs/mcp-security-hub",
+      "url": "https://github.com/FuzzingLabs/mcp-security-hub",
+      "description": "Connects to a collection of offensive security tools, enabling agents to query, execute, and monitor various security assessments like Nmap, Ghidra, and SQLMap. Best suited for security-focused agents and tasks requiring vulnerability analysis and exploitation.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "miscusi-peek/cheatengine-mcp-bridge",
+      "url": "https://github.com/miscusi-peek/cheatengine-mcp-bridge",
+      "description": "Connects to a memory and pointer analysis system via MCP, enabling agents to automate reverse engineering, pointer scanning, and memory analysis using natural language. Best suited for agents requiring automated analysis of executable code and memory states.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "CursorTouch/Android-MCP",
+      "url": "https://github.com/CursorTouch/Android-MCP",
+      "description": "Connects to Android devices via a server, enabling actions like querying device state, executing commands, and monitoring system events. Best suited for agents that need to interact with Android devices for automation or data collection.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
+    {
+      "name": "Cyfrin/aderyn",
+      "url": "https://github.com/Cyfrin/aderyn",
+      "description": "Connects to a Solidity static analysis tool to query code quality, create reports, and monitor for potential issues. Best suited for agents that need to ensure code correctness and maintainability.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T12:02:39Z"
+    },
     {
       "name": "tiny-http-mcp-server",
       "url": "https://github.com/poe-platform/poe-code",
@@ -762,125 +888,6 @@
       "name": "chongdashu/unreal-mcp",
       "url": "https://github.com/chongdashu/unreal-mcp",
       "description": "Connects to Unreal Engine via the Model Context Protocol (MCP), enabling agents to query, create, update, and monitor assets and scenes. Best suited for agents that need to automate tasks within Unreal Engine, such as content creation, scene management, and runtime operations.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "open-webui/mcpo",
-      "url": "https://github.com/open-webui/mcpo",
-      "description": "Connects to a proxy server that translates MCP commands into OpenAPI requests. Enables querying, creating, updating, and monitoring data within the system. Best suited for agents that need to interact with a variety of internal services and automate tasks across different platforms.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "joey-zhou/xiaozhi-esp32-server-java",
-      "url": "https://github.com/joey-zhou/xiaozhi-esp32-server-java",
-      "description": "Connects to a Java enterprise management platform for ESP32 devices, enabling monitoring, customization, role switching, and dialogue record management. Agents can query device status, execute commands, and manage user configurations. Best suited for agents requiring device management and automation capabilities.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "1Panel-dev/MaxKB",
-      "url": "https://github.com/1Panel-dev/MaxKB",
-      "description": "Connects to a platform for building enterprise-grade agents, enabling actions like querying, creating, updating, and searching. Best suited for agents requiring a flexible and extensible framework for complex tasks.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "martin-ger/esp32_nat_router",
-      "url": "https://github.com/martin-ger/esp32_nat_router",
-      "description": "Connects to an ESP32 device to enable network routing and firewall functionality. Agents can query device status, monitor network traffic, and potentially execute network configuration changes. Best suited for agents that need to manage network security and routing on embedded systems.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "OpenAgentPlatform/Dive",
-      "url": "https://github.com/OpenAgentPlatform/Dive",
-      "description": "Connects to a language model to enable code scanning, image uploading, and tool call logs. Best suited for agents that need to analyze code, interact with images, and manage tool usage within a coding context.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "Devin-AXIS/A2V",
-      "url": "https://github.com/Devin-AXIS/A2V",
-      "description": "Connects to a compute platform, enabling agents to query and execute various actions. Best suited for agents that need to interact with a wide range of computational resources and services.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "ravitemer/mcphub.nvim",
-      "url": "https://github.com/ravitemer/mcphub.nvim",
-      "description": "Connects to a client for a NeoVim editor that integrates with MCP servers. Enables querying, creating, updating, and monitoring MCP servers for use with chat plugins. Best suited for agents that need to manage and utilize external server resources within an editing workflow.",
       "category": "other",
       "platforms": [
         "Any"
