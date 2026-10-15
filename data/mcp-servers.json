@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T11:02:47Z",
+  "generated": "2026-10-15T11:18:17Z",
   "source": "star-update-script v1",
-  "count": 2153,
+  "count": 2159,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37045,8 +37045,116 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T11:02:47Z"
+    },
+    {
+      "name": "ruilisi/lsbot",
+      "url": "https://github.com/ruilisi/lsbot",
+      "description": "Connects to a system that manages and provides access to AI agent capabilities. Enables querying available capabilities, creating new ones, and monitoring their status. Best suited for agents that need to dynamically select and utilize specific functionalities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:18:17Z"
+    },
+    {
+      "name": "controlplaneio-fluxcd/flux-operator",
+      "url": "https://github.com/controlplaneio-fluxcd/flux-operator",
+      "description": "Connects to a GitOps system to manage and deploy applications. Enables actions like updating application configurations, monitoring deployment status, and triggering deployments. Best suited for agents that require automated application management and continuous delivery.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:18:17Z"
+    },
+    {
+      "name": "jerhadf/linear-mcp-server",
+      "url": "https://github.com/jerhadf/linear-mcp-server",
+      "description": "Connects to a project management system to enable LLMs to interact with project tasks. Actions include query, create, update, and monitor project items. Best suited for agents that need to manage and automate workflows within a project management context.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:18:17Z"
+    },
+    {
+      "name": "Shy2593666979/AgentChat",
+      "url": "https://github.com/Shy2593666979/AgentChat",
+      "description": "Connects to a platform that allows agents to understand and assist with complex tasks through multi-turn conversations and task collaboration. Enables querying, creating, updating, and executing actions within the platform, leveraging LangChain, Function Call, and other tools for knowledge retrieval and tool invocation. Best suited for agents that require advanced task management and integration with various AI tools.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:18:17Z"
+    },
+    {
+      "name": "levnikolaevich/claude-code-skills",
+      "url": "https://github.com/levnikolaevich/claude-code-skills",
+      "description": "Connects to a suite of tools for managing and automating a full delivery lifecycle using an agile pipeline. Enables actions like multi-model AI review, project bootstrap, documentation generation, codebase audits, performance optimization, and community workflows. Best suited for agents that require comprehensive code quality and project management capabilities.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:18:17Z"
+    },
+    {
+      "name": "concierge-hq/concierge",
+      "url": "https://github.com/concierge-hq/concierge",
+      "description": "Connects to a server management platform, enabling actions like querying server status, updating configurations, and monitoring resource usage. Best suited for agents that need to manage and maintain infrastructure.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T11:18:17Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T11:02:47Z"
+  "last_updated": "2026-10-15T11:18:17Z"
 }
