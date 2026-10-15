@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T12:48:23Z",
+  "generated": "2026-10-15T13:03:31Z",
   "source": "star-update-script v1",
-  "count": 2192,
+  "count": 2198,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -37747,8 +37747,116 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T12:48:23Z"
+    },
+    {
+      "name": "cyberkaida/reverse-engineering-assistant",
+      "url": "https://github.com/cyberkaida/reverse-engineering-assistant",
+      "description": "Connects to a MCP server for reverse engineering tasks in Ghidra, enabling agents to query and update Ghidra data, search for information, and monitor the reverse engineering process. Best suited for agents focused on software analysis and security research.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:03:31Z"
+    },
+    {
+      "name": "SPThole/CoexistAI",
+      "url": "https://github.com/SPThole/CoexistAI",
+      "description": "Connects to a research assistant framework, enabling agents to query, create, update, search, monitor, and execute research workflows using LLMs, web search, Reddit, YouTube, and mapping tools. Best suited for agents that require flexible research automation and integration with various data sources.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:03:31Z"
+    },
+    {
+      "name": "Kong/volcano-agent-sdk",
+      "url": "https://github.com/Kong/volcano-agent-sdk",
+      "description": "Connects to a platform for executing actions via a command-line interface. Enables querying, creating, updating, and monitoring external systems. Best suited for agents that require real-world action execution and integration with various tools.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:03:31Z"
+    },
+    {
+      "name": "mondaycom/mcp",
+      "url": "https://github.com/mondaycom/mcp",
+      "description": "Connects to a structured data source, enabling agents to query, create, update, and search information. Best suited for agents that require reliable access to data and tools for decision-making.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:03:31Z"
+    },
+    {
+      "name": "Cranot/roam-code",
+      "url": "https://github.com/Cranot/roam-code",
+      "description": "Connects to a system for architectural intelligence, enabling querying structural graphs, managing architecture governance, orchestrating multi-agent workflows, and mapping vulnerabilities. It supports 26 languages and 100% local execution. Best suited for agents requiring comprehensive architectural analysis and multi-agent system management.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:03:31Z"
+    },
+    {
+      "name": "Kymo-MCP/mcpcan",
+      "url": "https://github.com/Kymo-MCP/mcpcan",
+      "description": "Connects to a container deployment platform to monitor container deployments and verify service tokens. Enables querying deployment status, updating service configurations, and executing container-related actions. Best suited for agents that manage and secure containerized services.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T13:03:31Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T12:48:23Z"
+  "last_updated": "2026-10-15T13:03:31Z"
 }
