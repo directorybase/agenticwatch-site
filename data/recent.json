@@ -1,8 +1,44 @@
 {
-  "updated": "2026-10-15T07:18:03Z",
+  "updated": "2026-10-15T07:32:37Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "afrise/MCPSharp",
+      "url": "https://github.com/afrise/MCPSharp",
+      "description": "Connects to a .NET library for building Model Context Protocol (MCP) servers and clients. Enables querying, creating, updating, and monitoring MCP-based APIs. Best suited for agents that need to interact with AI assistant and model APIs.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T07:32:37Z"
+    },
+    {
+      "name": "ankorstore/yokai",
+      "url": "https://github.com/ankorstore/yokai",
+      "description": "Connects to a Go framework for backend applications, enabling actions like query, create, update, and search. Best suited for agents that need to interact with backend systems and manage data within a modular architecture.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T07:32:37Z"
+    },
     {
       "name": "peakmojo/applescript-mcp",
       "url": "https://github.com/peakmojo/applescript-mcp",
@@ -811,40 +847,6 @@
       "name": "JetBrains/mcp-jetbrains",
       "url": "https://github.com/JetBrains/mcp-jetbrains",
       "description": "Connects to JetBrains IDEs (IntelliJ, PyCharm, WebStorm, Android Studio) to enable actions like code scanning, file upload, and code completion. Best suited for agents that need to interact with code editing environments and leverage the IDE's features.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "modelcontextprotocol/csharp-sdk",
-      "url": "https://github.com/modelcontextprotocol/csharp-sdk",
-      "description": "Connects to a Model Context Protocol server, enabling agents to query and update various features like image storage, code scanning, and content management. Best suited for agents that need to interact with a wide range of services and manage contextual information.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "microsoft/mcp-for-beginners",
-      "url": "https://github.com/microsoft/mcp-for-beginners",
-      "description": "Connects to a curriculum providing practical examples of Model Context Protocol (MCP) in .NET, Java, TypeScript, JavaScript, Rust, and Python. Enables querying, creating, updating, and monitoring AI workflows from session setup to service orchestration. Best suited for agents developing modular, scalable, and secure AI applications.",
       "category": "other",
       "platforms": [
         "Any"

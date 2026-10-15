@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T07:18:03Z",
+  "generated": "2026-10-15T07:32:37Z",
   "source": "star-update-script v1",
-  "count": 2132,
+  "count": 2134,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36667,8 +36667,44 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T07:18:03Z"
+    },
+    {
+      "name": "afrise/MCPSharp",
+      "url": "https://github.com/afrise/MCPSharp",
+      "description": "Connects to a .NET library for building Model Context Protocol (MCP) servers and clients. Enables querying, creating, updating, and monitoring MCP-based APIs. Best suited for agents that need to interact with AI assistant and model APIs.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T07:32:37Z"
+    },
+    {
+      "name": "ankorstore/yokai",
+      "url": "https://github.com/ankorstore/yokai",
+      "description": "Connects to a Go framework for backend applications, enabling actions like query, create, update, and search. Best suited for agents that need to interact with backend systems and manage data within a modular architecture.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T07:32:37Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T07:18:03Z"
+  "last_updated": "2026-10-15T07:32:37Z"
 }
