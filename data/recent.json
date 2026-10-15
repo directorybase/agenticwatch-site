@@ -1,8 +1,26 @@
 {
-  "updated": "2026-10-15T06:32:47Z",
+  "updated": "2026-10-15T07:18:03Z",
   "count": 50,
   "description": "The most recently added MCP server entries. Updated automatically as new entries are published.",
   "entries": [
+    {
+      "name": "peakmojo/applescript-mcp",
+      "url": "https://github.com/peakmojo/applescript-mcp",
+      "description": "Connects to a server that executes AppleScript, providing full control over a Mac's applications. Agents can query, create, update, and monitor applications, and execute scripts to automate tasks. Best suited for agents that require extensive macOS automation and control.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T07:18:03Z"
+    },
     {
       "name": "@sap-ux/fiori-mcp-server",
       "url": "https://github.com/SAP/open-ux-tools.git",
@@ -827,23 +845,6 @@
       "name": "microsoft/mcp-for-beginners",
       "url": "https://github.com/microsoft/mcp-for-beginners",
       "description": "Connects to a curriculum providing practical examples of Model Context Protocol (MCP) in .NET, Java, TypeScript, JavaScript, Rust, and Python. Enables querying, creating, updating, and monitoring AI workflows from session setup to service orchestration. Best suited for agents developing modular, scalable, and secure AI applications.",
-      "category": "other",
-      "platforms": [
-        "Any"
-      ],
-      "transport": null,
-      "auth": null,
-      "difficulty": null,
-      "github_stars": null,
-      "last_updated": null,
-      "license": "unknown",
-      "tags": [],
-      "featured": false
-    },
-    {
-      "name": "0x4m4/hexstrike-ai",
-      "url": "https://github.com/0x4m4/hexstrike-ai",
-      "description": "Connects to a suite of cybersecurity tools for automated pen testing, vulnerability discovery, and security research. Enables agents to query, execute, and monitor these tools for security analysis. Best suited for agents requiring automated security assessments and real-world offensive security capabilities.",
       "category": "other",
       "platforms": [
         "Any"

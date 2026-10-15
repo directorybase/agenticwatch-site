@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-15T06:32:47Z",
+  "generated": "2026-10-15T07:18:03Z",
   "source": "star-update-script v1",
-  "count": 2131,
+  "count": 2132,
   "entries": [
     {
       "name": "Model Context Protocol (MCP) Quickstart",
@@ -36649,8 +36649,26 @@
       "tags": [],
       "featured": false,
       "added_at": "2026-10-15T06:32:47Z"
+    },
+    {
+      "name": "peakmojo/applescript-mcp",
+      "url": "https://github.com/peakmojo/applescript-mcp",
+      "description": "Connects to a server that executes AppleScript, providing full control over a Mac's applications. Agents can query, create, update, and monitor applications, and execute scripts to automate tasks. Best suited for agents that require extensive macOS automation and control.",
+      "category": "other",
+      "platforms": [
+        "Any"
+      ],
+      "transport": null,
+      "auth": null,
+      "difficulty": null,
+      "github_stars": null,
+      "last_updated": null,
+      "license": "unknown",
+      "tags": [],
+      "featured": false,
+      "added_at": "2026-10-15T07:18:03Z"
     }
   ],
   "stars_updated": "2026-10-14T14:15:41Z",
-  "last_updated": "2026-10-15T06:32:47Z"
+  "last_updated": "2026-10-15T07:18:03Z"
 }
