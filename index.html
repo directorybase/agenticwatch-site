@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AgenticWatch.dev — The MCP Server Index</title>
-<meta name="description" content="DistroWatch-style directory of 2,001+ MCP (Model Context Protocol) servers. Ranked by GitHub stars, categorized, and searchable."/>
+<meta name="description" content="DistroWatch-style directory of MCP (Model Context Protocol) servers. Ranked by GitHub stars, categorized, and searchable."/>
 <meta name="robots" content="index, follow"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
@@ -464,27 +464,15 @@ a:hover{color:var(--ac-h);text-decoration:underline;}
       <div class="guide-byline" style="margin-bottom:8px;">First Review</div>
       <a href="javascript:void(0)" class="guide-featured-title" onclick="showGuide()" style="font-size:14px;margin-bottom:10px;">Best MCP Servers for Claude Code</a>
       <div class="guide-byline">
-        Claude Sonnet 4.6 &nbsp;·&nbsp; Gemini 1.5 Pro &nbsp;·&nbsp; Grok &nbsp;·&nbsp; GPT-5.4 Thinking<br/>
+        Models used in the April 4, 2026 review: Claude Sonnet 4.6 &nbsp;·&nbsp; Gemini 1.5 Pro &nbsp;·&nbsp; Grok &nbsp;·&nbsp; GPT-5.4 Thinking<br/>
         April 4, 2026 &nbsp;·&nbsp; 15 servers reviewed
       </div>
       <button class="btn-read-more" onclick="showGuide()">Read the review →</button>
     </div>
   </div>
 
-  <!-- RIGHT: Sponsored + Claim -->
+  <!-- RIGHT: Claim -->
   <div class="top-col">
-    <div class="sponsor-card">
-      <span class="sponsor-label">Sponsored Listing</span>
-      <div class="sponsor-logo">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <rect width="14" height="14" rx="3" fill="#26303A"/>
-          <path d="M3 7h8M7 3v8" stroke="#5D7480" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="sponsor-name">Your Tool Here</div>
-      <div class="sponsor-desc">Reach developers evaluating AI agent infrastructure. Feature your MCP server to 12,000+ monthly visitors.</div>
-      <a href="mailto:advertise@agenticwatch.dev" class="btn-outline">Learn more</a>
-    </div>
     <div class="claim-card">
       <div class="claim-title">Claim This Listing</div>
       <div class="claim-desc">Is this your server? Claim your entry to add documentation and contact info.</div>
@@ -624,7 +612,7 @@ const GUIDE_CARD_HTML = document.getElementById('featured-guide-col').innerHTML;
 // ─── Load data ────────────────────────────────────────────────────────────────
 Promise.all([
   fetch('/data/mcp-servers.json').then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }),
-  fetch('/data/stars.json').then(r => r.ok ? r.json() : null).catch(() => null)
+  Promise.resolve(null) // /data/stars.json removed (never existed); stars come from mcp-servers.json
 ])
   .then(([data, starsData]) => {
     allEntries = data.entries || [];
@@ -751,7 +739,7 @@ function renderGuide() {
       <a href="javascript:void(0)" onclick="goHome()" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tm);display:inline-flex;align-items:center;gap:4px;margin-bottom:14px;text-decoration:none;">← Back to home</a>
       <div style="font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:600;color:#0D0D0F;background:var(--warn);padding:2px 6px;border-radius:2px;display:inline-block;margin-bottom:10px;">Editor's Pick</div>
       <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:800;color:var(--t1);line-height:1.2;letter-spacing:-0.3px;margin-bottom:6px;">Best MCP Servers for Claude Code</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--tm);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(245,185,66,0.15);">SMALL COUNCIL REVIEW &nbsp;·&nbsp; Claude Sonnet 4.6, Gemini 1.5 Pro, Grok, GPT-5.4 Thinking &nbsp;·&nbsp; April 4, 2026 &nbsp;·&nbsp; 15 servers</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--tm);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(245,185,66,0.15);">SMALL COUNCIL REVIEW &nbsp;·&nbsp; Models used in the April 4, 2026 review: Claude Sonnet 4.6, Gemini 1.5 Pro, Grok, GPT-5.4 Thinking &nbsp;·&nbsp; April 4, 2026 &nbsp;·&nbsp; 15 servers</div>
       <div id="guide-body" style="font-size:12px;color:var(--t2);line-height:1.7;"></div>
     </div>`;
   document.getElementById('guide-body').innerHTML = guideHTML();
@@ -850,7 +838,7 @@ function guideHTML() {
     </div>
 
     <div style="margin-top:20px;padding-top:14px;border-top:1px solid rgba(245,185,66,0.15);font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--td);">
-      <div style="margin-bottom:6px;color:var(--tm);font-weight:600;">SMALL COUNCIL — ATTRIBUTION</div>
+      <div style="margin-bottom:6px;color:var(--tm);font-weight:600;">SMALL COUNCIL — MODELS USED IN THE APRIL 4, 2026 REVIEW</div>
       <div>Claude Sonnet 4.6 · <a href="https://anthropic.com" target="_blank" style="color:var(--ac);">Anthropic</a></div>
       <div>Gemini 1.5 Pro · <a href="https://gemini.google.com" target="_blank" style="color:var(--ac);">Google</a></div>
       <div>Grok · <a href="https://x.ai" target="_blank" style="color:var(--ac);">xAI</a></div>
